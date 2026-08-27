@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
-import { getPackage, packages } from "@/data/safari-journeys";
+import { getPackage, packages } from "@/data/packages";
 import { ArrowLeft, ArrowRight, Calendar, Check, Clock, MapPin, Tag, X } from "lucide-react";
 
 const PackageDetail = () => {

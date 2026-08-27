@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
-import { packages } from "@/data/safari-journeys";
+import { packages } from "@/data/packages";
 import { ArrowRight, Clock, MapPin } from "lucide-react";
 
 const filters = ["All", "Safari", "Beach", "Outbound", "Corporate"] as const;
