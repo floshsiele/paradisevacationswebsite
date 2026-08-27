@@ -35,7 +35,7 @@ export function HeroVideo() {
   }, [prefersReducedMotion]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full min-h-svh overflow-hidden bg-black">
       {/* Video background */}
       <video
         ref={videoRef}
@@ -54,7 +54,7 @@ export function HeroVideo() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-black/10" />
 
       {/* Hero content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-8 z-20">
+      <div className="relative min-h-svh flex flex-col justify-center items-center text-center px-8 pt-32 pb-20 md:py-28 z-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export function HeroVideo() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 hidden md:block"
       >
         <div className="flex flex-col items-center gap-3">
           <span className="chapter-title text-xs text-white/60">Scroll to explore</span>
