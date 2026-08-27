@@ -9,6 +9,9 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
+import Services from "./pages/Services";
+import Packages from "./pages/Packages";
+import PackageDetail from "./pages/PackageDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +24,9 @@ const AppRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/packages/:slug" element={<PackageDetail />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="/contact" element={<Contact />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
