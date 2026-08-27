@@ -142,7 +142,7 @@ const About = () => (
           >
             <div className="aspect-[4/5] overflow-hidden rounded-xl shadow-elevated">
               <img
-                src=photos.brandTee
+                src={photos.brandTee}
                 alt="Safari guide and guests on a Kenyan game drive"
                 className="w-full h-full object-cover"
                 loading="lazy"

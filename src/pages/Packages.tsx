@@ -118,7 +118,7 @@ const Packages = () => {
           badge="Every itinerary tailored to your dates — at no extra cost"
           title={<>Trips worth taking, priced without games</>}
           subtitle="Inbound safaris and beach escapes, outbound holidays and international educational trips — each with a day-by-day itinerary, honest inclusions and a from-price you can budget against."
-          image=photos.dunesLamu
+          image={photos.dunesLamu}
           imageAlt="Elephants on the Kenyan plains with Mount Kilimanjaro behind"
           primaryLabel="Get a tailored quote"
           secondaryLabel="Corporate & group travel"
