@@ -28,7 +28,10 @@ const AppRoutes = () => {
         <Route path="/safari-journeys" element={<Packages />} />
         <Route path="/safari-journeys/:slug" element={<PackageDetail />} />
         <Route path="/book" element={<Quote />} />
+        <Route path="/quote" element={<Navigate to="/book" replace />} />
+        <Route path="/packages" element={<Navigate to="/safari-journeys" replace />} />
         <Route path="/contact" element={<Contact />} />
+
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
