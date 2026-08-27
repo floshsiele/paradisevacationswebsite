@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import heroVideo from "@/assets/corporate-hero-v7.mp4.asset.json";
-import heroPoster from "@/assets/corporate-hero-v7-poster.jpg.asset.json";
+import heroVideo from "@/assets/corporate-hero-v8.mp4.asset.json";
+import heroPoster from "@/assets/corporate-hero-v8-poster.jpg.asset.json";
 
 export function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
