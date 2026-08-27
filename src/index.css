@@ -22,24 +22,24 @@
     --popover: 40 30% 99%;
     --popover-foreground: 210 15% 12%;
 
-    /* Emerald primary — rich safari green */
-    --primary: 164 100% 17%;
+    /* Deep navy primary — from the logo tagline */
+    --primary: 222 47% 18%;
     --primary-foreground: 40 33% 98%;
 
     /* Warm sand secondary */
     --secondary: 36 40% 93%;
-    --secondary-foreground: 210 15% 12%;
+    --secondary-foreground: 222 30% 16%;
 
     /* Muted elements */
     --muted: 36 28% 91%;
-    --muted-foreground: 214 12% 45%;
+    --muted-foreground: 222 12% 42%;
 
     /* Sunset gold accent */
     --accent: 38 88% 55%;
-    --accent-foreground: 164 100% 12%;
+    --accent-foreground: 222 47% 14%;
 
-    /* Jade support (replaces blue/teal) */
-    --teal: 162 72% 30%;
+    /* Sunset coral support — from the emblem sky */
+    --teal: 16 85% 55%;
     --teal-foreground: 40 33% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -48,33 +48,33 @@
     /* Subtle borders */
     --border: 36 25% 88%;
     --input: 36 25% 88%;
-    --ring: 164 100% 17%;
+    --ring: 222 47% 18%;
 
     --radius: 0.5rem;
 
     /* Sidebar tokens */
     --sidebar-background: 40 33% 98%;
-    --sidebar-foreground: 210 15% 12%;
-    --sidebar-primary: 164 100% 17%;
+    --sidebar-foreground: 222 30% 16%;
+    --sidebar-primary: 222 47% 18%;
     --sidebar-primary-foreground: 40 33% 98%;
     --sidebar-accent: 36 30% 92%;
-    --sidebar-accent-foreground: 210 15% 12%;
+    --sidebar-accent-foreground: 222 30% 16%;
     --sidebar-border: 36 25% 88%;
-    --sidebar-ring: 164 100% 17%;
+    --sidebar-ring: 222 47% 18%;
 
     /* Custom tokens */
-    --chapter-title: 164 72% 24%;
-    --overlay: 164 45% 10%;
+    --chapter-title: 16 70% 42%;
+    --overlay: 222 45% 10%;
     --sand-dark: 36 30% 94%;
-    --ocean-light: 150 50% 95%;
+    --ocean-light: 36 45% 95%;
 
     /* Gradients & elevation */
     --gradient-hero: linear-gradient(180deg, hsl(var(--overlay) / 0.15) 0%, hsl(var(--overlay) / 0.35) 55%, hsl(var(--overlay) / 0.78) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--teal)) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(24 88% 58%) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(164 100% 17%) 0%, hsl(162 72% 30%) 45%, hsl(38 88% 55%) 100%);
-    --shadow-soft: 0 2px 10px -4px hsl(164 45% 12% / 0.10);
-    --shadow-elevated: 0 20px 45px -22px hsl(164 45% 12% / 0.35);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(222 40% 28%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--teal)) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(222 47% 18%) 0%, hsl(16 85% 50%) 55%, hsl(38 88% 55%) 100%);
+    --shadow-soft: 0 2px 10px -4px hsl(222 45% 12% / 0.10);
+    --shadow-elevated: 0 20px 45px -22px hsl(222 45% 12% / 0.35);
     --shadow-glow: 0 12px 40px -12px hsl(var(--primary) / 0.45);
   }
 
