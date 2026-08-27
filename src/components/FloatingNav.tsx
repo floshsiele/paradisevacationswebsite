@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "Work", path: "/work" },
   { name: "About", path: "/about" },
+  { name: "Services", path: "/#services" },
+  { name: "Get a Quote", path: "/quote" },
   { name: "Contact", path: "/contact" },
-  { name: "Styleguide", path: "/styleguide" },
 ];
 
 // Pages with dark backgrounds (hero with dark overlay)
@@ -31,14 +31,14 @@ export function FloatingNav() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Show nav after scrolling down 100px
       if (currentScrollY > 100) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
@@ -64,9 +64,9 @@ export function FloatingNav() {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "font-display text-sm tracking-widest uppercase transition-all duration-400 link-underline",
+                  "font-sans text-sm tracking-widest uppercase transition-all duration-400 link-underline",
                   location.pathname === item.path
-                    ? "text-accent"
+                    ? "text-primary font-semibold"
                     : "text-foreground/70 hover:text-foreground"
                 )}
               >
@@ -93,7 +93,7 @@ export function StaticNav() {
 
   return (
     <>
-      <motion.nav 
+      <motion.nav
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -103,16 +103,16 @@ export function StaticNav() {
         )}
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className={cn(
-              "font-display text-xl tracking-widest transition-colors duration-400",
-              isDarkBackground 
-                ? "text-white/90 hover:text-white" 
+              "font-display text-xl tracking-wide transition-colors duration-400",
+              isDarkBackground
+                ? "text-white/90 hover:text-white"
                 : "text-foreground/90 hover:text-foreground"
             )}
           >
-            Noa Levi
+            Paradise Vacations
           </Link>
 
           {/* Desktop Menu */}
@@ -122,19 +122,29 @@ export function StaticNav() {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "font-display text-sm tracking-widest uppercase transition-all duration-400 link-underline",
+                  "font-sans text-sm tracking-widest uppercase transition-all duration-400 link-underline",
                   isDarkBackground
                     ? location.pathname === item.path
                       ? "text-white"
                       : "text-white/70 hover:text-white"
                     : location.pathname === item.path
-                      ? "text-foreground"
-                      : "text-foreground/60 hover:text-foreground"
+                      ? "text-primary font-semibold"
+                      : "text-foreground/70 hover:text-foreground"
                 )}
               >
                 {item.name}
               </Link>
             ))}
+            <a
+              href="tel:+254726927081"
+              className={cn(
+                "hidden lg:flex items-center gap-2 font-sans text-sm tracking-widest transition-colors duration-400",
+                isDarkBackground ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-foreground"
+              )}
+            >
+              <Phone size={14} />
+              0726 927 081
+            </a>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -162,11 +172,11 @@ export function StaticNav() {
             className="fixed inset-0 z-30 md:hidden"
           >
             {/* Backdrop */}
-            <div 
+            <div
               className="absolute inset-0 bg-background/98 backdrop-blur-md"
               onClick={() => setMobileMenuOpen(false)}
             />
-            
+
             {/* Menu Content */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -187,9 +197,9 @@ export function StaticNav() {
                     to={item.path}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
-                      "font-display text-2xl tracking-widest uppercase transition-all duration-400",
+                      "font-sans text-2xl tracking-widest uppercase transition-all duration-400",
                       location.pathname === item.path
-                        ? "text-accent"
+                        ? "text-primary font-semibold"
                         : "text-foreground/70 hover:text-foreground"
                     )}
                   >
@@ -197,6 +207,13 @@ export function StaticNav() {
                   </Link>
                 </motion.div>
               ))}
+              <a
+                href="tel:+254726927081"
+                className="flex items-center gap-2 font-sans text-lg text-foreground/70 mt-4"
+              >
+                <Phone size={18} />
+                0726 927 081
+              </a>
             </motion.div>
           </motion.div>
         )}

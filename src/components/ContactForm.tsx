@@ -10,7 +10,9 @@ export function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    weddingDate: "",
+    phone: "",
+    destination: "",
+    travelDate: "",
     message: "",
   });
   const { toast } = useToast();
@@ -23,11 +25,11 @@ export function ContactForm() {
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     toast({
-      title: "Message sent",
-      description: "Thank you for reaching out. I'll be in touch soon.",
+      title: "Quote request received",
+      description: "Thank you for reaching out. Our travel consultants will be in touch soon.",
     });
 
-    setFormData({ name: "", email: "", weddingDate: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", destination: "", travelDate: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -38,12 +40,12 @@ export function ContactForm() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       onSubmit={handleSubmit}
-      className="max-w-xl mx-auto space-y-8"
+      className="max-w-2xl mx-auto space-y-6"
     >
-      <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="name" className="chapter-title text-xs block">
-            Your Name
+            Full Name
           </label>
           <Input
             id="name"
@@ -51,8 +53,8 @@ export function ContactForm() {
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="bg-transparent border-0 border-b border-border rounded-none px-0 py-3 font-serif text-lg focus-visible:ring-0 focus-visible:border-accent transition-colors"
-            placeholder="How should I address you?"
+            className="bg-background border-border rounded-md px-4 py-3 font-sans focus-visible:ring-primary"
+            placeholder="Your name"
           />
         </div>
 
@@ -66,46 +68,76 @@ export function ContactForm() {
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="bg-transparent border-0 border-b border-border rounded-none px-0 py-3 font-serif text-lg focus-visible:ring-0 focus-visible:border-accent transition-colors"
+            className="bg-background border-border rounded-md px-4 py-3 font-sans focus-visible:ring-primary"
             placeholder="your@email.com"
           />
         </div>
+      </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label htmlFor="weddingDate" className="chapter-title text-xs block">
-            Wedding Date (if known)
+          <label htmlFor="phone" className="chapter-title text-xs block">
+            Phone Number
           </label>
           <Input
-            id="weddingDate"
-            type="text"
-            value={formData.weddingDate}
-            onChange={(e) => setFormData({ ...formData, weddingDate: e.target.value })}
-            className="bg-transparent border-0 border-b border-border rounded-none px-0 py-3 font-serif text-lg focus-visible:ring-0 focus-visible:border-accent transition-colors"
-            placeholder="Month, Year or exact date"
+            id="phone"
+            type="tel"
+            value={formData.phone}
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            className="bg-background border-border rounded-md px-4 py-3 font-sans focus-visible:ring-primary"
+            placeholder="+254 700 000 000"
           />
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="message" className="chapter-title text-xs block">
-            Your Story
+          <label htmlFor="destination" className="chapter-title text-xs block">
+            Destination
           </label>
-          <Textarea
-            id="message"
-            required
-            value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="bg-transparent border-0 border-b border-border rounded-none px-0 py-3 font-serif text-lg focus-visible:ring-0 focus-visible:border-accent transition-colors resize-none min-h-[120px]"
-            placeholder="Tell me a little about yourselves and your vision for the day..."
+          <Input
+            id="destination"
+            type="text"
+            value={formData.destination}
+            onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
+            className="bg-background border-border rounded-md px-4 py-3 font-sans focus-visible:ring-primary"
+            placeholder="Where would you like to go?"
           />
         </div>
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="travelDate" className="chapter-title text-xs block">
+          Preferred Travel Date
+        </label>
+        <Input
+          id="travelDate"
+          type="text"
+          value={formData.travelDate}
+          onChange={(e) => setFormData({ ...formData, travelDate: e.target.value })}
+          className="bg-background border-border rounded-md px-4 py-3 font-sans focus-visible:ring-primary"
+          placeholder="Month, Year or exact date"
+        />
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="message" className="chapter-title text-xs block">
+          Your Travel Request
+        </label>
+        <Textarea
+          id="message"
+          required
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          className="bg-background border-border rounded-md px-4 py-3 font-sans focus-visible:ring-primary resize-none min-h-[140px]"
+          placeholder="Tell us about your trip, number of travelers, interests..."
+        />
       </div>
 
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-transparent hover:bg-accent/10 text-foreground border border-foreground/20 hover:border-accent rounded-none py-6 font-display text-sm tracking-widest uppercase transition-all duration-300"
+        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-md py-6 font-sans text-sm tracking-widest uppercase transition-all duration-300"
       >
-        {isSubmitting ? "Sending..." : "Begin the Conversation"}
+        {isSubmitting ? "Sending..." : "Request Your Quote"}
       </Button>
     </motion.form>
   );
