@@ -54,7 +54,7 @@ export function HeroVideo() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-black/10" />
 
       {/* Hero content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-8 z-20">
+      <div className="absolute inset-0 flex flex-col justify-end md:justify-center items-center text-center px-8 pt-32 pb-24 md:py-0 z-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
