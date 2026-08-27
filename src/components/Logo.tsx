@@ -22,7 +22,7 @@ export function Logo({ variant = "dark", className }: LogoProps) {
       <img
         src="/paradise-emblem.png"
         alt="Paradise Vacations emblem"
-        className="h-12 md:h-14 w-auto shrink-0 rounded-full transition-transform duration-500 group-hover:scale-105"
+        className="h-12 md:h-16 w-12 md:w-16 shrink-0 rounded-full object-cover ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105"
         width={246}
         height={246}
       />
