@@ -107,13 +107,13 @@ export function StaticNav() {
           <Logo variant={isDarkBackground ? "light" : "dark"} />
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "font-sans text-sm tracking-widest uppercase transition-all duration-400 link-underline",
+                  "font-sans text-xs lg:text-sm tracking-widest uppercase whitespace-nowrap transition-all duration-400 link-underline",
                   isDarkBackground
                     ? location.pathname === item.path
                       ? "text-white"
@@ -129,7 +129,7 @@ export function StaticNav() {
             <a
               href="tel:+254726927081"
               className={cn(
-                "hidden lg:flex items-center gap-2 font-sans text-sm tracking-widest transition-colors duration-400",
+                "hidden xl:flex items-center gap-2 font-sans text-sm tracking-widest whitespace-nowrap transition-colors duration-400",
                 isDarkBackground ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-foreground"
               )}
             >
