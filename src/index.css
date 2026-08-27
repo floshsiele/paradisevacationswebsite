@@ -11,123 +11,117 @@
 
 @layer base {
   :root {
-    /* Warm sand background */
-    --background: 40 33% 98%;
-    --foreground: 210 15% 12%;
+    /* Airy sky-blue background */
+    --background: 205 60% 99%;
+    --foreground: 212 45% 14%;
 
-    /* Cards */
-    --card: 40 30% 99%;
-    --card-foreground: 210 15% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 212 45% 14%;
 
-    --popover: 40 30% 99%;
-    --popover-foreground: 210 15% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 45% 14%;
 
-    /* Deep navy primary — from the logo tagline */
-    --primary: 222 47% 18%;
-    --primary-foreground: 40 33% 98%;
+    /* Sky blue primary */
+    --primary: 205 85% 42%;
+    --primary-foreground: 205 60% 99%;
 
-    /* Warm sand secondary */
-    --secondary: 36 40% 93%;
-    --secondary-foreground: 222 30% 16%;
+    /* Pale sky secondary */
+    --secondary: 202 60% 94%;
+    --secondary-foreground: 212 42% 18%;
 
-    /* Muted elements */
-    --muted: 36 28% 91%;
-    --muted-foreground: 222 12% 42%;
+    --muted: 202 45% 94%;
+    --muted-foreground: 212 18% 44%;
 
-    /* Sunset gold accent */
+    /* Sunset gold accent — from the logo */
     --accent: 38 88% 55%;
-    --accent-foreground: 222 47% 14%;
+    --accent-foreground: 212 45% 14%;
 
-    /* Sunset coral support — from the emblem sky */
-    --teal: 16 85% 55%;
-    --teal-foreground: 40 33% 98%;
+    /* Bright sky support */
+    --teal: 197 88% 58%;
+    --teal-foreground: 212 45% 14%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 33% 98%;
+    --destructive-foreground: 205 60% 99%;
 
-    /* Subtle borders */
-    --border: 36 25% 88%;
-    --input: 36 25% 88%;
-    --ring: 222 47% 18%;
+    --border: 205 35% 88%;
+    --input: 205 35% 88%;
+    --ring: 205 85% 42%;
 
     --radius: 0.5rem;
 
-    /* Sidebar tokens */
-    --sidebar-background: 40 33% 98%;
-    --sidebar-foreground: 222 30% 16%;
-    --sidebar-primary: 222 47% 18%;
-    --sidebar-primary-foreground: 40 33% 98%;
-    --sidebar-accent: 36 30% 92%;
-    --sidebar-accent-foreground: 222 30% 16%;
-    --sidebar-border: 36 25% 88%;
-    --sidebar-ring: 222 47% 18%;
+    --sidebar-background: 205 60% 99%;
+    --sidebar-foreground: 212 42% 18%;
+    --sidebar-primary: 205 85% 42%;
+    --sidebar-primary-foreground: 205 60% 99%;
+    --sidebar-accent: 202 55% 94%;
+    --sidebar-accent-foreground: 212 42% 18%;
+    --sidebar-border: 205 35% 88%;
+    --sidebar-ring: 205 85% 42%;
 
-    /* Custom tokens */
-    --chapter-title: 16 70% 42%;
-    --overlay: 222 45% 10%;
-    --sand-dark: 36 30% 94%;
-    --ocean-light: 36 45% 95%;
+    --chapter-title: 205 75% 38%;
+    --overlay: 212 60% 12%;
+    --sand-dark: 202 50% 95%;
+    --ocean-light: 200 65% 96%;
 
-    /* Gradients & elevation */
-    --gradient-hero: linear-gradient(180deg, hsl(var(--overlay) / 0.15) 0%, hsl(var(--overlay) / 0.35) 55%, hsl(var(--overlay) / 0.78) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(222 40% 28%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--teal)) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(222 47% 18%) 0%, hsl(16 85% 50%) 55%, hsl(38 88% 55%) 100%);
-    --shadow-soft: 0 2px 10px -4px hsl(222 45% 12% / 0.10);
-    --shadow-elevated: 0 20px 45px -22px hsl(222 45% 12% / 0.35);
+    --gradient-hero: linear-gradient(180deg, hsl(var(--overlay) / 0.12) 0%, hsl(var(--overlay) / 0.35) 55%, hsl(var(--overlay) / 0.78) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(197 88% 58%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(197 88% 58%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(205 85% 34%) 0%, hsl(197 88% 58%) 55%, hsl(38 88% 58%) 100%);
+    --shadow-soft: 0 2px 10px -4px hsl(205 60% 20% / 0.12);
+    --shadow-elevated: 0 20px 45px -22px hsl(205 60% 20% / 0.35);
     --shadow-glow: 0 12px 40px -12px hsl(var(--primary) / 0.45);
   }
 
   .dark {
-    --background: 222 40% 9%;
-    --foreground: 40 20% 92%;
+    --background: 212 45% 9%;
+    --foreground: 200 30% 94%;
 
-    --card: 222 36% 12%;
-    --card-foreground: 40 20% 92%;
+    --card: 212 40% 12%;
+    --card-foreground: 200 30% 94%;
 
-    --popover: 222 36% 12%;
-    --popover-foreground: 40 20% 92%;
+    --popover: 212 40% 12%;
+    --popover-foreground: 200 30% 94%;
 
-    --primary: 38 88% 55%;
-    --primary-foreground: 222 45% 10%;
+    --primary: 197 88% 60%;
+    --primary-foreground: 212 45% 10%;
 
-    --secondary: 222 28% 17%;
-    --secondary-foreground: 40 20% 92%;
+    --secondary: 212 30% 17%;
+    --secondary-foreground: 200 30% 94%;
 
-    --muted: 222 28% 17%;
-    --muted-foreground: 40 10% 62%;
+    --muted: 212 30% 17%;
+    --muted-foreground: 200 14% 65%;
 
-    --accent: 16 85% 58%;
-    --accent-foreground: 40 33% 98%;
+    --accent: 38 88% 58%;
+    --accent-foreground: 212 45% 10%;
 
-    --teal: 16 80% 60%;
-    --teal-foreground: 222 45% 10%;
+    --teal: 197 85% 62%;
+    --teal-foreground: 212 45% 10%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 20% 92%;
+    --destructive-foreground: 200 30% 94%;
 
-    --border: 222 22% 22%;
-    --input: 222 22% 22%;
-    --ring: 38 88% 55%;
+    --border: 212 24% 23%;
+    --input: 212 24% 23%;
+    --ring: 197 88% 60%;
 
-    --sidebar-background: 222 40% 9%;
-    --sidebar-foreground: 40 20% 92%;
-    --sidebar-primary: 38 88% 55%;
-    --sidebar-primary-foreground: 222 45% 10%;
-    --sidebar-accent: 222 28% 17%;
-    --sidebar-accent-foreground: 40 20% 92%;
-    --sidebar-border: 222 22% 22%;
-    --sidebar-ring: 38 88% 55%;
+    --sidebar-background: 212 45% 9%;
+    --sidebar-foreground: 200 30% 94%;
+    --sidebar-primary: 197 88% 60%;
+    --sidebar-primary-foreground: 212 45% 10%;
+    --sidebar-accent: 212 30% 17%;
+    --sidebar-accent-foreground: 200 30% 94%;
+    --sidebar-border: 212 24% 23%;
+    --sidebar-ring: 197 88% 60%;
 
-    --chapter-title: 38 80% 60%;
-    --overlay: 222 45% 8%;
-    --sand-dark: 222 28% 15%;
-    --ocean-light: 222 28% 17%;
+    --chapter-title: 197 85% 65%;
+    --overlay: 212 55% 7%;
+    --sand-dark: 212 30% 15%;
+    --ocean-light: 212 30% 17%;
 
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 0% / 0.2) 0%, hsl(0 0% 0% / 0.45) 55%, hsl(0 0% 0% / 0.85) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(16 85% 55%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(24 88% 60%) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(222 45% 20%) 0%, hsl(16 85% 50%) 55%, hsl(38 88% 58%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(205 85% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(197 88% 60%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(205 85% 30%) 0%, hsl(197 88% 55%) 55%, hsl(38 88% 58%) 100%);
     --shadow-soft: 0 2px 10px -4px hsl(0 0% 0% / 0.5);
     --shadow-elevated: 0 20px 45px -22px hsl(0 0% 0% / 0.7);
     --shadow-glow: 0 12px 40px -12px hsl(var(--primary) / 0.5);
