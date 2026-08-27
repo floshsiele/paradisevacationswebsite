@@ -9,7 +9,7 @@ import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
-import { Globe, Shield, HeartHandshake, Award, Users, Phone } from "lucide-react";
+import { Globe, Shield, HeartHandshake, Award } from "lucide-react";
 
 const values = [
   {
@@ -318,13 +318,6 @@ const About = () => (
 
       <SiteFooter />
       <StickyCta />
-      <a
-        href="tel:+254726927081"
-        className="sr-only"
-        aria-hidden="true"
-      >
-        <Phone size={0} />
-      </a>
     </div>
   </PageTransition>
 );
