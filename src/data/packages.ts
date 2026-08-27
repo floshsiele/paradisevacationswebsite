@@ -26,7 +26,7 @@ export const packages: TravelPackage[] = [
     priceFrom: "USD 620 per person",
     summary:
       "Kenya's most iconic reserve — big cats, endless plains, and the Great Migration river crossings in season.",
-    image: photos.lionessSafari,
+    image: photos.safariConvoy,
     highlights: [
       "Full-day game drives in a 4x4 pop-top land cruiser",
       "Great Migration viewing (July – October)",
@@ -51,7 +51,7 @@ export const packages: TravelPackage[] = [
     priceFrom: "USD 540 per person",
     summary:
       "Great herds of elephants framed by the snow-capped peak of Mount Kilimanjaro — the classic African photograph.",
-    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=85",
+    image: photos.safariElephant,
     highlights: [
       "Large elephant herds at close range",
       "Kilimanjaro sunrise views",
@@ -156,7 +156,7 @@ export const packages: TravelPackage[] = [
     priceFrom: "USD 260 per delegate",
     summary:
       "Team offsites and incentive trips with meeting facilities, activities, and logistics handled end-to-end.",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=85",
+    image: photos.safariFleet,
     highlights: [
       "Conference room with full AV setup",
       "Team-building activities",

@@ -89,7 +89,7 @@ const services = [
     id: "programmes",
     label: "Programmes",
     title: "Tailor-Made Programmes & Excursions",
-    image: photos.lionessSafari,
+    image: photos.safariElephant,
     icon: Binoculars,
     intro:
       "Bespoke itineraries for overseas tour operators, corporate groups and luxury travellers, built around your clients' interests.",
