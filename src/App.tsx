@@ -9,7 +9,8 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
-import Services from "./pages/Services";
+import CorporateTravel from "./pages/CorporateTravel";
+import DMC from "./pages/DMC";
 import Packages from "./pages/Packages";
 import PackageDetail from "./pages/PackageDetail";
 import NotFound from "./pages/NotFound";
@@ -24,12 +25,15 @@ const AppRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/safari-journeys" element={<Packages />} />
-        <Route path="/safari-journeys/:slug" element={<PackageDetail />} />
+        <Route path="/corporate-travel" element={<CorporateTravel />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/packages/:slug" element={<PackageDetail />} />
+        <Route path="/dmc" element={<DMC />} />
         <Route path="/book" element={<Quote />} />
         <Route path="/quote" element={<Navigate to="/book" replace />} />
-        <Route path="/packages" element={<Navigate to="/safari-journeys" replace />} />
+        <Route path="/services" element={<Navigate to="/packages" replace />} />
+        <Route path="/safari-journeys" element={<Navigate to="/packages" replace />} />
+        <Route path="/safari-journeys/:slug" element={<Navigate to="/packages" replace />} />
         <Route path="/contact" element={<Contact />} />
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

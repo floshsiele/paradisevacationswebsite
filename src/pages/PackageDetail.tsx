@@ -20,8 +20,8 @@ const PackageDetail = () => {
           <div className="flex-1 flex flex-col items-center justify-center px-8 text-center">
             <h1 className="font-display text-3xl mb-4">Package not found</h1>
             <p className="font-sans text-muted-foreground mb-8">This itinerary may have been renamed or retired.</p>
-            <Link to="/safari-journeys" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md">
-              <ArrowLeft size={16} /> All Journeys
+            <Link to="/packages" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md">
+              <ArrowLeft size={16} /> All Packages
             </Link>
           </div>
           <SiteFooter />
@@ -32,7 +32,7 @@ const PackageDetail = () => {
 
   const related = packages.filter((p) => p.slug !== pkg.slug).slice(0, 3);
   const faqs = getPackageFaqs(pkg);
-  const path = `/safari-journeys/${pkg.slug}`;
+  const path = `/packages/${pkg.slug}`;
 
   return (
     <PageTransition>
@@ -69,7 +69,7 @@ const PackageDetail = () => {
               "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-                { "@type": "ListItem", position: 2, name: "Safari Journeys", item: "/safari-journeys" },
+                { "@type": "ListItem", position: 2, name: "Packages", item: "/packages" },
                 { "@type": "ListItem", position: 3, name: pkg.name, item: path },
               ],
             },
@@ -231,12 +231,12 @@ const PackageDetail = () => {
         {/* Related */}
         <section className="py-20 px-8 md:px-16 bg-ocean-light">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">Other Journeys You May Like</h2>
+            <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">Other Packages You May Like</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {related.map((p) => (
                 <Link
                   key={p.slug}
-                  to={`/safari-journeys/${p.slug}`}
+                  to={`/packages/${p.slug}`}
                   className="group rounded-lg overflow-hidden bg-background border border-border/60 hover:shadow-lg transition-all duration-500"
                 >
                   <div className="aspect-[16/10] overflow-hidden">
@@ -250,8 +250,8 @@ const PackageDetail = () => {
               ))}
             </div>
             <div className="text-center mt-12">
-              <Link to="/safari-journeys" className="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-primary">
-                <ArrowLeft size={14} /> All Journeys
+              <Link to="/packages" className="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-primary">
+                <ArrowLeft size={14} /> All Packages
               </Link>
             </div>
           </div>
