@@ -5,10 +5,8 @@ import { HeroVideo } from "@/components/HeroVideo";
 import { PageTransition } from "@/components/PageTransition";
 import { TrustBar } from "@/components/TrustBar";
 import { FeaturedPackages } from "@/components/FeaturedPackages";
-import { WhyUs } from "@/components/WhyUs";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Testimonials } from "@/components/Testimonials";
-import { LoyaltySection } from "@/components/LoyaltySection";
 import { HomeFaq, homeFaqs } from "@/components/HomeFaq";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
@@ -56,8 +54,6 @@ const stats = [
   { label: "Average corporate saving", value: "30%" },
   { label: "Support, every day", value: "24/7" },
 ];
-
-const clients = ["Mbogo", "Kipsigis", "Kipchimatt", "Kuresoi", "KG Group", "WVS"];
 
 const Index = () => {
   return (
@@ -151,7 +147,6 @@ const Index = () => {
         </section>
 
         <FeaturedPackages />
-        <WhyUs />
 
         {/* Stats */}
         <section className="py-16 px-6 md:px-16 bg-gradient-primary text-primary-foreground">
@@ -173,24 +168,7 @@ const Index = () => {
           </div>
         </section>
 
-        <HowItWorks />
         <Testimonials />
-
-        {/* Clients */}
-        <section className="py-16 px-6 md:px-16 bg-sand-dark">
-          <div className="max-w-6xl mx-auto text-center">
-            <span className="chapter-title text-xs mb-6 block">Trusted By</span>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-14 opacity-70">
-              {clients.map((client) => (
-                <div key={client} className="font-display text-xl md:text-2xl text-muted-foreground tracking-wide">
-                  {client}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <LoyaltySection />
         <HomeFaq />
 
         {/* Final CTA */}
