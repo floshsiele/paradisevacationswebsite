@@ -1,7 +1,7 @@
 export type TravelPackage = {
   slug: string;
   name: string;
-  category: "Safari" | "Beach" | "Outbound" | "Corporate";
+  category: "Inbound" | "Outbound" | "Educational" | "Corporate";
   duration: string;
   destination: string;
   priceFrom: string;
@@ -18,7 +18,7 @@ export const packages: TravelPackage[] = [
   {
     slug: "masai-mara-safari",
     name: "Masai Mara Classic Safari",
-    category: "Safari",
+    category: "Inbound",
     duration: "3 Days / 2 Nights",
     destination: "Masai Mara National Reserve, Kenya",
     priceFrom: "USD 620 per person",
@@ -43,7 +43,7 @@ export const packages: TravelPackage[] = [
   {
     slug: "amboseli-kilimanjaro",
     name: "Amboseli & Kilimanjaro Views",
-    category: "Safari",
+    category: "Inbound",
     duration: "3 Days / 2 Nights",
     destination: "Amboseli National Park, Kenya",
     priceFrom: "USD 540 per person",
@@ -68,7 +68,7 @@ export const packages: TravelPackage[] = [
   {
     slug: "diani-beach-escape",
     name: "Diani Beach Escape",
-    category: "Beach",
+    category: "Inbound",
     duration: "4 Days / 3 Nights",
     destination: "Diani, Kenyan South Coast",
     priceFrom: "USD 480 per person",
@@ -168,6 +168,62 @@ export const packages: TravelPackage[] = [
     includes: ["Group transport", "Full board accommodation", "Conference package", "Coordinator", "Activity fees"],
     excludes: ["Extra nights", "Personal expenses", "Alcoholic beverages"],
     bestTime: "Year round, subject to venue availability.",
+  },
+  {
+    slug: "uk-educational-trip",
+    name: "United Kingdom Educational Trip",
+    category: "Educational",
+    duration: "7 Days / 6 Nights",
+    destination: "London, Oxford & Cambridge, United Kingdom",
+    priceFrom: "USD 2,450 per student",
+    summary:
+      "A structured study tour for schools and colleges combining university campus visits, museums and guided history walks across London, Oxford and Cambridge.",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=85",
+    highlights: [
+      "Guided visits to Oxford and Cambridge colleges",
+      "British Museum and Science Museum sessions",
+      "University admissions and careers talks",
+      "Teacher-to-student ratio planning and full supervision",
+    ],
+    itinerary: [
+      { day: "Day 1", title: "Arrival in London", description: "Airport meet-and-greet, transfer to student accommodation, orientation and welcome briefing." },
+      { day: "Day 2", title: "London Landmarks", description: "Guided walk through Westminster, Big Ben and the South Bank with a history-focused guide." },
+      { day: "Day 3", title: "Museums Day", description: "British Museum in the morning and Science Museum workshops in the afternoon." },
+      { day: "Day 4", title: "Oxford Campus Visit", description: "Day trip to Oxford with college tours and an admissions information session." },
+      { day: "Day 5", title: "Cambridge Campus Visit", description: "Day trip to Cambridge, punting on the Cam and a student-life Q&A." },
+      { day: "Day 6", title: "Careers & Culture", description: "Careers talk, Greenwich Observatory visit and a group reflection session." },
+      { day: "Day 7", title: "Departure", description: "Free morning for shopping, then transfer to the airport for the flight home." },
+    ],
+    includes: ["Return international flights", "Student accommodation with breakfast and dinner", "All ground transport", "Entrance fees for listed sites", "Tour manager throughout", "Group travel insurance"],
+    excludes: ["Visa fees", "Lunches", "Personal spending", "Optional excursions"],
+    bestTime: "April, July and October, aligned with school holidays and university open days.",
+  },
+  {
+    slug: "dubai-stem-study-tour",
+    name: "Dubai STEM & Innovation Study Tour",
+    category: "Educational",
+    duration: "5 Days / 4 Nights",
+    destination: "Dubai, United Arab Emirates",
+    priceFrom: "USD 1,380 per student",
+    summary:
+      "A short-format international educational trip built around science, technology and innovation — ideal for high school and college STEM groups.",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=85",
+    highlights: [
+      "Museum of the Future and Dubai Frame visits",
+      "Sustainable City and clean-energy site tour",
+      "University campus visit and admissions session",
+      "Desert ecology and conservation activity",
+    ],
+    itinerary: [
+      { day: "Day 1", title: "Arrival & Orientation", description: "Airport transfer, hotel check-in and an evening orientation walk at Dubai Marina." },
+      { day: "Day 2", title: "Museum of the Future", description: "Guided innovation-focused visit followed by a robotics and AI workshop." },
+      { day: "Day 3", title: "Sustainability Day", description: "Tour of the Sustainable City and a solar-energy briefing, then Dubai Frame." },
+      { day: "Day 4", title: "Campus & Desert Ecology", description: "Morning university campus visit, afternoon desert conservation and astronomy session." },
+      { day: "Day 5", title: "Departure", description: "Group debrief, souvenir stop and transfer to the airport." },
+    ],
+    includes: ["Return flights from Nairobi", "Hotel accommodation on half board", "Air-conditioned group transport", "All listed entrance fees and workshops", "Tour manager and local guides", "Group travel insurance"],
+    excludes: ["UAE visa fees", "Lunches", "Personal spending", "Optional theme-park add-ons"],
+    bestTime: "November to March, when Dubai temperatures are comfortable for group activities.",
   },
 ];
 
