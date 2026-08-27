@@ -99,7 +99,7 @@ export function StaticNav() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 py-6 px-6 md:py-8 md:px-16",
+          "fixed top-0 left-0 right-0 z-40 py-4 px-6 md:py-5 md:px-16",
           isDarkBackground ? "bg-transparent" : "bg-background/95 backdrop-blur-sm border-b border-border/30"
         )}
       >
