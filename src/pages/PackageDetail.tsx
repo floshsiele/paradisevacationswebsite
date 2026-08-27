@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
-import { getPackage, packages } from "@/data/packages";
+import { getPackage, packages } from "@/data/safari-journeys";
 import { ArrowLeft, ArrowRight, Calendar, Check, Clock, MapPin, Tag, X } from "lucide-react";
 
 const PackageDetail = () => {
@@ -18,7 +18,7 @@ const PackageDetail = () => {
           <div className="flex-1 flex flex-col items-center justify-center px-8 text-center">
             <h1 className="font-display text-3xl mb-4">Package not found</h1>
             <p className="font-sans text-muted-foreground mb-8">This itinerary may have been renamed or retired.</p>
-            <Link to="/packages" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md">
+            <Link to="/safari-journeys" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md">
               <ArrowLeft size={16} /> All Packages
             </Link>
           </div>
@@ -115,7 +115,7 @@ const PackageDetail = () => {
               </div>
 
               <Link
-                to="/quote"
+                to="/book"
                 className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300 mb-3"
               >
                 Get Your Quote <ArrowRight size={16} />
@@ -140,7 +140,7 @@ const PackageDetail = () => {
               {related.map((p) => (
                 <Link
                   key={p.slug}
-                  to={`/packages/${p.slug}`}
+                  to={`/safari-journeys/${p.slug}`}
                   className="group rounded-lg overflow-hidden bg-background border border-border/60 hover:shadow-lg transition-all duration-500"
                 >
                   <div className="aspect-[16/10] overflow-hidden">
@@ -154,7 +154,7 @@ const PackageDetail = () => {
               ))}
             </div>
             <div className="text-center mt-12">
-              <Link to="/packages" className="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-primary">
+              <Link to="/safari-journeys" className="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-primary">
                 <ArrowLeft size={14} /> All Packages
               </Link>
             </div>

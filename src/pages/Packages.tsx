@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
-import { packages } from "@/data/packages";
+import { packages } from "@/data/safari-journeys";
 import { ArrowRight, Clock, MapPin } from "lucide-react";
 
 const filters = ["All", "Safari", "Beach", "Outbound", "Corporate"] as const;
@@ -56,7 +56,7 @@ const Packages = () => {
                 transition={{ duration: 0.5, delay: index * 0.06 }}
                 className="group flex flex-col rounded-lg overflow-hidden border border-border/60 bg-background hover:shadow-lg transition-all duration-500"
               >
-                <Link to={`/packages/${pkg.slug}`} className="relative aspect-[16/10] overflow-hidden">
+                <Link to={`/safari-journeys/${pkg.slug}`} className="relative aspect-[16/10] overflow-hidden">
                   <img
                     src={pkg.image}
                     alt={pkg.name}
@@ -70,7 +70,7 @@ const Packages = () => {
 
                 <div className="flex flex-col flex-1 p-6">
                   <h2 className="font-display text-xl mb-2">
-                    <Link to={`/packages/${pkg.slug}`} className="hover:text-primary transition-colors">
+                    <Link to={`/safari-journeys/${pkg.slug}`} className="hover:text-primary transition-colors">
                       {pkg.name}
                     </Link>
                   </h2>
@@ -82,7 +82,7 @@ const Packages = () => {
                   <div className="mt-auto flex items-center justify-between">
                     <span className="font-sans text-sm text-foreground">From <strong>{pkg.priceFrom.replace(" per person", "").replace(" per delegate", "")}</strong></span>
                     <Link
-                      to={`/packages/${pkg.slug}`}
+                      to={`/safari-journeys/${pkg.slug}`}
                       className="inline-flex items-center gap-1.5 font-sans text-sm tracking-widest uppercase text-primary hover:gap-3 transition-all"
                     >
                       Details <ArrowRight size={14} />

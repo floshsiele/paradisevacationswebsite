@@ -194,7 +194,7 @@ const Index = () => {
                 Get a personalized quote from our travel consultants. We'll handle the details so you can focus on the experience.
               </p>
               <Link
-                to="/quote"
+                to="/book"
                 className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
               >
                 Get Your Quote <ArrowRight size={16} />
@@ -219,7 +219,7 @@ const Index = () => {
                 <Link to="/" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Home</Link>
                 <Link to="/about" className="font-sans text-sm text-background/70 hover:text-background transition-colors">About Us</Link>
                 <Link to="/services" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Services</Link>
-                <Link to="/quote" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Get a Quote</Link>
+                <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Get a Quote</Link>
                 <Link to="/contact" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Contact</Link>
               </nav>
             </div>
