@@ -49,7 +49,7 @@ export const packages: TravelPackage[] = [
     priceFrom: "USD 540 per person",
     summary:
       "Great herds of elephants framed by the snow-capped peak of Mount Kilimanjaro — the classic African photograph.",
-    image: "https://images.unsplash.com/photo-1523805009345-7448843a9fbc?w=1600&q=85",
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=85",
     highlights: [
       "Large elephant herds at close range",
       "Kilimanjaro sunrise views",
