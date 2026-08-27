@@ -5,6 +5,7 @@ import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
 import { packages } from "@/data/packages";
+import { Seo } from "@/components/Seo";
 import { ArrowRight, Clock, MapPin } from "lucide-react";
 
 const filters = ["All", "Safari", "Beach", "Outbound", "Corporate"] as const;
@@ -16,6 +17,22 @@ const Packages = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
+        <Seo
+          title="Kenya Safari & Holiday Packages with Prices | Paradise Vacations"
+          description="Browse safari, beach, outbound and corporate travel packages from Paradise Vacations Kenya — day-by-day itineraries, inclusions and prices from USD 620 per person."
+          path="/safari-journeys"
+          jsonLd={{
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Travel packages",
+            itemListElement: packages.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: p.name,
+              url: `/safari-journeys/${p.slug}`,
+            })),
+          }}
+        />
         <StaticNav />
 
         <section className="pt-32 pb-12 px-8 md:px-16">

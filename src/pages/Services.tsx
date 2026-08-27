@@ -4,6 +4,7 @@ import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
 import { ArrowRight, Binoculars, Map, Ticket, Hotel, Users, Shield, FileCheck, Briefcase } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 const detailedServices = [
   {
@@ -57,6 +58,24 @@ const detailedServices = [
       "Seat, baggage and special assistance requests",
     ],
   },
+  {
+    id: "corporate-travel",
+    label: "Corporate Travel",
+    title: "Corporate Travel Management",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=85",
+    icon: Briefcase,
+    intro:
+      "A managed travel programme for organisations in Kenya and the region — policy, bookings, cost control and 24/7 traveller support in one account.",
+    body: "We act as an extension of your admin and finance teams: booking flights, hotels and ground transport within your travel policy, negotiating corporate rates with airlines and hotels, consolidating invoicing, and reporting on spend so you can see exactly where the travel budget goes. Duty-of-care sits at the centre — travellers reach a real person any time a flight cancels, a visa stalls or plans change mid-trip.",
+    points: [
+      "Travel policy design and approval workflows",
+      "Negotiated corporate airline and hotel rates",
+      "Consolidated invoicing and monthly spend reporting",
+      "Visa, ETA and travel insurance handling for staff",
+      "MICE, conferences and incentive travel for teams",
+      "24/7 emergency support for travelling staff",
+    ],
+  },
 ];
 
 const supportServices = [
@@ -65,13 +84,35 @@ const supportServices = [
   { icon: Shield, title: "Travel Insurance", description: "Comprehensive medical and trip coverage so you travel with total peace of mind." },
   { icon: FileCheck, title: "Visa Assistance", description: "Guided visa application support and documentation review for major destinations." },
   { icon: Ticket, title: "Electronic Travel Authorization", description: "Fast, reliable ETA processing for Kenya and other eligible destinations." },
-  { icon: Briefcase, title: "Corporate Travel Management", description: "Travel policy design, reporting, cost control and round-the-clock traveller support." },
 ];
 
 const Services = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
+        <Seo
+          title="Safari, DMC & Corporate Travel Services | Paradise Vacations Kenya"
+          description="Safari and holiday packages, destination management (DMC) in Kenya and East Africa, air ticketing, corporate travel management, MICE, visas, ETA and travel insurance."
+          path="/services"
+          jsonLd={{
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Travel services by Paradise Vacations Kenya",
+            itemListElement: detailedServices.map((s, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              item: {
+                "@type": "Service",
+                name: s.title,
+                description: s.intro,
+                serviceType: s.label,
+                areaServed: "Kenya and East Africa",
+                url: `/services#${s.id}`,
+                provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
+              },
+            })),
+          }}
+        />
         <StaticNav />
 
         <section className="pt-32 pb-16 px-8 md:px-16">
