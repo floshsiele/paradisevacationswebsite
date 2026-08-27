@@ -143,7 +143,7 @@ const About = () => (
             <div className="aspect-[4/5] overflow-hidden rounded-xl shadow-elevated">
               <img
                 src={photos.brandTee}
-                alt="Safari guide and guests on a Kenyan game drive"
+                alt="Paradise Group Travels branded tee by the ocean — travel is our business"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
