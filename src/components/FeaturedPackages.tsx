@@ -56,7 +56,7 @@ export function FeaturedPackages() {
                   <h3 className="font-display text-xl mb-2 group-hover:text-primary transition-colors">{p.name}</h3>
                   <div className="flex items-center gap-4 text-xs text-muted-foreground font-sans mb-4">
                     <span className="inline-flex items-center gap-1"><Clock size={13} /> {p.duration}</span>
-                    <span className="inline-flex items-center gap-1"><MapPin size={13} /> {p.location}</span>
+                    <span className="inline-flex items-center gap-1"><MapPin size={13} /> {p.destination}</span>
                   </div>
                   <p className="font-sans text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-5">
                     {p.summary}
