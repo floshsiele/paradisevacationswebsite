@@ -170,7 +170,7 @@ const PackageDetail = () => {
         {/* Related */}
         <section className="py-20 px-8 md:px-16 bg-ocean-light">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">Other Packages You May Like</h2>
+            <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">Other Journeys You May Like</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {related.map((p) => (
                 <Link
