@@ -10,6 +10,7 @@ import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
 import { PlaneLanding, CalendarCheck, Bus, LifeBuoy, Binoculars, Check, Handshake, Percent, MapPinned } from "lucide-react";
+import { photos } from "@/assets/photos";
 
 const audiences = [
   {
@@ -88,7 +89,7 @@ const services = [
     id: "programmes",
     label: "Programmes",
     title: "Tailor-Made Programmes & Excursions",
-    image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=1400&q=85",
+    image: photos.lionessSafari,
     icon: Binoculars,
     intro:
       "Bespoke itineraries for overseas tour operators, corporate groups and luxury travellers, built around your clients' interests.",

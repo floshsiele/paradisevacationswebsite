@@ -10,6 +10,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
 import { Globe, Shield, HeartHandshake, Award } from "lucide-react";
+import { photos } from "@/assets/photos";
 
 const values = [
   {
@@ -56,7 +57,7 @@ const team = [
     name: "Tours & safari team",
     role: "Inbound, outbound & educational",
     text: "Itinerary designers and KPSGA-standard guides who have driven the routes they sell you.",
-    image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=900&q=85",
+    image: photos.giraffeCentre,
   },
   {
     name: "Operations & duty desk",
@@ -141,7 +142,7 @@ const About = () => (
           >
             <div className="aspect-[4/5] overflow-hidden rounded-xl shadow-elevated">
               <img
-                src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=85"
+                src=photos.brandTee
                 alt="Safari guide and guests on a Kenyan game drive"
                 className="w-full h-full object-cover"
                 loading="lazy"
