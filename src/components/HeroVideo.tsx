@@ -49,7 +49,7 @@ export function HeroVideo() {
       />
 
       {/* Cinematic overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-black/10" />
 
       {/* Hero content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-8 z-20">
