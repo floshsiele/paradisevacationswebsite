@@ -20,7 +20,6 @@ export function SiteFooter() {
             <Link to="/corporate-travel" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Corporate Travel Management</Link>
             <Link to="/packages" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Packages</Link>
             <Link to="/dmc" className="font-sans text-sm text-background/70 hover:text-background transition-colors">DMC</Link>
-            <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Book</Link>
             <Link to="/contact" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Contact</Link>
           </nav>
         </div>
