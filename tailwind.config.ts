@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['Sentient', 'serif'],
-        display: ['Sentient', 'serif'],
+        serif: ['Playfair Display', 'serif'],
+        display: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -43,9 +44,9 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        rose: {
-          DEFAULT: "hsl(var(--rose))",
-          foreground: "hsl(var(--rose-foreground))",
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+          foreground: "hsl(var(--teal-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -66,8 +67,11 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         chapter: "hsl(var(--chapter-title))",
-        cream: {
-          dark: "hsl(var(--cream-dark))",
+        sand: {
+          dark: "hsl(var(--sand-dark))",
+        },
+        ocean: {
+          light: "hsl(var(--ocean-light))",
         },
       },
       borderRadius: {

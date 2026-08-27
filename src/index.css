@@ -1,117 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=sentient@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Wedding Photographer Portfolio - Cinematic Design System
+/* Paradise Vacations Kenya - Travel Design System
+   Warm, professional, trustworthy palette.
    All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Warm cream background - organic, intimate */
-    --background: 36 33% 97%;
-    --foreground: 0 0% 23%;
+    /* Warm sand background */
+    --background: 40 33% 98%;
+    --foreground: 210 15% 12%;
 
-    /* Cards with subtle warmth */
-    --card: 36 33% 97%;
-    --card-foreground: 0 0% 23%;
+    /* Cards */
+    --card: 40 30% 99%;
+    --card-foreground: 210 15% 12%;
 
-    --popover: 36 33% 97%;
-    --popover-foreground: 0 0% 23%;
+    --popover: 40 30% 99%;
+    --popover-foreground: 210 15% 12%;
 
-    /* Charcoal primary for text and elements */
-    --primary: 0 0% 23%;
-    --primary-foreground: 36 33% 97%;
+    /* Deep ocean primary */
+    --primary: 174 75% 27%;
+    --primary-foreground: 40 33% 98%;
 
-    /* Soft secondary tones */
-    --secondary: 36 20% 92%;
-    --secondary-foreground: 0 0% 23%;
+    /* Warm sand secondary */
+    --secondary: 36 30% 92%;
+    --secondary-foreground: 210 15% 12%;
 
     /* Muted elements */
-    --muted: 36 15% 90%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 36 25% 90%;
+    --muted-foreground: 210 10% 45%;
 
-    /* Soft gold accent - elegant, warm */
-    --accent: 42 45% 60%;
-    --accent-foreground: 0 0% 15%;
+    /* Golden sand accent */
+    --accent: 36 50% 55%;
+    --accent-foreground: 40 33% 98%;
 
-    /* Rosé alternative accent */
-    --rose: 12 30% 70%;
-    --rose-foreground: 0 0% 20%;
+    /* Soft teal alternative */
+    --teal: 174 60% 40%;
+    --teal-foreground: 40 33% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 36 33% 97%;
+    --destructive-foreground: 40 33% 98%;
 
     /* Subtle borders */
-    --border: 36 20% 88%;
-    --input: 36 20% 88%;
-    --ring: 42 45% 60%;
+    --border: 36 25% 88%;
+    --input: 36 25% 88%;
+    --ring: 174 75% 27%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
     /* Sidebar tokens */
-    --sidebar-background: 36 33% 97%;
-    --sidebar-foreground: 0 0% 23%;
-    --sidebar-primary: 0 0% 23%;
-    --sidebar-primary-foreground: 36 33% 97%;
-    --sidebar-accent: 36 20% 92%;
-    --sidebar-accent-foreground: 0 0% 23%;
-    --sidebar-border: 36 20% 88%;
-    --sidebar-ring: 42 45% 60%;
+    --sidebar-background: 40 33% 98%;
+    --sidebar-foreground: 210 15% 12%;
+    --sidebar-primary: 174 75% 27%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 36 30% 92%;
+    --sidebar-accent-foreground: 210 15% 12%;
+    --sidebar-border: 36 25% 88%;
+    --sidebar-ring: 174 75% 27%;
 
-    /* Custom tokens for this design */
-    --chapter-title: 42 35% 45%;
-    --overlay: 0 0% 0%;
-    --cream-dark: 36 25% 94%;
+    /* Custom tokens */
+    --chapter-title: 174 60% 35%;
+    --overlay: 210 15% 8%;
+    --sand-dark: 36 25% 94%;
+    --ocean-light: 174 50% 95%;
   }
 
   .dark {
-    --background: 0 0% 8%;
-    --foreground: 36 20% 90%;
+    --background: 210 15% 8%;
+    --foreground: 40 20% 92%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 36 20% 90%;
+    --card: 210 15% 10%;
+    --card-foreground: 40 20% 92%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 36 20% 90%;
+    --popover: 210 15% 10%;
+    --popover-foreground: 40 20% 92%;
 
-    --primary: 36 20% 90%;
-    --primary-foreground: 0 0% 8%;
+    --primary: 174 60% 45%;
+    --primary-foreground: 210 15% 8%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 36 20% 90%;
+    --secondary: 210 15% 15%;
+    --secondary-foreground: 40 20% 92%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 36 10% 60%;
+    --muted: 210 15% 15%;
+    --muted-foreground: 40 10% 60%;
 
-    --accent: 42 40% 55%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 36 50% 55%;
+    --accent-foreground: 210 15% 8%;
 
-    --rose: 12 25% 65%;
-    --rose-foreground: 0 0% 8%;
+    --teal: 174 50% 50%;
+    --teal-foreground: 210 15% 8%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 36 20% 90%;
+    --destructive-foreground: 40 20% 92%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 42 40% 55%;
+    --border: 210 15% 18%;
+    --input: 210 15% 18%;
+    --ring: 174 60% 45%;
 
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 36 20% 90%;
-    --sidebar-primary: 36 20% 90%;
-    --sidebar-primary-foreground: 0 0% 8%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 36 20% 90%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 42 40% 55%;
+    --sidebar-background: 210 15% 8%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 174 60% 45%;
+    --sidebar-primary-foreground: 210 15% 8%;
+    --sidebar-accent: 210 15% 15%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 210 15% 18%;
+    --sidebar-ring: 174 60% 45%;
 
-    --chapter-title: 42 30% 60%;
-    --overlay: 0 0% 0%;
-    --cream-dark: 0 0% 12%;
+    --chapter-title: 174 50% 55%;
+    --overlay: 210 15% 8%;
+    --sand-dark: 210 15% 12%;
+    --ocean-light: 210 15% 15%;
   }
 }
 
@@ -126,11 +128,11 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Sentient', serif;
+    font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sentient', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 500;
     letter-spacing: 0.01em;
   }
@@ -143,11 +145,10 @@
 }
 
 @layer components {
-  /* Chapter title styling */
+  /* Section label styling */
   .chapter-title {
-    font-family: 'Sentient', serif;
-    font-weight: 400;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: hsl(var(--chapter-title));
@@ -155,7 +156,7 @@
 
   /* Elegant quote styling */
   .quote-text {
-    font-family: 'Sentient', serif;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
     line-height: 1.8;
@@ -165,8 +166,8 @@
   .cinematic-overlay {
     background: linear-gradient(
       to top,
-      hsl(var(--overlay) / 0.6) 0%,
-      hsl(var(--overlay) / 0.2) 50%,
+      hsl(var(--overlay) / 0.7) 0%,
+      hsl(var(--overlay) / 0.3) 50%,
       hsl(var(--overlay) / 0.1) 100%
     );
   }
@@ -175,7 +176,7 @@
   .link-underline {
     position: relative;
   }
-  
+
   .link-underline::after {
     content: '';
     position: absolute;
@@ -188,7 +189,7 @@
     transform-origin: bottom right;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  
+
   .link-underline:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -198,7 +199,7 @@
   .image-hover {
     @apply transition-all duration-700 ease-out;
   }
-  
+
   .image-hover:hover {
     @apply scale-[1.02];
   }

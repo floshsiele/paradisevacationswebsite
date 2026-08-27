@@ -1,26 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import estherDanielClouds from "@/assets/esther-daniel-clouds.jpg";
-import estherDanielMountains from "@/assets/esther-daniel-mountains.jpg";
-import rebeccaAaronSparklers from "@/assets/rebecca-aaron-sparklers.jpg";
-import rebeccaAaronKiss from "@/assets/rebecca-aaron-kiss.jpg";
 
 const slides = [
   {
-    image: estherDanielClouds,
-    alt: "Couple above the clouds"
+    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1920&q=85",
+    alt: "African safari elephant at sunrise"
   },
   {
-    image: estherDanielMountains,
-    alt: "Mountain elopement at sunrise"
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1920&q=85",
+    alt: "Hot air balloon over Kenyan savannah"
   },
   {
-    image: rebeccaAaronSparklers,
-    alt: "Wedding celebration with sparklers"
-  },
-  {
-    image: rebeccaAaronKiss,
-    alt: "Intimate wedding moment"
+    image: "https://images.unsplash.com/photo-1534234828563-0252171806a8?w=1920&q=85",
+    alt: "Dhow sailing on turquoise ocean"
   },
 ];
 
@@ -44,7 +36,7 @@ export function HeroSlideshow() {
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
-          transition={{ 
+          transition={{
             opacity: { duration: 1.5, ease: [0.25, 0.46, 0.45, 0.94] },
             scale: { duration: 6, ease: "linear" }
           }}
@@ -59,7 +51,7 @@ export function HeroSlideshow() {
             transition={{ duration: 6, ease: "linear" }}
           />
           {/* Cinematic overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
         </motion.div>
       </AnimatePresence>
 
@@ -71,14 +63,14 @@ export function HeroSlideshow() {
           transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
           className="max-w-4xl"
         >
+          <span className="chapter-title text-xs text-white/80 mb-6 block">Strategic Travel</span>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
-            I don't photograph weddings.
+            Unforgettable
             <br />
-            <span className="italic font-normal">I tell love stories.</span>
+            <span className="italic font-normal">Experiences</span>
           </h1>
-          <p className="font-serif text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Capturing the quiet moments, the stolen glances, and the overwhelming joy 
-            that makes your day uniquely yours.
+          <p className="font-sans text-lg md:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">
+            Your journey begins here — with personalized, seamless, and professional travel solutions.
           </p>
         </motion.div>
       </div>
@@ -116,21 +108,6 @@ export function HeroSlideshow() {
               }}
               transition={{ duration: 0.4 }}
             />
-            {index === currentSlide && (
-              <motion.div
-                layoutId="slideProgress"
-                className="absolute inset-0 flex items-center"
-                initial={false}
-              >
-                <motion.div
-                  className="h-px bg-white origin-left"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 6, ease: "linear" }}
-                  style={{ width: "100%" }}
-                />
-              </motion.div>
-            )}
           </button>
         ))}
       </div>
