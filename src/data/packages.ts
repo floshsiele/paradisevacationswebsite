@@ -172,3 +172,37 @@ export const packages: TravelPackage[] = [
 ];
 
 export const getPackage = (slug?: string) => packages.find((p) => p.slug === slug);
+
+export type PackageFaq = { question: string; answer: string };
+
+/** FAQs generated from each package's own itinerary, pricing and inclusion data. */
+export const getPackageFaqs = (pkg: TravelPackage): PackageFaq[] => [
+  {
+    question: `How long is the ${pkg.name} and where does it go?`,
+    answer: `${pkg.name} runs ${pkg.duration.toLowerCase()} and covers ${pkg.destination}. ${pkg.summary}`,
+  },
+  {
+    question: `How much does the ${pkg.name} cost?`,
+    answer: `Pricing starts from ${pkg.priceFrom}. The final quote depends on your travel dates, group size and choice of accommodation — send us your dates and we will confirm exact rates.`,
+  },
+  {
+    question: "What is included in the price?",
+    answer: `The package price covers ${pkg.includes.join(", ").toLowerCase()}.`,
+  },
+  {
+    question: "What is not included?",
+    answer: `Not included: ${pkg.excludes.join(", ").toLowerCase()}. We can quote most of these separately if you need them.`,
+  },
+  {
+    question: "When is the best time to travel?",
+    answer: pkg.bestTime,
+  },
+  {
+    question: "Can the itinerary be customised?",
+    answer: `Yes. The ${pkg.itinerary.length}-day schedule is a starting point — we can add or remove days, change lodges, adjust the pace and build private departures for families, couples or corporate groups.`,
+  },
+  {
+    question: "How do I book and what are the payment terms?",
+    answer: "Request a quote or message us on WhatsApp with your dates and traveller numbers. Bookings are confirmed with a deposit, with the balance due before travel; we will share the exact schedule with your quote.",
+  },
+];

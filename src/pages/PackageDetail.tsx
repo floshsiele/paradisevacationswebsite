@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
-import { getPackage, packages } from "@/data/packages";
+import { getPackage, getPackageFaqs, packages } from "@/data/packages";
+import { Seo } from "@/components/Seo";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowLeft, ArrowRight, Calendar, Check, Clock, MapPin, Tag, X } from "lucide-react";
 
 const PackageDetail = () => {
@@ -29,10 +31,50 @@ const PackageDetail = () => {
   }
 
   const related = packages.filter((p) => p.slug !== pkg.slug).slice(0, 3);
+  const faqs = getPackageFaqs(pkg);
+  const path = `/safari-journeys/${pkg.slug}`;
 
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
+        <Seo
+          title={`${pkg.name} — ${pkg.duration} | Paradise Vacations Kenya`}
+          description={`${pkg.summary} ${pkg.duration}, ${pkg.destination}. From ${pkg.priceFrom} with Paradise Vacations Kenya.`}
+          path={path}
+          image={pkg.image}
+          type="article"
+          jsonLd={[
+            {
+              "@context": "https://schema.org",
+              "@type": "TouristTrip",
+              name: pkg.name,
+              description: pkg.summary,
+              image: pkg.image,
+              url: path,
+              touristType: pkg.category,
+              itinerary: {
+                "@type": "ItemList",
+                numberOfItems: pkg.itinerary.length,
+                itemListElement: pkg.itinerary.map((d, i) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  name: d.title,
+                  description: d.description,
+                })),
+              },
+              provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "/" },
+                { "@type": "ListItem", position: 2, name: "Safari Journeys", item: "/safari-journeys" },
+                { "@type": "ListItem", position: 3, name: pkg.name, item: path },
+              ],
+            },
+          ]}
+        />
         <StaticNav />
 
         {/* Hero */}
@@ -133,6 +175,25 @@ const PackageDetail = () => {
                 </div>
                 <p className="font-sans text-xs text-muted-foreground mt-4">
                   Itineraries are flexible — days, lodges and inclusions can be tailored to your dates and group size.
+                </p>
+              </div>
+
+              <div id="faqs" className="scroll-mt-28 mt-14">
+                <h2 className="font-display text-2xl md:text-3xl mb-6">Frequently Asked Questions</h2>
+                <Accordion type="single" collapsible className="border border-border/60 rounded-lg px-5">
+                  {faqs.map((f) => (
+                    <AccordionItem key={f.question} value={f.question}>
+                      <AccordionTrigger className="font-display text-left text-base md:text-lg">
+                        {f.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="font-sans text-sm text-muted-foreground leading-relaxed">
+                        {f.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+                <p className="font-sans text-xs text-muted-foreground mt-4">
+                  Still have a question? <Link to="/contact" className="text-primary underline-offset-4 hover:underline">Talk to our team</Link>.
                 </p>
               </div>
 
