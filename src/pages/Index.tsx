@@ -5,7 +5,6 @@ import { HeroVideo } from "@/components/HeroVideo";
 import { PageTransition } from "@/components/PageTransition";
 import { TrustBar } from "@/components/TrustBar";
 import { FeaturedPackages } from "@/components/FeaturedPackages";
-import { HowItWorks } from "@/components/HowItWorks";
 import { Testimonials } from "@/components/Testimonials";
 import { HomeFaq, homeFaqs } from "@/components/HomeFaq";
 import { SiteFooter } from "@/components/SiteFooter";
