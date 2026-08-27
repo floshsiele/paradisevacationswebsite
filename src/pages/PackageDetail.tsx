@@ -19,7 +19,7 @@ const PackageDetail = () => {
             <h1 className="font-display text-3xl mb-4">Package not found</h1>
             <p className="font-sans text-muted-foreground mb-8">This itinerary may have been renamed or retired.</p>
             <Link to="/safari-journeys" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md">
-              <ArrowLeft size={16} /> All Packages
+              <ArrowLeft size={16} /> All Journeys
             </Link>
           </div>
           <SiteFooter />
@@ -190,7 +190,7 @@ const PackageDetail = () => {
             </div>
             <div className="text-center mt-12">
               <Link to="/safari-journeys" className="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-primary">
-                <ArrowLeft size={14} /> All Packages
+                <ArrowLeft size={14} /> All Journeys
               </Link>
             </div>
           </div>
