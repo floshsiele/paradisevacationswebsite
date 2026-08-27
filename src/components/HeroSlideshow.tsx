@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { photos } from "@/assets/photos";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1920&q=85",
+    image: photos.lionessSafari,
     alt: "African safari elephant at sunrise"
   },
   {
-    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1920&q=85",
+    image: photos.beachWalk,
     alt: "Hot air balloon over Kenyan savannah"
   },
   {

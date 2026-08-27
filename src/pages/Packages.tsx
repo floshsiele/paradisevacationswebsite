@@ -13,6 +13,7 @@ import { StickyCta } from "@/components/StickyCta";
 import { packages, type TravelPackage } from "@/data/packages";
 import { Seo } from "@/components/Seo";
 import { ArrowRight, Clock, MapPin, Flame, ShieldCheck, CreditCard, Users } from "lucide-react";
+import { photos } from "@/assets/photos";
 
 type Filter = "All" | TravelPackage["category"];
 
@@ -29,7 +30,7 @@ const categoryBlurbs: { key: TravelPackage["category"]; title: string; text: str
     key: "Inbound",
     title: "Inbound Tours",
     text: "Safaris, beach holidays and cultural journeys inside Kenya and East Africa for visitors and residents — Masai Mara, Amboseli, Diani and beyond, with licensed guides and 4x4 safari vehicles.",
-    image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=1200&q=85",
+    image: photos.lionessSafari,
   },
   {
     key: "Outbound",
@@ -117,7 +118,7 @@ const Packages = () => {
           badge="Every itinerary tailored to your dates — at no extra cost"
           title={<>Trips worth taking, priced without games</>}
           subtitle="Inbound safaris and beach escapes, outbound holidays and international educational trips — each with a day-by-day itinerary, honest inclusions and a from-price you can budget against."
-          image="https://images.unsplash.com/photo-1549366021-9f761d450615?w=1800&q=85"
+          image={photos.dunesLamu}
           imageAlt="Elephants on the Kenyan plains with Mount Kilimanjaro behind"
           primaryLabel="Get a tailored quote"
           secondaryLabel="Corporate & group travel"

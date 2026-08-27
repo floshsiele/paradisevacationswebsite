@@ -1,3 +1,5 @@
+import { photos } from "@/assets/photos";
+
 export type TravelPackage = {
   slug: string;
   name: string;
@@ -24,7 +26,7 @@ export const packages: TravelPackage[] = [
     priceFrom: "USD 620 per person",
     summary:
       "Kenya's most iconic reserve — big cats, endless plains, and the Great Migration river crossings in season.",
-    image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=1600&q=85",
+    image: photos.lionessSafari,
     highlights: [
       "Full-day game drives in a 4x4 pop-top land cruiser",
       "Great Migration viewing (July – October)",
@@ -74,7 +76,7 @@ export const packages: TravelPackage[] = [
     priceFrom: "USD 480 per person",
     summary:
       "White sand, warm Indian Ocean water, and the relaxed rhythm of Kenya's most-loved beach destination.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=85",
+    image: photos.familyOcean,
     highlights: [
       "Beachfront resort stay",
       "Snorkelling at Kisite Marine Park",
@@ -127,7 +129,7 @@ export const packages: TravelPackage[] = [
     priceFrom: "USD 890 per person",
     summary:
       "Spice markets, Stone Town history, and turquoise water on the north-east coast of the island.",
-    image: "https://images.unsplash.com/photo-1516815231560-8f41ec531527?w=1600&q=85",
+    image: photos.starfishChild,
     highlights: [
       "Stone Town heritage walk",
       "Spice farm tour",
