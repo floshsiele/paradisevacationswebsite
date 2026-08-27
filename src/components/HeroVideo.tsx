@@ -59,14 +59,33 @@ export function HeroVideo() {
           transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <span className="chapter-title text-xs text-white/80 mb-6 block">Strategic Travel</span>
+          <span className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm">
+            <Star className="w-3.5 h-3.5 fill-accent text-accent" />
+            <span className="font-sans text-xs tracking-wider text-white/90">
+              Trusted by 200+ Kenyan corporates, schools and families
+            </span>
+          </span>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
-            Corporate Travel
+            Travel managed properly.
             <br />
-            <span className="italic font-normal">Management</span>
+            <span className="italic font-normal">Every trip, every time.</span>
           </h1>
-          <p className="font-sans text-lg md:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">
-            Seamless, professional travel solutions for businesses — from air ticketing and policy to 24/7 traveller support.
+          <p className="font-sans text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+            Corporate travel management, safaris, outbound holidays, educational trips and full
+            destination management — quoted in 24 hours, backed by 24/7 support.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-9">
+            <Link to="/book" className="btn-primary-cta">
+              Get a free quote in 24 hrs <ArrowRight size={16} />
+            </Link>
+            <a href="tel:+254726927081" className="btn-ghost-cta">
+              <Phone size={16} /> Talk to a consultant
+            </a>
+          </div>
+
+          <p className="font-sans text-xs text-white/70 mt-5">
+            No planning fees · No obligation · Itemised pricing
           </p>
         </motion.div>
       </div>
