@@ -23,7 +23,7 @@ export function Logo({ variant = "dark", className, showTagline = true }: LogoPr
           height={44}
         />
       </span>
-      <span className="flex flex-col leading-none">
+      <span className="flex flex-col justify-center gap-1 leading-none whitespace-nowrap">
         <span
           className={cn(
             "font-display text-lg md:text-xl tracking-wide transition-colors duration-300",
@@ -33,12 +33,7 @@ export function Logo({ variant = "dark", className, showTagline = true }: LogoPr
           Paradise Vacations
         </span>
         {showTagline && (
-          <span
-            className={cn(
-              "font-sans text-[10px] md:text-[11px] tracking-[0.22em] uppercase mt-1",
-              onDark ? "text-accent" : "text-accent"
-            )}
-          >
+          <span className="font-sans text-[11px] md:text-xs font-semibold tracking-[0.18em] uppercase text-accent">
             Dream. Explore. Discover.
           </span>
         )}
