@@ -124,7 +124,7 @@ const Contact = () => {
         <section className="py-16 px-8 md:px-16 border-t border-border">
           <div className="max-w-4xl mx-auto text-center">
             <Link
-              to="/quote"
+              to="/book"
               className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
             >
               Get Your Quote <ArrowRight size={16} />
@@ -139,7 +139,7 @@ const Contact = () => {
             <nav className="flex gap-8">
               <Link to="/" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Home</Link>
               <Link to="/about" className="font-sans text-sm text-background/70 hover:text-background transition-colors">About</Link>
-              <Link to="/quote" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Get a Quote</Link>
+              <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Book</Link>
             </nav>
             <p className="font-sans text-sm text-background/50">
               © 2025 Paradise Vacations Kenya

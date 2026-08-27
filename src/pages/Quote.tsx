@@ -24,7 +24,7 @@ const Quote = () => {
             >
               <ArrowLeft size={16} /> Back to Home
             </Link>
-            <span className="chapter-title text-xs mb-4 block">Get a Quote</span>
+            <span className="chapter-title text-xs mb-4 block">Book</span>
             <h1 className="font-display text-4xl md:text-6xl mb-6">
               Plan Your Journey
             </h1>

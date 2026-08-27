@@ -131,7 +131,7 @@ const Services = () => {
                   ))}
                 </ul>
                 <Link
-                  to="/quote"
+                  to="/book"
                   className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
                 >
                   Enquire Now <ArrowRight size={16} />
@@ -185,7 +185,7 @@ const Services = () => {
             Ready-made safari, beach and outbound itineraries you can book as they are or tailor to your dates.
           </p>
           <Link
-            to="/packages"
+            to="/safari-journeys"
             className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
           >
             View Packages <ArrowRight size={16} />

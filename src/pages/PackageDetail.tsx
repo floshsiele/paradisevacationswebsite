@@ -18,8 +18,8 @@ const PackageDetail = () => {
           <div className="flex-1 flex flex-col items-center justify-center px-8 text-center">
             <h1 className="font-display text-3xl mb-4">Package not found</h1>
             <p className="font-sans text-muted-foreground mb-8">This itinerary may have been renamed or retired.</p>
-            <Link to="/packages" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md">
-              <ArrowLeft size={16} /> All Packages
+            <Link to="/safari-journeys" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md">
+              <ArrowLeft size={16} /> All Journeys
             </Link>
           </div>
           <SiteFooter />
@@ -67,40 +67,75 @@ const PackageDetail = () => {
                 ))}
               </ul>
 
-              <h2 className="font-display text-2xl mb-6">Day-by-Day Itinerary</h2>
-              <div className="space-y-6 mb-12">
-                {pkg.itinerary.map((day) => (
-                  <div key={day.day} className="border-l-2 border-primary/30 pl-6 relative">
-                    <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-primary" />
-                    <span className="font-sans text-xs tracking-widest uppercase text-primary">{day.day}</span>
-                    <h3 className="font-display text-lg mt-1 mb-2">{day.title}</h3>
-                    <p className="font-sans text-sm text-muted-foreground leading-relaxed">{day.description}</p>
-                  </div>
-                ))}
+              <div id="itinerary" className="scroll-mt-28 mb-14">
+                <div className="flex items-baseline justify-between mb-6">
+                  <h2 className="font-display text-2xl md:text-3xl">Day-by-Day Itinerary</h2>
+                  <span className="font-sans text-xs tracking-widest uppercase text-muted-foreground">{pkg.itinerary.length} days</span>
+                </div>
+
+                <div className="relative border border-border/60 rounded-lg overflow-hidden">
+                  {pkg.itinerary.map((day, i) => (
+                    <div
+                      key={day.day}
+                      className={`flex gap-5 p-6 ${i % 2 === 1 ? "bg-sand-dark/40" : "bg-background"} ${
+                        i !== pkg.itinerary.length - 1 ? "border-b border-border/60" : ""
+                      }`}
+                    >
+                      <div className="flex flex-col items-center flex-shrink-0">
+                        <span className="w-11 h-11 rounded-full bg-primary text-primary-foreground font-display text-lg flex items-center justify-center">
+                          {i + 1}
+                        </span>
+                        {i !== pkg.itinerary.length - 1 && <span className="flex-1 w-px bg-border mt-3" />}
+                      </div>
+                      <div className="pt-1">
+                        <span className="font-sans text-[11px] tracking-[0.25em] uppercase text-primary">{day.day}</span>
+                        <h3 className="font-display text-xl mt-1 mb-2">{day.title}</h3>
+                        <p className="font-sans text-sm text-muted-foreground leading-relaxed">{day.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-sans text-sm text-muted-foreground">
+                  <span className="flex items-center gap-2"><Clock size={15} className="text-primary" /> {pkg.duration}</span>
+                  <span className="flex items-center gap-2"><MapPin size={15} className="text-primary" /> {pkg.destination}</span>
+                  <span className="flex items-center gap-2"><Calendar size={15} className="text-primary" /> Best time: {pkg.bestTime}</span>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="font-display text-xl mb-4">What's Included</h3>
-                  <ul className="space-y-2">
-                    {pkg.includes.map((i) => (
-                      <li key={i} className="flex items-start gap-2 font-sans text-sm text-muted-foreground">
-                        <Check size={15} className="text-primary mt-0.5 flex-shrink-0" /> {i}
-                      </li>
-                    ))}
-                  </ul>
+              <div id="inclusions" className="scroll-mt-28">
+                <h2 className="font-display text-2xl md:text-3xl mb-6">Inclusions &amp; Exclusions</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="rounded-lg border border-primary/25 bg-primary/5 p-6">
+                    <h3 className="font-display text-xl mb-4 flex items-center gap-2">
+                      <Check size={18} className="text-primary" /> What&apos;s Included
+                    </h3>
+                    <ul className="space-y-2.5">
+                      {pkg.includes.map((i) => (
+                        <li key={i} className="flex items-start gap-2 font-sans text-sm text-muted-foreground">
+                          <Check size={15} className="text-primary mt-0.5 flex-shrink-0" /> {i}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="rounded-lg border border-border/70 bg-muted/40 p-6">
+                    <h3 className="font-display text-xl mb-4 flex items-center gap-2">
+                      <X size={18} className="text-muted-foreground" /> Not Included
+                    </h3>
+                    <ul className="space-y-2.5">
+                      {pkg.excludes.map((i) => (
+                        <li key={i} className="flex items-start gap-2 font-sans text-sm text-muted-foreground">
+                          <X size={15} className="text-muted-foreground/60 mt-0.5 flex-shrink-0" /> {i}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-display text-xl mb-4">Not Included</h3>
-                  <ul className="space-y-2">
-                    {pkg.excludes.map((i) => (
-                      <li key={i} className="flex items-start gap-2 font-sans text-sm text-muted-foreground">
-                        <X size={15} className="text-muted-foreground/60 mt-0.5 flex-shrink-0" /> {i}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <p className="font-sans text-xs text-muted-foreground mt-4">
+                  Itineraries are flexible — days, lodges and inclusions can be tailored to your dates and group size.
+                </p>
               </div>
+
             </div>
 
             {/* Sidebar */}
@@ -115,7 +150,7 @@ const PackageDetail = () => {
               </div>
 
               <Link
-                to="/quote"
+                to="/book"
                 className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300 mb-3"
               >
                 Get Your Quote <ArrowRight size={16} />
@@ -135,12 +170,12 @@ const PackageDetail = () => {
         {/* Related */}
         <section className="py-20 px-8 md:px-16 bg-ocean-light">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">Other Packages You May Like</h2>
+            <h2 className="font-display text-2xl md:text-3xl mb-10 text-center">Other Journeys You May Like</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {related.map((p) => (
                 <Link
                   key={p.slug}
-                  to={`/packages/${p.slug}`}
+                  to={`/safari-journeys/${p.slug}`}
                   className="group rounded-lg overflow-hidden bg-background border border-border/60 hover:shadow-lg transition-all duration-500"
                 >
                   <div className="aspect-[16/10] overflow-hidden">
@@ -154,8 +189,8 @@ const PackageDetail = () => {
               ))}
             </div>
             <div className="text-center mt-12">
-              <Link to="/packages" className="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-primary">
-                <ArrowLeft size={14} /> All Packages
+              <Link to="/safari-journeys" className="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-primary">
+                <ArrowLeft size={14} /> All Journeys
               </Link>
             </div>
           </div>

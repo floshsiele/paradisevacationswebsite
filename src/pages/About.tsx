@@ -176,7 +176,7 @@ const About = () => {
                 Whether it's a corporate trip, a safari, or a beach holiday, we're here to make it unforgettable.
               </p>
               <Link
-                to="/quote"
+                to="/book"
                 className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
               >
                 Get Your Quote <ArrowRight size={16} />
@@ -191,7 +191,7 @@ const About = () => {
             <Link to="/" className="font-display text-xl tracking-wide">Paradise Vacations</Link>
             <nav className="flex gap-8">
               <Link to="/" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Home</Link>
-              <Link to="/quote" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Get a Quote</Link>
+              <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Book</Link>
               <Link to="/contact" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Contact</Link>
             </nav>
             <p className="font-sans text-sm text-background/50">
