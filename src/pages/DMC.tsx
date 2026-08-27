@@ -1,10 +1,33 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
+import { PageHero } from "@/components/PageHero";
+import { TrustBar } from "@/components/TrustBar";
+import { Testimonials } from "@/components/Testimonials";
+import { CtaBand } from "@/components/CtaBand";
+import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
+import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
-import { ArrowRight, Map, PlaneLanding, CalendarCheck, Bus, LifeBuoy, Binoculars } from "lucide-react";
+import { PlaneLanding, CalendarCheck, Bus, LifeBuoy, Binoculars, Check, Handshake, Percent, MapPinned } from "lucide-react";
+
+const audiences = [
+  {
+    icon: Handshake,
+    title: "Overseas tour operators",
+    text: "Net rates, ready-to-sell programme copy and imagery, plus a local operator who protects your client relationship and never sells around you.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Conference & event organisers",
+    text: "Venue sourcing, delegate registration, room blocks, transfers and on-site coordinators for programmes from 20 to 400+ delegates.",
+  },
+  {
+    icon: MapPinned,
+    title: "Corporates & incentive houses",
+    text: "Team retreats, incentive circuits, CSR and conservation days, spouse programmes and executive handling with full duty-of-care cover.",
+  },
+];
 
 const services = [
   {
@@ -23,6 +46,7 @@ const services = [
       "Welcome packs, SIM cards and currency assistance",
       "VIP and delegation protocol support",
     ],
+    outcome: "No guest has ever been left standing at arrivals.",
   },
   {
     id: "events",
@@ -40,6 +64,7 @@ const services = [
       "County permits, filming and event licensing",
       "On-site coordination and post-event reporting",
     ],
+    outcome: "Contingency plans for weather, power and transport, always.",
   },
   {
     id: "ground",
@@ -57,6 +82,7 @@ const services = [
       "Park fees, conservancy permits and lodge liaison",
       "Vehicle tracking and daily condition checks",
     ],
+    outcome: "Our own assets — not a chain of subcontractors.",
   },
   {
     id: "programmes",
@@ -74,6 +100,7 @@ const services = [
       "Spouse and pre/post-conference tour programmes",
       "Imagery and itinerary copy for partner marketing",
     ],
+    outcome: "Sales-ready material your team can quote from same day.",
   },
   {
     id: "support",
@@ -91,6 +118,47 @@ const services = [
       "Real-time itinerary changes and supplier escalation",
       "Daily operations updates to your head office",
     ],
+    outcome: "A direct line to a human being, all night, every night.",
+  },
+];
+
+const process = [
+  { n: "01", title: "Send the brief", text: "Dates, pax numbers, budget band and objectives. A programme designer is assigned the same day." },
+  { n: "02", title: "Costed proposal in 48 hours", text: "Full ground programme with vehicles, guides, venues and net rates — priced line by line." },
+  { n: "03", title: "Confirm and contract", text: "We lock suppliers, issue permits and build the operations manual for your programme." },
+  { n: "04", title: "We run it on the ground", text: "Named duty coordinator, live tracking, daily updates and a post-programme report with reconciliation." },
+];
+
+const faqs: Faq[] = [
+  {
+    question: "What exactly does a DMC do?",
+    answer:
+      "A destination management company is the local operator behind your programme. We hold the supplier relationships, the fleet, the guides and the permits, and we take responsibility for every movement between arrival and departure — so your team sells and hosts while we deliver.",
+  },
+  {
+    question: "Do you offer net rates to overseas operators?",
+    answer:
+      "Yes. Trade partners receive confidential net rates with a clear commission structure, plus imagery and itinerary copy your own sales team can market from. We never sell around a partner's client.",
+  },
+  {
+    question: "Which destinations do you cover?",
+    answer:
+      "Kenya end to end — Nairobi, Masai Mara, Amboseli, Samburu, Lake Nakuru, Naivasha, Tsavo, Diani, Watamu and Lamu — plus cross-border programmes into Tanzania, Uganda and Rwanda through vetted partners.",
+  },
+  {
+    question: "What size of group can you handle?",
+    answer:
+      "From a two-person luxury circuit to conferences of 400+ delegates. Fleet, guides, rooming and registration scale with the brief, and coordinator numbers are set by group size rather than by budget.",
+  },
+  {
+    question: "How fast is a ground quote?",
+    answer:
+      "Standard programmes are costed within 48 hours. Complex multi-country or large-conference briefs typically take three to five working days including venue inspections.",
+  },
+  {
+    question: "Are your vehicles and guides licensed and insured?",
+    answer:
+      "Yes. Vehicles are serviced, insured, tracked and checked daily. Driver-guides are licensed and KPSGA-standard, briefed on your specific itinerary before departure.",
   },
 ];
 
@@ -98,58 +166,82 @@ const DMC = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
       <Seo
-        title="Destination Management Company (DMC) Kenya & East Africa | Paradise Vacations"
-        description="Paradise Vacations is a Kenyan DMC providing airport meet-and-greet, venue sourcing and event logistics, ground transport and licensed guides, tailor-made programmes and 24/7 on-ground support for overseas operators and corporate groups."
+        title="Kenya DMC | Destination Management for Operators & Events"
+        description="Kenyan DMC with owned fleet and licensed guides: airport meet-and-greet, venue sourcing and event logistics, ground operations, tailor-made programmes and 24/7 support. Costed ground quote in 48 hours."
         path="/dmc"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          name: "Destination Management (DMC)",
-          serviceType: "Destination management company",
-          areaServed: "Kenya and East Africa",
-          url: "/dmc",
-          description:
-            "Full destination management services in Kenya and East Africa: arrivals and transfers, event logistics, ground operations, tailor-made programmes and 24/7 support.",
-          provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
-        }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Destination Management (DMC)",
+            serviceType: "Destination management company",
+            areaServed: "Kenya and East Africa",
+            url: "/dmc",
+            description:
+              "Full destination management services in Kenya and East Africa: arrivals and transfers, event logistics, ground operations, tailor-made programmes and 24/7 support.",
+            provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
+          },
+          faqPageJsonLd(faqs),
+        ]}
       />
       <StaticNav />
 
-      <section className="relative h-[58vh] min-h-[400px] w-full overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=85"
-          alt="Kenyan landscape managed by Paradise Vacations destination management team"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/55" />
-        <div className="relative h-full max-w-6xl mx-auto flex flex-col justify-end px-8 md:px-16 pb-14">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span className="font-sans text-xs tracking-[0.3em] uppercase text-white/70 mb-4 block">Destination Management</span>
-            <h1 className="font-display text-4xl md:text-6xl text-white leading-tight mb-4 max-w-3xl">
-              Your DMC in Kenya &amp; East Africa
-            </h1>
-            <p className="font-sans text-white/80 max-w-2xl">
-              Local expertise, an owned ground operation and a single accountable contact for overseas operators, corporates and event organisers.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Destination Management"
+        badge="Costed ground programme within 48 hours"
+        title={<>Your ground operation in Kenya &amp; East Africa</>}
+        subtitle="Owned fleet, licensed guides, held permits and a single accountable contact — for overseas operators, corporates and event organisers who cannot afford a surprise."
+        image="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=85"
+        imageAlt="Safari vehicle crossing the Kenyan savannah managed by Paradise Vacations DMC"
+        primaryLabel="Request a ground quote"
+        secondaryLabel="View sample programmes"
+        secondaryTo="/packages"
+        microcopy="Net rates for trade partners · Confidential · No obligation"
+        stats={[
+          { value: "48 hrs", label: "Quote turnaround" },
+          { value: "400+", label: "Delegates handled" },
+          { value: "Owned", label: "Fleet & guides" },
+          { value: "24/7", label: "Duty coordinator" },
+        ]}
+      />
 
-      <section className="py-16 px-8 md:px-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="chapter-title text-xs mb-4 block">What a DMC Does</span>
-          <h2 className="font-display text-3xl md:text-4xl mb-6 leading-tight">Everything on the Ground, Handled Locally</h2>
-          <p className="font-sans text-lg text-muted-foreground leading-relaxed">
-            As a Destination Management Company we are the local operator behind your programme: we hold the supplier
-            relationships, the fleet, the guides and the permits, and we take responsibility for every movement between
-            arrival and departure — so your team sells and hosts while we deliver.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mt-8">
+      <TrustBar />
+
+      {/* Who we work with */}
+      <section className="py-20 px-6 md:px-16 bg-sand-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="chapter-title text-xs mb-4 block">Who We Work With</span>
+            <h2 className="font-display text-3xl md:text-5xl mb-4">Three kinds of partner, one standard</h2>
+            <p className="font-sans text-muted-foreground text-lg">
+              Whatever the brief, you get one contact who is answerable for the entire ground programme.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {audiences.map((a, index) => (
+              <motion.div
+                key={a.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-background rounded-xl p-7 border border-border shadow-soft"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                  <a.icon className="w-6 h-6 text-primary" strokeWidth={1.6} />
+                </div>
+                <h3 className="font-display text-xl mb-3">{a.title}</h3>
+                <p className="font-sans text-sm text-muted-foreground leading-relaxed">{a.text}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3 mt-12">
             {services.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="px-5 py-2 rounded-full border border-border font-sans text-xs tracking-widest uppercase text-foreground/70 hover:text-primary hover:border-primary/40 transition-colors"
+                className="px-5 py-2 rounded-full border border-border bg-background font-sans text-xs tracking-widest uppercase text-foreground/70 hover:text-primary hover:border-primary/40 transition-colors"
               >
                 {s.label}
               </a>
@@ -162,7 +254,7 @@ const DMC = () => (
         <section
           key={service.id}
           id={service.id}
-          className={`py-20 px-8 md:px-16 scroll-mt-24 ${index % 2 === 0 ? "bg-sand-dark" : "bg-background"}`}
+          className={`py-20 px-6 md:px-16 scroll-mt-24 ${index % 2 === 0 ? "bg-background" : "bg-ocean-light"}`}
         >
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <motion.div
@@ -176,14 +268,17 @@ const DMC = () => (
               <h2 className="font-display text-3xl md:text-4xl mb-5 leading-tight">{service.title}</h2>
               <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-4">{service.intro}</p>
               <p className="font-sans text-muted-foreground leading-relaxed mb-6">{service.body}</p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-7">
                 {service.points.map((point) => (
                   <li key={point} className="flex items-start gap-3 font-sans text-sm text-muted-foreground">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                     {point}
                   </li>
                 ))}
               </ul>
+              <div className="inline-flex items-center gap-2 rounded-lg bg-primary/10 px-4 py-3 font-sans text-sm text-primary">
+                {service.outcome}
+              </div>
             </motion.div>
 
             <motion.div
@@ -191,7 +286,7 @@ const DMC = () => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className={`relative aspect-[4/3] rounded-lg overflow-hidden ${index % 2 === 0 ? "" : "lg:order-1"}`}
+              className={`relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated ${index % 2 === 0 ? "" : "lg:order-1"}`}
             >
               <img src={service.image} alt={service.title} loading="lazy" className="w-full h-full object-cover" />
             </motion.div>
@@ -199,29 +294,60 @@ const DMC = () => (
         </section>
       ))}
 
-      <section className="py-20 px-8 md:px-16 text-center bg-ocean-light">
-        <Map className="w-10 h-10 text-primary mx-auto mb-6" strokeWidth={1.5} />
-        <h2 className="font-display text-3xl md:text-4xl mb-6">Planning a Group or Programme in Kenya?</h2>
-        <p className="font-sans text-muted-foreground max-w-2xl mx-auto mb-8">
-          Send us your dates, group size and objectives and we will return a costed ground programme with vehicles, guides and venues confirmed.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link
-            to="/book"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
-          >
-            Request a Ground Quote <ArrowRight size={16} />
-          </Link>
-          <Link
-            to="/packages"
-            className="inline-flex items-center gap-2 px-10 py-4 border border-primary/40 text-primary font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/5 transition-all duration-300"
-          >
-            View Packages
-          </Link>
+      {/* Process */}
+      <section className="py-20 px-6 md:px-16 bg-sand-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="chapter-title text-xs mb-4 block">How We Engage</span>
+            <h2 className="font-display text-3xl md:text-5xl mb-4">From brief to delivered programme</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {process.map((s, index) => (
+              <motion.div
+                key={s.n}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-background rounded-xl p-7 border border-border shadow-soft"
+              >
+                <div className="font-display text-4xl text-primary/25 mb-4">{s.n}</div>
+                <h3 className="font-display text-lg mb-3">{s.title}</h3>
+                <p className="font-sans text-sm text-muted-foreground leading-relaxed">{s.text}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-12 max-w-3xl mx-auto flex items-start gap-4 bg-background rounded-xl border border-border p-7 shadow-soft">
+            <Percent className="w-7 h-7 text-primary shrink-0" strokeWidth={1.6} />
+            <p className="font-sans text-sm text-muted-foreground leading-relaxed">
+              <span className="text-foreground font-medium">Trade partners:</span> confidential net rates, clear
+              commission structure, and marketing-ready imagery and itinerary copy supplied with every proposal.
+            </p>
+          </div>
         </div>
       </section>
 
+      <Testimonials
+        eyebrow="Ground Programmes"
+        heading="What organisers say after the last delegate leaves"
+        intro="Conference convenors, operators and group leaders we have delivered for."
+        limit={3}
+      />
+
+      <FaqBlock faqs={faqs} eyebrow="DMC FAQs" heading="What partners ask before appointing us" tone="plain" />
+
+      <CtaBand
+        eyebrow="Ground Quote"
+        heading="Send the brief. Get a costed ground programme in 48 hours."
+        text="Dates, group size and objectives are enough to start. We come back with vehicles, guides, venues and net rates priced line by line."
+        primaryLabel="Request a ground quote"
+        secondary={{ label: "Corporate travel management", to: "/corporate-travel" }}
+        tone="dark"
+      />
+
       <SiteFooter />
+      <StickyCta />
     </div>
   </PageTransition>
 );

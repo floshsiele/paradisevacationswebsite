@@ -3,8 +3,56 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
+import { PageHero } from "@/components/PageHero";
+import { TrustBar } from "@/components/TrustBar";
+import { Testimonials } from "@/components/Testimonials";
+import { CtaBand } from "@/components/CtaBand";
+import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
+import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
-import { ArrowRight, Ticket, Hotel, Users, Shield, FileCheck, BarChart3, Clock, Briefcase } from "lucide-react";
+import {
+  ArrowRight,
+  Ticket,
+  Hotel,
+  Users,
+  Shield,
+  FileCheck,
+  BarChart3,
+  Clock,
+  Briefcase,
+  TrendingDown,
+  AlarmClock,
+  ClipboardList,
+  Wallet,
+  Check,
+} from "lucide-react";
+
+const painPoints = [
+  {
+    icon: TrendingDown,
+    problem: "Nobody knows what travel actually costs you",
+    solution:
+      "Monthly spend reporting by department, route, traveller and supplier — plus a fare audit that shows what you paid versus the best available fare.",
+  },
+  {
+    icon: AlarmClock,
+    problem: "Approvals take days and fares expire",
+    solution:
+      "A booking desk that holds fares while your approval workflow runs, and issues the moment sign-off lands. Urgent tickets inside the hour.",
+  },
+  {
+    icon: ClipboardList,
+    problem: "Policy exists on paper, not in practice",
+    solution:
+      "Every request checked against your written policy before ticketing, with out-of-policy requests flagged to your approver rather than quietly booked.",
+  },
+  {
+    icon: Wallet,
+    problem: "Invoices arrive from ten different suppliers",
+    solution:
+      "One consolidated monthly invoice, reconciled to your cost centres, with credit terms for approved accounts.",
+  },
+];
 
 const pillars = [
   {
@@ -22,6 +70,7 @@ const pillars = [
       "Reissues, refunds and schedule-change management",
       "Seat, baggage and special assistance requests",
     ],
+    outcome: "Most clients see 20–30% off their previous air spend in year one.",
   },
   {
     id: "programme",
@@ -38,6 +87,7 @@ const pillars = [
       "Monthly spend reporting by department and route",
       "Supplier negotiation and cost-saving reviews",
     ],
+    outcome: "One invoice, one account manager, zero chasing.",
   },
   {
     id: "mice",
@@ -54,6 +104,7 @@ const pillars = [
       "Team-building and incentive experiences",
       "On-site event coordination and reporting",
     ],
+    outcome: "Our coordinators are physically on site, start to finish.",
   },
 ];
 
@@ -66,45 +117,121 @@ const support = [
   { icon: BarChart3, title: "Duty of Care Tracking", description: "Know where your travellers are, with itineraries and alerts shared with your team." },
 ];
 
+const onboarding = [
+  { n: "01", title: "Travel audit", text: "Share 12 months of travel spend. We analyse routes, carriers, class mix and leakage — free and confidential." },
+  { n: "02", title: "Savings proposal", text: "You receive a written proposal with projected savings, service levels and a policy draft within five working days." },
+  { n: "03", title: "Go live in 2 weeks", text: "Account setup, traveller profiles, approver matrix and credit terms configured. No system for your team to learn." },
+  { n: "04", title: "Quarterly review", text: "We report on savings delivered, policy compliance and supplier performance, then renegotiate where volumes justify it." },
+];
+
+const faqs: Faq[] = [
+  {
+    question: "How much does corporate travel management cost us?",
+    answer:
+      "There is no subscription or platform fee for standard managed accounts. We are remunerated through supplier arrangements and, where applicable, a transparent transaction fee agreed in your service contract before you sign. Every quote you receive is itemised.",
+  },
+  {
+    question: "How quickly can you issue an urgent ticket?",
+    answer:
+      "Within the hour during business hours, and any time of night through the 24/7 duty desk for accounts with emergency authorisation on file. We can hold fares while your internal approval runs.",
+  },
+  {
+    question: "Do we have to change our travel policy or systems?",
+    answer:
+      "No. We work inside your existing policy and approval chain, and we can help redraft it if you want. There is no software for your staff to learn — they email or call the desk and we handle the rest.",
+  },
+  {
+    question: "Can you offer credit terms and consolidated invoicing?",
+    answer:
+      "Yes. Approved corporate accounts are set up with credit terms and a single monthly invoice reconciled to your cost centres, replacing dozens of individual supplier receipts.",
+  },
+  {
+    question: "How do you handle duty of care?",
+    answer:
+      "We maintain live traveller itineraries, share them with your nominated safety contact, and coordinate medical referrals, evacuations and emergency rerouting through our duty desk.",
+  },
+  {
+    question: "What happens when a trip goes wrong at 2am?",
+    answer:
+      "You call the emergency line and a consultant re-routes or re-issues the ticket, rebooks affected hotels and transfers, and informs your office. There is no agency penalty for disruption rebooking.",
+  },
+];
+
 const CorporateTravel = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
       <Seo
-        title="Corporate Travel Management in Kenya | Paradise Vacations"
-        description="Corporate travel management for Kenyan organisations: air ticketing, negotiated hotel rates, travel policy and approvals, MICE and incentives, visas, insurance, spend reporting and 24/7 traveller support."
+        title="Corporate Travel Management Kenya | Cut Travel Spend 20-30%"
+        description="Managed corporate travel for Kenyan organisations: negotiated airfares, policy and approvals, consolidated invoicing, MICE, visas, duty of care and 24/7 traveller support. Free travel spend audit."
         path="/corporate-travel"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          name: "Corporate Travel Management",
-          serviceType: "Corporate travel management",
-          areaServed: "Kenya and East Africa",
-          url: "/corporate-travel",
-          description:
-            "Managed corporate travel programmes covering air ticketing, hotels, policy compliance, MICE, duty of care and spend reporting.",
-          provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
-        }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Corporate Travel Management",
+            serviceType: "Corporate travel management",
+            areaServed: "Kenya and East Africa",
+            url: "/corporate-travel",
+            description:
+              "Managed corporate travel programmes covering air ticketing, hotels, policy compliance, MICE, duty of care and spend reporting.",
+            provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
+          },
+          faqPageJsonLd(faqs),
+        ]}
       />
       <StaticNav />
 
-      {/* Hero */}
-      <section className="relative h-[58vh] min-h-[400px] w-full overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1800&q=85"
-          alt="Business travellers in a meeting arranged by Paradise Vacations Kenya"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/55" />
-        <div className="relative h-full max-w-6xl mx-auto flex flex-col justify-end px-8 md:px-16 pb-14">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span className="font-sans text-xs tracking-[0.3em] uppercase text-white/70 mb-4 block">Corporate Travel Management</span>
-            <h1 className="font-display text-4xl md:text-6xl text-white leading-tight mb-4 max-w-3xl">
-              Corporate Travel Management, Delivered
-            </h1>
-            <p className="font-sans text-white/80 max-w-2xl">
-              One accountable partner for flights, hotels, policy, approvals, reporting and traveller safety — across Kenya, the region and worldwide.
+      <PageHero
+        eyebrow="Corporate Travel Management"
+        badge="Free travel spend audit · Proposal in 5 working days"
+        title={<>Spend less on travel. Take better care of your people.</>}
+        subtitle="One accountable partner for flights, hotels, policy, approvals, reporting and traveller safety — across Kenya, the region and worldwide."
+        image="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1800&q=85"
+        imageAlt="Business travellers in a corporate meeting arranged by Paradise Vacations Kenya"
+        primaryLabel="Request a free spend audit"
+        microcopy="No obligation · Confidential · Written savings projection"
+        stats={[
+          { value: "20–30%", label: "Typical spend saving" },
+          { value: "<1 hr", label: "Urgent ticketing" },
+          { value: "1", label: "Monthly invoice" },
+          { value: "24/7", label: "Duty desk" },
+        ]}
+      />
+
+      <TrustBar />
+
+      {/* Pain / solution */}
+      <section className="py-20 px-6 md:px-16 bg-sand-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="chapter-title text-xs mb-4 block">The Problem We Solve</span>
+            <h2 className="font-display text-3xl md:text-5xl mb-4">Four things every finance team tells us</h2>
+            <p className="font-sans text-muted-foreground text-lg">
+              If two or more of these sound familiar, an audit will pay for itself.
             </p>
-          </motion.div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {painPoints.map((p, index) => (
+              <motion.div
+                key={p.problem}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-background rounded-xl p-7 border border-border shadow-soft"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <p.icon className="w-5 h-5 text-primary" strokeWidth={1.7} />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg mb-3">“{p.problem}”</h3>
+                    <p className="font-sans text-sm text-muted-foreground leading-relaxed">{p.solution}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -112,7 +239,7 @@ const CorporateTravel = () => (
         <section
           key={pillar.id}
           id={pillar.id}
-          className={`py-20 px-8 md:px-16 scroll-mt-24 ${index % 2 === 0 ? "bg-sand-dark" : "bg-background"}`}
+          className={`py-20 px-6 md:px-16 scroll-mt-24 ${index % 2 === 0 ? "bg-background" : "bg-ocean-light"}`}
         >
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <motion.div
@@ -126,14 +253,17 @@ const CorporateTravel = () => (
               <h2 className="font-display text-3xl md:text-4xl mb-5 leading-tight">{pillar.title}</h2>
               <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-4">{pillar.intro}</p>
               <p className="font-sans text-muted-foreground leading-relaxed mb-6">{pillar.body}</p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-7">
                 {pillar.points.map((point) => (
                   <li key={point} className="flex items-start gap-3 font-sans text-sm text-muted-foreground">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                     {point}
                   </li>
                 ))}
               </ul>
+              <div className="inline-flex items-center gap-2 rounded-lg bg-primary/10 px-4 py-3 font-sans text-sm text-primary">
+                {pillar.outcome}
+              </div>
             </motion.div>
 
             <motion.div
@@ -141,7 +271,7 @@ const CorporateTravel = () => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className={`relative aspect-[4/3] rounded-lg overflow-hidden ${index % 2 === 0 ? "" : "lg:order-1"}`}
+              className={`relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated ${index % 2 === 0 ? "" : "lg:order-1"}`}
             >
               <img src={pillar.image} alt={pillar.title} loading="lazy" className="w-full h-full object-cover" />
             </motion.div>
@@ -149,11 +279,12 @@ const CorporateTravel = () => (
         </section>
       ))}
 
-      <section className="py-24 px-8 md:px-16 bg-ocean-light">
+      {/* Support services */}
+      <section className="py-20 px-6 md:px-16 bg-sand-dark">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <span className="chapter-title text-xs mb-4 block">Included in Your Account</span>
-            <h2 className="font-display text-3xl md:text-4xl">Support Services for Travelling Staff</h2>
+            <h2 className="font-display text-3xl md:text-5xl">Support services for travelling staff</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {support.map((item, index) => (
@@ -163,7 +294,7 @@ const CorporateTravel = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="flex items-start gap-4 bg-background p-6 rounded-lg"
+                className="flex items-start gap-4 bg-background p-6 rounded-xl border border-border shadow-soft"
               >
                 <item.icon className="w-8 h-8 text-primary flex-shrink-0" strokeWidth={1.5} />
                 <div>
@@ -176,28 +307,62 @@ const CorporateTravel = () => (
         </div>
       </section>
 
-      <section className="py-20 px-8 md:px-16 text-center">
-        <h2 className="font-display text-3xl md:text-4xl mb-6">Talk to Us About Your Travel Programme</h2>
-        <p className="font-sans text-muted-foreground max-w-2xl mx-auto mb-8">
-          Share your annual travel volumes and policy and we will come back with a proposal, projected savings and a service plan.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link
-            to="/book"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
-          >
-            Request a Proposal <ArrowRight size={16} />
-          </Link>
-          <Link
-            to="/dmc"
-            className="inline-flex items-center gap-2 px-10 py-4 border border-primary/40 text-primary font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/5 transition-all duration-300"
-          >
-            Our DMC Services
-          </Link>
+      {/* Onboarding */}
+      <section className="py-20 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="chapter-title text-xs mb-4 block">Switching Is Easy</span>
+            <h2 className="font-display text-3xl md:text-5xl mb-4">Live in two weeks, savings in the first quarter</h2>
+            <p className="font-sans text-muted-foreground text-lg">
+              No systems to install, no disruption to your travellers.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {onboarding.map((s, index) => (
+              <motion.div
+                key={s.n}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-card rounded-xl p-7 border border-border shadow-soft"
+              >
+                <div className="font-display text-4xl text-primary/25 mb-4">{s.n}</div>
+                <h3 className="font-display text-lg mb-3">{s.title}</h3>
+                <p className="font-sans text-sm text-muted-foreground leading-relaxed">{s.text}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
+      <Testimonials
+        eyebrow="Corporate Clients"
+        heading="What travel managers say"
+        intro="Finance teams, admin heads and frequent-flying executives across Kenya."
+        limit={3}
+      />
+
+      <FaqBlock faqs={faqs} eyebrow="Corporate Travel FAQs" heading="What procurement teams ask us" />
+
+      <CtaBand
+        eyebrow="Free Spend Audit"
+        heading="Show us last year's travel spend. We'll show you the savings."
+        text="Send 12 months of travel data and receive a confidential written proposal with projected savings, service levels and a draft travel policy within five working days."
+        primaryLabel="Request a proposal"
+        secondary={{ label: "Our DMC services", to: "/dmc" }}
+        tone="dark"
+      />
+
+      <section className="py-14 px-6 md:px-16 text-center bg-background">
+        <p className="font-sans text-muted-foreground mb-5">Prefer to talk it through first?</p>
+        <Link to="/packages" className="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-primary hover:gap-3 transition-all">
+          Browse group and incentive packages <ArrowRight size={15} />
+        </Link>
+      </section>
+
       <SiteFooter />
+      <StickyCta />
     </div>
   </PageTransition>
 );
