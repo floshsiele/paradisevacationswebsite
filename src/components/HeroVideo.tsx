@@ -39,8 +39,8 @@ export function HeroVideo() {
       {/* Video background */}
       <video
         ref={videoRef}
-        src={heroVideo.url}
-        poster={heroPoster.url}
+        src={heroVideoUrl}
+        poster={heroPosterUrl}
         autoPlay={!prefersReducedMotion}
         muted
         loop
