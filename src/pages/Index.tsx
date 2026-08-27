@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
-import { HeroSlideshow } from "@/components/HeroSlideshow";
+import { HeroVideo } from "@/components/HeroVideo";
 import { PageTransition } from "@/components/PageTransition";
 import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone } from "lucide-react";
 import { Seo } from "@/components/Seo";
@@ -48,7 +48,7 @@ const Index = () => {
         <StaticNav />
 
         {/* Hero Section */}
-        <HeroSlideshow />
+        <HeroVideo />
 
         {/* Service Pillars */}
         <section id="services" className="py-16 px-8 md:px-16 bg-sand-dark">
