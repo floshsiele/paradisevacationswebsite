@@ -104,16 +104,16 @@ export function StaticNav() {
         )}
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <Logo variant={isDarkBackground ? "light" : "dark"} className="mr-2 md:mr-4 lg:mr-6 shrink-0" />
+          <Logo variant={isDarkBackground ? "light" : "dark"} />
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "font-sans text-sm tracking-widest uppercase transition-all duration-400 link-underline whitespace-nowrap",
+                  "font-sans text-sm tracking-widest uppercase transition-all duration-400 link-underline",
                   isDarkBackground
                     ? location.pathname === item.path
                       ? "text-white"
@@ -129,7 +129,7 @@ export function StaticNav() {
             <a
               href="tel:+254726927081"
               className={cn(
-                "hidden xl:flex items-center gap-2 font-sans text-sm tracking-widest transition-colors duration-400 whitespace-nowrap",
+                "hidden lg:flex items-center gap-2 font-sans text-sm tracking-widest transition-colors duration-400",
                 isDarkBackground ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-foreground"
               )}
             >
@@ -142,7 +142,7 @@ export function StaticNav() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={cn(
-              "lg:hidden p-2 transition-colors duration-300 shrink-0",
+              "md:hidden p-2 transition-colors duration-300",
               isDarkBackground ? "text-white" : "text-foreground"
             )}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
@@ -160,7 +160,7 @@ export function StaticNav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-30 lg:hidden"
+            className="fixed inset-0 z-30 md:hidden"
           >
             {/* Backdrop */}
             <div
