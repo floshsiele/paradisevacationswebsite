@@ -9,7 +9,7 @@ type LogoProps = {
   showTagline?: boolean;
 };
 
-/** Paradise Vacations logo lockup using the original brand artwork. */
+/** Paradise Vacations logo — the original brand artwork, unmodified. */
 export function Logo({ className }: LogoProps) {
   return (
     <Link
@@ -17,13 +17,15 @@ export function Logo({ className }: LogoProps) {
       className={cn("inline-flex items-center group", className)}
       aria-label="Paradise Vacations home"
     >
-      <img
-        src={logoAsset.url}
-        alt="Paradise Vacations logo"
-        className="h-12 md:h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
-        width={200}
-        height={80}
-      />
+      <span className="rounded-xl bg-white p-1.5 shadow-sm">
+        <img
+          src={logoAsset.url}
+          alt="Paradise Vacations logo"
+          className="h-14 md:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+          width={256}
+          height={256}
+        />
+      </span>
     </Link>
   );
 }
