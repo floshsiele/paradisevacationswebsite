@@ -9,6 +9,7 @@ import { ArrowRight, Map, PlaneLanding, CalendarCheck, Bus, LifeBuoy, Binoculars
 const services = [
   {
     id: "arrival",
+    label: "Arrivals",
     title: "Arrival, Transfers & VIP Handling",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1400&q=85",
     icon: PlaneLanding,
@@ -25,6 +26,7 @@ const services = [
   },
   {
     id: "events",
+    label: "Events",
     title: "Venue Sourcing & Event Logistics",
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1400&q=85",
     icon: CalendarCheck,
@@ -41,8 +43,9 @@ const services = [
   },
   {
     id: "ground",
+    label: "Ground Ops",
     title: "Ground Operations & Fleet",
-    image: "https://images.unsplash.com/photo-1523805009345-7448843a9fbc?w=1400&q=85",
+    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1400&q=85",
     icon: Bus,
     intro:
       "A managed fleet and licensed guide network covering Nairobi, the coast, the Rift Valley and the northern circuit.",
@@ -57,6 +60,7 @@ const services = [
   },
   {
     id: "programmes",
+    label: "Programmes",
     title: "Tailor-Made Programmes & Excursions",
     image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=1400&q=85",
     icon: Binoculars,
@@ -73,6 +77,7 @@ const services = [
   },
   {
     id: "support",
+    label: "24/7 Support",
     title: "24/7 On-Ground Support",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=85",
     icon: LifeBuoy,
@@ -112,7 +117,7 @@ const DMC = () => (
 
       <section className="relative h-[58vh] min-h-[400px] w-full overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1523805009345-7448843a9fbc?w=1800&q=85"
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=85"
           alt="Kenyan landscape managed by Paradise Vacations destination management team"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -146,7 +151,7 @@ const DMC = () => (
                 href={`#${s.id}`}
                 className="px-5 py-2 rounded-full border border-border font-sans text-xs tracking-widest uppercase text-foreground/70 hover:text-primary hover:border-primary/40 transition-colors"
               >
-                {s.title.split(" ")[0]}
+                {s.label}
               </a>
             ))}
           </div>
