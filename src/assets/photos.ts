@@ -5,6 +5,9 @@ import familyOcean from "./family-ocean.jpg.asset.json";
 import starfishChild from "./starfish-child.jpg.asset.json";
 import dunes from "./dunes-lamu.jpg.asset.json";
 import brandTee from "./travel-is-my-business.jpg.asset.json";
+import safariConvoy from "./safari-convoy.png.asset.json";
+import safariElephant from "./safari-elephant-game-drive.png.asset.json";
+import safariFleet from "./safari-fleet-track.png.asset.json";
 
 export const photos = {
   lionessSafari: lioness.url,
@@ -14,4 +17,7 @@ export const photos = {
   starfishChild: starfishChild.url,
   dunesLamu: dunes.url,
   brandTee: brandTee.url,
+  safariConvoy: safariConvoy.url,
+  safariElephant: safariElephant.url,
+  safariFleet: safariFleet.url,
 };

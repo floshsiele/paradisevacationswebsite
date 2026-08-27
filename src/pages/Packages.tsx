@@ -30,7 +30,7 @@ const categoryBlurbs: { key: TravelPackage["category"]; title: string; text: str
     key: "Inbound",
     title: "Inbound Tours",
     text: "Safaris, beach holidays and cultural journeys inside Kenya and East Africa for visitors and residents — Masai Mara, Amboseli, Diani and beyond, with licensed guides and 4x4 safari vehicles.",
-    image: photos.lionessSafari,
+    image: photos.safariConvoy,
   },
   {
     key: "Outbound",
