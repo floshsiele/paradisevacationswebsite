@@ -67,6 +67,14 @@
     --overlay: 210 15% 8%;
     --sand-dark: 36 25% 94%;
     --ocean-light: 174 50% 95%;
+
+    /* Gradients & elevation */
+    --gradient-hero: linear-gradient(180deg, hsl(var(--overlay) / 0.15) 0%, hsl(var(--overlay) / 0.35) 55%, hsl(var(--overlay) / 0.78) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--teal)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(36 65% 62%) 100%);
+    --shadow-soft: 0 2px 10px -4px hsl(210 15% 12% / 0.10);
+    --shadow-elevated: 0 20px 45px -22px hsl(210 15% 12% / 0.35);
+    --shadow-glow: 0 12px 40px -12px hsl(var(--primary) / 0.45);
   }
 
   .dark {
@@ -114,6 +122,13 @@
     --overlay: 210 15% 8%;
     --sand-dark: 210 15% 12%;
     --ocean-light: 210 15% 15%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 0% / 0.2) 0%, hsl(0 0% 0% / 0.45) 55%, hsl(0 0% 0% / 0.85) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--teal)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(36 65% 62%) 100%);
+    --shadow-soft: 0 2px 10px -4px hsl(0 0% 0% / 0.5);
+    --shadow-elevated: 0 20px 45px -22px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 12px 40px -12px hsl(var(--primary) / 0.5);
   }
 }
 
@@ -213,5 +228,27 @@
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@layer components {
+  .btn-primary-cta {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md font-sans text-sm tracking-widest uppercase text-primary-foreground transition-transform duration-300;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-primary-cta:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost-cta {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md font-sans text-sm tracking-widest uppercase border transition-colors duration-300;
+    border-color: hsl(var(--background) / 0.5);
+    color: hsl(var(--background));
+  }
+
+  .btn-ghost-cta:hover {
+    background: hsl(var(--background) / 0.12);
   }
 }
