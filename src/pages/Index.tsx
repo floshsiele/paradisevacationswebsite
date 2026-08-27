@@ -7,7 +7,7 @@ import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone } from "lucide-
 import { Seo } from "@/components/Seo";
 
 const serviceCards = [
-  { icon: Briefcase, title: "Corporate Travel", description: "Managed business travel: air ticketing, negotiated hotel rates, policy, reporting and 24/7 traveller support.", to: "/corporate-travel" },
+  { icon: Briefcase, title: "Corporate Travel Management", description: "Managed business travel: air ticketing, negotiated hotel rates, policy, reporting and 24/7 traveller support.", to: "/corporate-travel" },
   { icon: Plane, title: "Inbound & Outbound Tours", description: "Kenya safaris and beach holidays, plus outbound getaways to Dubai, Zanzibar and beyond.", to: "/packages" },
   { icon: GraduationCap, title: "Educational Trips", description: "Supervised international study tours for schools, colleges and universities.", to: "/packages" },
   { icon: Map, title: "Destination Management", description: "Ground handling, event logistics, fleet and licensed guides across Kenya and East Africa.", to: "/dmc" },
