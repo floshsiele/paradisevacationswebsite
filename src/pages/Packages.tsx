@@ -166,6 +166,18 @@ const Packages = () => {
               </motion.article>
             ))}
           </div>
+
+          <div className="text-center mt-16">
+            <p className="font-sans text-muted-foreground mb-6">
+              Want a custom package or dates that are not listed?
+            </p>
+            <Link
+              to="/book"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
+            >
+              Request a Custom Quote <ArrowRight size={16} />
+            </Link>
+          </div>
         </section>
 
         <SiteFooter />
