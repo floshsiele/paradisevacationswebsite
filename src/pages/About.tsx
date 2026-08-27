@@ -191,7 +191,7 @@ const About = () => {
             <Link to="/" className="font-display text-xl tracking-wide">Paradise Vacations</Link>
             <nav className="flex gap-8">
               <Link to="/" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Home</Link>
-              <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Get a Quote</Link>
+              <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Book</Link>
               <Link to="/contact" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Contact</Link>
             </nav>
             <p className="font-sans text-sm text-background/50">

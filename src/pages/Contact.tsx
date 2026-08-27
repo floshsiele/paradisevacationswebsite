@@ -139,7 +139,7 @@ const Contact = () => {
             <nav className="flex gap-8">
               <Link to="/" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Home</Link>
               <Link to="/about" className="font-sans text-sm text-background/70 hover:text-background transition-colors">About</Link>
-              <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Get a Quote</Link>
+              <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Book</Link>
             </nav>
             <p className="font-sans text-sm text-background/50">
               © 2025 Paradise Vacations Kenya
