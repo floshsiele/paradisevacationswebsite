@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Corporate Travel", path: "/corporate-travel" },
+  { name: "Corporate Travel Management", path: "/corporate-travel" },
   { name: "Packages", path: "/packages" },
   { name: "DMC", path: "/dmc" },
   { name: "Contact", path: "/contact" },

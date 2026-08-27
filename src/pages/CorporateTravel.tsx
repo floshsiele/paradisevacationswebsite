@@ -97,9 +97,9 @@ const CorporateTravel = () => (
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/55" />
         <div className="relative h-full max-w-6xl mx-auto flex flex-col justify-end px-8 md:px-16 pb-14">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span className="font-sans text-xs tracking-[0.3em] uppercase text-white/70 mb-4 block">Corporate Travel</span>
+            <span className="font-sans text-xs tracking-[0.3em] uppercase text-white/70 mb-4 block">Corporate Travel Management</span>
             <h1 className="font-display text-4xl md:text-6xl text-white leading-tight mb-4 max-w-3xl">
-              Business Travel, Managed End to End
+              Corporate Travel Management, Delivered
             </h1>
             <p className="font-sans text-white/80 max-w-2xl">
               One accountable partner for flights, hotels, policy, approvals, reporting and traveller safety — across Kenya, the region and worldwide.
