@@ -2,24 +2,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { HeroSlideshow } from "@/components/HeroSlideshow";
-import { ContactForm } from "@/components/ContactForm";
 import { PageTransition } from "@/components/PageTransition";
-import { Plane, Building2, Map, Briefcase, Shield, FileCheck, Ticket, Hotel, Users, ArrowRight, Phone } from "lucide-react";
+import { Plane, Map, Briefcase, Building2, ArrowRight, Phone } from "lucide-react";
 
 const serviceCards = [
   { icon: Briefcase, title: "Corporate Travel Management", description: "Tailored business travel solutions that ensure efficiency, comfort, and cost-effectiveness." },
   { icon: Plane, title: "Leisure Travel", description: "Curated holidays and getaways designed around your dreams and budget." },
   { icon: Map, title: "Destination Management", description: "Local expertise and on-ground support for seamless travel experiences across Kenya." },
   { icon: Building2, title: "Business Solutions", description: "End-to-end travel policies, reporting, and compliance for organizations." },
-];
-
-const offerings = [
-  { icon: Ticket, title: "Air Ticketing", description: "Competitive fares and flexible bookings on all major airlines." },
-  { icon: Hotel, title: "Hotel Booking", description: "Hand-picked stays from city hotels to safari lodges and beach resorts." },
-  { icon: Users, title: "MICE", description: "Meetings, Incentives, Conferences and Exhibitions handled flawlessly." },
-  { icon: Shield, title: "Travel Insurance", description: "Comprehensive coverage so you travel with total peace of mind." },
-  { icon: FileCheck, title: "Visa Assistance", description: "Guided visa application support for all major destinations." },
-  { icon: Ticket, title: "Electronic Travel Authorization", description: "Fast, reliable ETA processing for eligible destinations." },
 ];
 
 const stats = [
@@ -41,14 +31,14 @@ const Index = () => {
         <HeroSlideshow />
 
         {/* Service Pillars */}
-        <section id="services" className="py-24 px-8 md:px-16 bg-sand-dark">
+        <section id="services" className="py-16 px-8 md:px-16 bg-sand-dark">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
               <span className="chapter-title text-xs mb-4 block">What We Do</span>
               <h2 className="font-display text-3xl md:text-5xl">Seamless Travel Solutions</h2>
@@ -72,52 +62,20 @@ const Index = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* Corporate Travel Highlight */}
-        <section className="py-24 px-8 md:px-16 bg-background">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <span className="chapter-title text-xs mb-4 block">Corporate</span>
-              <h2 className="font-display text-3xl md:text-5xl mb-6 leading-tight">Corporate Travel Management</h2>
-              <p className="font-sans text-muted-foreground text-lg leading-relaxed mb-6">
-                At Paradise Vacations Kenya, we specialize in Corporate Travel Management designed to streamline your business travel needs.
-              </p>
-              <p className="font-sans text-muted-foreground leading-relaxed mb-8">
-                We handle everything from flight bookings and accommodation to meeting logistics and travel policy compliance — allowing you to focus on what matters most: business success. With our proactive travel consultants and round-the-clock support, we deliver a seamless corporate travel experience that saves you time and money.
-              </p>
+            <div className="text-center mt-10">
               <Link
-                to="/quote"
+                to="/services"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
               >
-                Get Your Quote <ArrowRight size={16} />
+                Explore All Services <ArrowRight size={16} />
               </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative aspect-[4/3] rounded-lg overflow-hidden"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
-                alt="Corporate traveler at airport"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Safari & Outbound Holidays */}
-        <section className="py-24 px-8 md:px-16 bg-ocean-light">
+        <section className="py-16 px-8 md:px-16 bg-ocean-light">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -127,7 +85,7 @@ const Index = () => {
             >
               <span className="chapter-title text-xs mb-4 block">Unforgettable Experiences</span>
               <h2 className="font-display text-3xl md:text-5xl mb-6">Your Travel Journey Awaits</h2>
-              <p className="font-sans text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
+              <p className="font-sans text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
                 Step into the wild with our curated safari experiences across Kenya's iconic landscapes and around the world.
               </p>
             </motion.div>
@@ -174,79 +132,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* DMC Services */}
-        <section className="py-24 px-8 md:px-16 bg-background">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative aspect-[4/3] rounded-lg overflow-hidden order-2 lg:order-1"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1523805009345-7448843a9fbc?w=1200&q=85"
-                alt="Kenya destination landscape"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="order-1 lg:order-2"
-            >
-              <span className="chapter-title text-xs mb-4 block">Destination Management</span>
-              <h2 className="font-display text-3xl md:text-5xl mb-6 leading-tight">Your Local Expert for Seamless Travel Experiences</h2>
-              <p className="font-sans text-muted-foreground text-lg leading-relaxed mb-6">
-                As your trusted Destination Management Company (DMC), we specialize in providing in-depth local expertise and customized on-ground support for travel experiences across Kenya and beyond.
-              </p>
-              <p className="font-sans text-muted-foreground leading-relaxed">
-                Whether you're planning corporate events, incentive travel, luxury holidays, or group tours, we ensure that every detail is flawlessly executed from arrival to departure.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* What We Offer */}
-        <section className="py-24 px-8 md:px-16 bg-sand-dark">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <span className="chapter-title text-xs mb-4 block">Our Services</span>
-              <h2 className="font-display text-3xl md:text-5xl">What We Offer</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {offerings.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start gap-4 bg-background p-6 rounded-lg"
-                >
-                  <item.icon className="w-8 h-8 text-primary flex-shrink-0" strokeWidth={1.5} />
-                  <div>
-                    <h3 className="font-display text-lg mb-1">{item.title}</h3>
-                    <p className="font-sans text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Stats */}
-        <section className="py-20 px-8 md:px-16 bg-primary text-primary-foreground">
+        <section className="py-16 px-8 md:px-16 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {stats.map((stat, index) => (
@@ -266,14 +153,14 @@ const Index = () => {
         </section>
 
         {/* Clients */}
-        <section className="py-20 px-8 md:px-16 bg-background">
+        <section className="py-16 px-8 md:px-16 bg-background">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="mb-12"
+              className="mb-10"
             >
               <span className="chapter-title text-xs mb-4 block">Trusted By</span>
               <h2 className="font-display text-3xl md:text-4xl">Our Clients</h2>
@@ -293,7 +180,7 @@ const Index = () => {
         </section>
 
         {/* Quote CTA */}
-        <section className="py-24 px-8 md:px-16 bg-ocean-light">
+        <section className="py-16 px-8 md:px-16 bg-ocean-light">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -303,7 +190,7 @@ const Index = () => {
             >
               <span className="chapter-title text-xs mb-4 block">Start Your Journey</span>
               <h2 className="font-display text-3xl md:text-5xl mb-6">Ready to Travel?</h2>
-              <p className="font-sans text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
+              <p className="font-sans text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
                 Get a personalized quote from our travel consultants. We'll handle the details so you can focus on the experience.
               </p>
               <Link
@@ -331,6 +218,7 @@ const Index = () => {
               <nav className="flex flex-col gap-3">
                 <Link to="/" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Home</Link>
                 <Link to="/about" className="font-sans text-sm text-background/70 hover:text-background transition-colors">About Us</Link>
+                <Link to="/services" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Services</Link>
                 <Link to="/quote" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Get a Quote</Link>
                 <Link to="/contact" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Contact</Link>
               </nav>
