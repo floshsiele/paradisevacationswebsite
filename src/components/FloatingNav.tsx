@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "What We Offer", path: "/services" },
-  { name: "Safari Journeys", path: "/safari-journeys" },
-  { name: "Book", path: "/book" },
+  { name: "About Us", path: "/about" },
+  { name: "Corporate Travel", path: "/corporate-travel" },
+  { name: "Packages", path: "/packages" },
+  { name: "DMC", path: "/dmc" },
   { name: "Contact", path: "/contact" },
 ];
 

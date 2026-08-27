@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { PageTransition } from "@/components/PageTransition";
+import { Seo } from "@/components/Seo";
 import { ArrowRight, Award, Globe, Shield, HeartHandshake } from "lucide-react";
 
 const values = [
@@ -31,6 +32,7 @@ const About = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
+        <Seo title={"About Us — Paradise Vacations Kenya"} description={"Paradise Vacations Kenya is a Nairobi-based travel agency delivering corporate travel, tour packages, educational trips and destination management across Kenya and worldwide."} path="/about" />
         <StaticNav />
 
         {/* Hero Section */}

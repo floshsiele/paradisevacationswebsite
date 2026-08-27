@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { HeroSlideshow } from "@/components/HeroSlideshow";
 import { PageTransition } from "@/components/PageTransition";
-import { Plane, Map, Briefcase, Building2, ArrowRight, Phone } from "lucide-react";
+import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 const serviceCards = [
-  { icon: Briefcase, title: "Corporate Travel Management", description: "Tailored business travel solutions that ensure efficiency, comfort, and cost-effectiveness." },
-  { icon: Plane, title: "Leisure Travel", description: "Curated holidays and getaways designed around your dreams and budget." },
-  { icon: Map, title: "Destination Management", description: "Local expertise and on-ground support for seamless travel experiences across Kenya." },
-  { icon: Building2, title: "Business Solutions", description: "End-to-end travel policies, reporting, and compliance for organizations." },
+  { icon: Briefcase, title: "Corporate Travel", description: "Managed business travel: air ticketing, negotiated hotel rates, policy, reporting and 24/7 traveller support.", to: "/corporate-travel" },
+  { icon: Plane, title: "Inbound & Outbound Tours", description: "Kenya safaris and beach holidays, plus outbound getaways to Dubai, Zanzibar and beyond.", to: "/packages" },
+  { icon: GraduationCap, title: "Educational Trips", description: "Supervised international study tours for schools, colleges and universities.", to: "/packages" },
+  { icon: Map, title: "Destination Management", description: "Ground handling, event logistics, fleet and licensed guides across Kenya and East Africa.", to: "/dmc" },
 ];
 
 const stats = [
@@ -25,6 +26,25 @@ const Index = () => {
   return (
     <PageTransition>
       <div className="min-h-screen">
+        <Seo
+          title="Paradise Vacations Kenya — Corporate Travel, Packages & DMC"
+          description="Kenyan travel agency offering corporate travel management, inbound and outbound tour packages, international educational trips and full destination management (DMC) services."
+          path="/"
+          jsonLd={{
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            name: "Paradise Vacations Kenya",
+            url: "/",
+            telephone: "+254726927081",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Occidental Plaza, 3rd floor, Muthithi Road, Westlands",
+              addressLocality: "Nairobi",
+              addressCountry: "KE",
+            },
+            areaServed: "Kenya and worldwide",
+          }}
+        />
         <StaticNav />
 
         {/* Hero Section */}
@@ -52,23 +72,25 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group bg-background p-8 rounded-lg border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-500"
+                  className="group bg-background rounded-lg border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-500"
                 >
+                  <Link to={service.to} className="block p-8 h-full">
                   <service.icon className="w-10 h-10 text-primary mb-6" strokeWidth={1.5} />
                   <h3 className="font-display text-xl mb-3">{service.title}</h3>
                   <p className="font-sans text-muted-foreground leading-relaxed text-sm">
                     {service.description}
                   </p>
+                  </Link>
                 </motion.div>
               ))}
             </div>
 
             <div className="text-center mt-10">
               <Link
-                to="/services"
+                to="/packages"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300"
               >
-                Explore All Services <ArrowRight size={16} />
+                Explore All Packages <ArrowRight size={16} />
               </Link>
             </div>
           </div>
@@ -218,7 +240,8 @@ const Index = () => {
               <nav className="flex flex-col gap-3">
                 <Link to="/" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Home</Link>
                 <Link to="/about" className="font-sans text-sm text-background/70 hover:text-background transition-colors">About Us</Link>
-                <Link to="/services" className="font-sans text-sm text-background/70 hover:text-background transition-colors">What We Offer</Link>
+                <Link to="/corporate-travel" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Corporate Travel</Link>
+                <Link to="/dmc" className="font-sans text-sm text-background/70 hover:text-background transition-colors">DMC</Link>
                 <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Book</Link>
                 <Link to="/contact" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Contact</Link>
               </nav>

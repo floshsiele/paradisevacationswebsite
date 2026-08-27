@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { ContactForm } from "@/components/ContactForm";
 import { PageTransition } from "@/components/PageTransition";
+import { Seo } from "@/components/Seo";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
 const Quote = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
+        <Seo title={"Book or Request a Travel Quote | Paradise Vacations Kenya"} description={"Tell us your destination, dates and travellers and get a tailored quote for safaris, holidays, educational trips or corporate travel in Kenya."} path="/book" />
         <StaticNav />
 
         {/* Header */}

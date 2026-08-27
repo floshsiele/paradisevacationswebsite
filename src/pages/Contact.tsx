@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { ContactForm } from "@/components/ContactForm";
 import { PageTransition } from "@/components/PageTransition";
+import { Seo } from "@/components/Seo";
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 
 const Contact = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
+        <Seo title={"Contact Paradise Vacations Kenya — Westlands, Nairobi"} description={"Call, WhatsApp, email or visit Paradise Vacations Kenya at Occidental Plaza, Muthithi Road, Westlands, Nairobi for travel quotes and bookings."} path="/contact" />
         <StaticNav />
 
         {/* Header */}
