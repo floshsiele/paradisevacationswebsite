@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/Logo";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -103,17 +104,7 @@ export function StaticNav() {
         )}
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <Link
-            to="/"
-            className={cn(
-              "font-display text-xl tracking-wide transition-colors duration-400",
-              isDarkBackground
-                ? "text-white/90 hover:text-white"
-                : "text-foreground/90 hover:text-foreground"
-            )}
-          >
-            Paradise Vacations
-          </Link>
+          <Logo variant={isDarkBackground ? "light" : "dark"} />
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
