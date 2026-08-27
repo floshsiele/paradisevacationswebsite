@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Phone, Star } from "lucide-react";
 import heroVideo from "@/assets/corporate-hero-v9.mp4.asset.json";
 import heroPoster from "@/assets/corporate-hero-v9-poster.jpg.asset.json";
 
