@@ -6,7 +6,6 @@ import { PageTransition } from "@/components/PageTransition";
 import { TrustBar } from "@/components/TrustBar";
 import { FeaturedPackages } from "@/components/FeaturedPackages";
 import { Testimonials } from "@/components/Testimonials";
-import { HomeFaq, homeFaqs, safariFaqs } from "@/components/HomeFaq";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
