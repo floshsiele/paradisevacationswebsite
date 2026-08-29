@@ -1,12 +1,10 @@
-import { ShieldCheck, Clock4, Award, Wallet, BadgeCheck } from "lucide-react";
-
-const accreditations = ["IATA", "KATA", "TRA", "TOSK"];
+import { ShieldCheck, Clock4, Award, Wallet } from "lucide-react";
 
 const points = [
   {
     icon: Award,
     title: "14 Years of Experience",
-    text: "IATA, KATA, TRA and TOSK certified — recognised by airlines and tourism bodies across Kenya.",
+    text: "Trusted by corporates, schools and travellers across Kenya and beyond since 2012.",
   },
   {
     icon: Clock4,
@@ -38,22 +36,6 @@ export function TrustBar() {
             </div>
           </div>
         ))}
-      </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-16 pb-8 flex flex-wrap items-center justify-center gap-3">
-        <span className="font-sans text-[11px] tracking-widest uppercase text-muted-foreground mr-2">
-          Accredited &amp; Certified
-        </span>
-        {accreditations.map((a) => (
-          <span
-            key={a}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 font-display text-sm font-semibold tracking-widest text-primary"
-          >
-            <BadgeCheck size={14} strokeWidth={2} /> {a}
-          </span>
-        ))}
-        <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-accent/40 bg-accent/10 font-display text-sm font-semibold tracking-widest text-accent-foreground">
-          <Award size={14} strokeWidth={2} /> 14 Years in Operation
-        </span>
       </div>
     </section>
   );

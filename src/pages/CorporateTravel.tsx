@@ -61,10 +61,10 @@ const pillars = [
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1400&q=85",
     icon: Ticket,
     intro:
-      "Competitive fares and flexible bookings on all major domestic, regional and international airlines, issued by IATA-certified consultants with 14 years of ticketing experience.",
-    body: "As an IATA-certified agency, we compare fares across carriers and consolidators to find the best combination of price, routing and flexibility for each trip. We issue and reissue tickets, manage schedule changes, negotiate corporate fare agreements and handle group and block-seat bookings — so your travellers keep moving when plans shift.",
+      "Competitive fares and flexible bookings on all major domestic, regional and international airlines, issued by accredited consultants with 14 years of ticketing experience.",
+    body: "As a fully accredited travel agency, we compare fares across carriers and consolidators to find the best combination of price, routing and flexibility for each trip. We issue and reissue tickets, manage schedule changes, negotiate corporate fare agreements and handle group and block-seat bookings — so your travellers keep moving when plans shift.",
     points: [
-      "IATA-certified ticketing desk",
+      "Accredited ticketing desk",
       "Domestic, regional and international fares",
       "Negotiated corporate fares and airline agreements",
       "Group bookings and block seat reservations",
@@ -184,9 +184,9 @@ const CorporateTravel = () => (
 
       <PageHero
         eyebrow="Corporate Travel Management"
-        badge="IATA certified · 14 years · Trusted by Kenyan corporates"
+        badge="14 years · Trusted by Kenyan corporates"
         title={<>Corporate Travel Management in Kenya — Travel Smarter, Not Harder</>}
-        subtitle="Time is money, and every business trip should move your company forward. With 14 years of experience and IATA, KATA, TRA and TOSK certification, we manage the full travel lifecycle for businesses, NGOs and government institutions — flights, hotels, transfers, visas, MICE logistics and real-time 24/7 traveller assistance."
+        subtitle="Time is money, and every business trip should move your company forward. With 14 years of experience, we manage the full travel lifecycle for businesses, NGOs and government institutions — flights, hotels, transfers, visas, MICE logistics and real-time 24/7 traveller assistance."
         image="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1800&q=85"
         imageAlt="Business travellers in a corporate meeting arranged by Paradise Vacations Kenya"
         primaryLabel="Request a corporate travel consultation"

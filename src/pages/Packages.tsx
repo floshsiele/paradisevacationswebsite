@@ -47,7 +47,7 @@ const categoryBlurbs: { key: TravelPackage["category"]; title: string; text: str
 ];
 
 const assurances = [
-  { icon: ShieldCheck, title: "IATA & KATA certified operator", text: "14 years in business, fully licensed and bonded. Your booking, payments and travel documents are handled by accredited professionals." },
+  { icon: ShieldCheck, title: "Fully licensed & accredited operator", text: "14 years in business, fully licensed and bonded. Your booking, payments and travel documents are handled by certified travel professionals." },
   { icon: CreditCard, title: "Deposit now, pay in instalments", text: "Secure your dates with a deposit and settle the balance in scheduled instalments before departure." },
   { icon: Users, title: "Any package, tailored free", text: "Change the dates, the lodge, the group size or the route. Redesign and requoting costs you nothing." },
 ];
@@ -115,7 +115,7 @@ const Packages = () => {
 
         <PageHero
           eyebrow="Tour Packages"
-          badge="IATA · KATA · TRA · TOSK certified · 14 years of trusted service"
+          badge="14 years of trusted, fully accredited service"
           title={<>Tour Packages — Experience the World, Starting with Kenya</>}
           subtitle="We don't just book trips — we design experiences. Inbound safaris and beach escapes, outbound holidays and international school trips, each with a day-by-day itinerary, honest inclusions and a from-price you can budget against."
           image={photos.dunesLamu}
