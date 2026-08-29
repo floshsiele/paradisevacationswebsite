@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
-        <Seo title={"Contact Paradise Vacations Kenya — Westlands, Nairobi"} description={"Call, WhatsApp, email or visit Paradise Vacations Kenya at Occidental Plaza, Muthithi Road, Westlands, Nairobi for travel quotes and bookings."} path="/contact" />
+        <Seo title={"Contact Paradise Vacations Kenya — Westlands, Nairobi"} description={"Call, WhatsApp, email or visit Paradise Vacations Kenya at Occidental Plaza, Muthithi Road, Westlands, Nairobi. 14 years of experience, IATA, KATA, TRA and TOSK certified."} path="/contact" />
         <StaticNav />
 
         {/* Header */}
@@ -25,7 +25,7 @@ const Contact = () => {
               Let's Plan Your Trip
             </h1>
             <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-              Reach out to our travel consultants for personalized itineraries, corporate travel solutions, or any travel inquiry.
+              Reach out to our travel consultants for personalized itineraries, corporate travel solutions, or any travel inquiry. IATA, KATA, TRA and TOSK certified with 14 years of trusted service.
             </p>
           </motion.div>
         </section>
@@ -144,7 +144,7 @@ const Contact = () => {
               <Link to="/book" className="font-sans text-sm text-background/70 hover:text-background transition-colors">Book</Link>
             </nav>
             <p className="font-sans text-sm text-background/50">
-              © 2025 Paradise Vacations Kenya
+              © 2025 Paradise Vacations Kenya · 14 years · IATA · KATA · TRA · TOSK
             </p>
           </div>
         </footer>
