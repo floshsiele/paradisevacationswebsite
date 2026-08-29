@@ -10,14 +10,14 @@ import { HomeFaq, homeFaqs } from "@/components/HomeFaq";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
-import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone, CheckCircle2, Stamp } from "lucide-react";
 
 const serviceCards = [
   {
     icon: Briefcase,
     title: "Corporate Travel Management",
     description:
-      "Negotiated airfares, policy control, approval workflows, monthly reporting and 24/7 traveller care. Cut travel spend without cutting comfort.",
+      "Negotiated airfares, policy control, MICE logistics, monthly reporting and 24/7 traveller care. Cut travel spend without cutting comfort.",
     proof: "Average 20–30% spend reduction",
     to: "/corporate-travel",
   },
@@ -44,6 +44,14 @@ const serviceCards = [
       "Ground handling for inbound operators and event organisers: fleet, licensed guides, conference logistics and delegate management.",
     proof: "East Africa ground assets",
     to: "/dmc",
+  },
+  {
+    icon: Stamp,
+    title: "Immigration Services",
+    description:
+      "Kenya visa applications and renewals, work permits, residency support and relocation assistance — handled by specialists, end to end.",
+    proof: "Direct liaison with immigration authorities",
+    to: "/immigration-services",
   },
 ];
 
@@ -110,14 +118,14 @@ const Index = () => {
               className="text-center max-w-2xl mx-auto mb-14"
             >
               <span className="chapter-title text-xs mb-4 block">What We Do</span>
-              <h2 className="font-display text-3xl md:text-5xl mb-4">Four services. One accountable team.</h2>
+              <h2 className="font-display text-3xl md:text-5xl mb-4">Five services. One accountable team.</h2>
               <p className="font-sans text-muted-foreground text-lg">
-                Whether it is a board trip to Dubai or 120 students to London, the same consultant owns it
-                from first quote to safe return.
+                Whether it is a board trip to Dubai, 120 students to London or a work permit for new staff,
+                the same consultant owns it from first quote to safe return.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCards.map((service, index) => (
                 <motion.div
                   key={service.title}

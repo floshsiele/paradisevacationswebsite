@@ -161,8 +161,8 @@ const CorporateTravel = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
       <Seo
-        title="Corporate Travel Management Kenya | Cut Travel Spend 20-30%"
-        description="Managed corporate travel for Kenyan organisations: negotiated airfares, policy and approvals, consolidated invoicing, MICE, visas, duty of care and 24/7 traveller support. Free travel spend audit."
+        title="Corporate Travel Management Kenya | Business Travel Solutions – Paradise Vacations Kenya"
+        description="Streamline your company's business travel with Paradise Vacations Kenya's corporate travel management services — flight bookings, accommodation, MICE, and 24/7 travel support across Kenya and East Africa."
         path="/corporate-travel"
         jsonLd={[
           {
@@ -184,11 +184,11 @@ const CorporateTravel = () => (
       <PageHero
         eyebrow="Corporate Travel Management"
         badge="Free travel spend audit · Proposal in 5 working days"
-        title={<>Spend less on travel. Take better care of your people.</>}
-        subtitle="One accountable partner for flights, hotels, policy, approvals, reporting and traveller safety — across Kenya, the region and worldwide."
+        title={<>Corporate Travel Management in Kenya — Travel Smarter, Not Harder</>}
+        subtitle="Time is money, and every business trip should move your company forward. We manage the full travel lifecycle for businesses, NGOs and government institutions — flights, hotels, transfers, visas, MICE logistics and real-time 24/7 traveller assistance."
         image="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1800&q=85"
         imageAlt="Business travellers in a corporate meeting arranged by Paradise Vacations Kenya"
-        primaryLabel="Request a free spend audit"
+        primaryLabel="Request a corporate travel consultation"
         microcopy="No obligation · Confidential · Written savings projection"
         stats={[
           { value: "20–30%", label: "Typical spend saving" },
