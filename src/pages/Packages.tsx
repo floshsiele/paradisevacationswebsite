@@ -75,7 +75,15 @@ const Packages = () => {
                 url: `/packages/${p.slug}`,
               })),
             },
-            faqPageJsonLd(faqs),
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [...homeFaqs, ...safariFaqs].map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            },
           ]}
         />
         <StaticNav />
