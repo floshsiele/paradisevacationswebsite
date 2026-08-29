@@ -1,10 +1,10 @@
-import { ShieldCheck, Clock4, BadgeCheck, Wallet } from "lucide-react";
+import { ShieldCheck, Clock4, Award, Wallet } from "lucide-react";
 
 const points = [
   {
-    icon: BadgeCheck,
-    title: "Licensed & Bonded",
-    text: "Registered Kenyan travel agency, KATO-standard operating practice.",
+    icon: Award,
+    title: "14 Years of Experience",
+    text: "IATA, KATA, TRA and TOSK certified — recognised by airlines and tourism bodies across Kenya.",
   },
   {
     icon: Clock4,

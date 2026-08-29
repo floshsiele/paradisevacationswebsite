@@ -29,8 +29,8 @@ const steps = [
 
 const reasons = [
   { icon: Clock4, title: "A quote within 24 hours", text: "Same working day for straightforward trips, 48 hours for complex multi-country programmes." },
-  { icon: Wallet, title: "Negotiated rates, itemised", text: "Airline and hotel contracts we've built over years — passed on, with every line of the price shown." },
-  { icon: ShieldCheck, title: "Nothing owed to enquire", text: "No fee, no obligation, no pressure. Take the itinerary away and think about it." },
+  { icon: Wallet, title: "Negotiated rates, itemised", text: "Airline and hotel contracts we've built over 14 years — passed on, with every line of the price shown." },
+  { icon: ShieldCheck, title: "IATA & KATA certified", text: "Your booking is handled by accredited professionals. No fee, no obligation, no pressure to commit." },
 ];
 
 const contactCards = [
@@ -67,7 +67,7 @@ const Quote = () => (
     <div className="min-h-screen bg-background">
       <Seo
         title="Get a Free Travel Quote in 24 Hours | Paradise Vacations Kenya"
-        description="Tell us your destination, dates and travellers and get a tailored, itemised travel quote within 24 hours. Safaris, holidays, educational trips and corporate travel. No fee, no obligation."
+        description="Tell us your destination, dates and travellers and get a tailored, itemised travel quote within 24 hours. 14 years of experience, IATA, KATA, TRA and TOSK certified. No fee, no obligation."
         path="/book"
         jsonLd={[faqPageJsonLd(faqs)]}
       />
@@ -89,7 +89,7 @@ const Quote = () => (
           </Link>
           <div className="inline-flex items-center gap-2 rounded-full bg-background/80 border border-border px-4 py-1.5 mb-6">
             <Star className="w-3.5 h-3.5 fill-accent text-accent" />
-            <span className="font-sans text-xs tracking-widest uppercase">Free quote in 24 hours · No obligation</span>
+            <span className="font-sans text-xs tracking-widest uppercase">14 years · IATA · KATA · TRA · TOSK · Free quote in 24 hours</span>
           </div>
           <h1 className="font-display text-4xl md:text-6xl mb-6">Tell us the trip. We'll price it honestly.</h1>
           <p className="font-sans text-lg text-muted-foreground">

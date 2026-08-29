@@ -126,9 +126,9 @@ const Immigration = () => (
 
       <PageHero
         eyebrow="Immigration Services"
-        badge="Confidential · Professional · End-to-end handling"
+        badge="14 years · IATA · KATA · TRA · TOSK certified"
         title={<>Immigration Services — Your Trusted Partner for Visas, Permits &amp; Relocation</>}
-        subtitle="Navigating immigration procedures can be confusing, time-consuming and stressful. We take the guesswork and hassle out of the process — for individuals, families and corporate clients relocating to or from Kenya."
+        subtitle="Navigating immigration procedures can be confusing, time-consuming and stressful. With 14 years of handling travel and relocation documentation for individuals, families and corporate clients, we take the guesswork and hassle out of the process — for anyone relocating to or from Kenya."
         image="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1800&q=85"
         imageAlt="Kenya visa and immigration documents handled by Paradise Vacations Kenya"
         primaryLabel="Get immigration assistance"
@@ -136,7 +136,7 @@ const Immigration = () => (
         secondaryTo="/contact"
         microcopy="Clear guidance from application to approval"
         stats={[
-          { value: "End-to-end", label: "Application handling" },
+          { value: "14 yrs", label: "Travel expertise" },
           { value: "Direct", label: "Government liaison" },
           { value: "100%", label: "Confidential" },
           { value: "1", label: "Dedicated contact" },
