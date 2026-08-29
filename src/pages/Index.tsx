@@ -242,7 +242,6 @@ const Index = () => {
         </section>
 
         <Testimonials />
-        <HomeFaq />
 
         {/* Final CTA */}
         <section className="py-20 px-6 md:px-16 bg-ocean-light">
