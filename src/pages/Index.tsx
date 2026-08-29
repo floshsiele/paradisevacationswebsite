@@ -6,7 +6,6 @@ import { PageTransition } from "@/components/PageTransition";
 import { TrustBar } from "@/components/TrustBar";
 import { FeaturedPackages } from "@/components/FeaturedPackages";
 import { Testimonials } from "@/components/Testimonials";
-import { HomeFaq, homeFaqs, safariFaqs } from "@/components/HomeFaq";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
@@ -127,15 +126,6 @@ const Index = () => {
                 reviewCount: "600",
               },
             },
-            {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [...homeFaqs, ...safariFaqs].map((f) => ({
-              "@type": "Question",
-              name: f.question,
-              acceptedAnswer: { "@type": "Answer", text: f.answer },
-            })),
-          },
           ]}
         />
         <StaticNav />
@@ -252,7 +242,6 @@ const Index = () => {
         </section>
 
         <Testimonials />
-        <HomeFaq />
 
         {/* Final CTA */}
         <section className="py-20 px-6 md:px-16 bg-ocean-light">
