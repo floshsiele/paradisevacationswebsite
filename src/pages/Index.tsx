@@ -10,14 +10,14 @@ import { HomeFaq, homeFaqs } from "@/components/HomeFaq";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
-import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone, CheckCircle2, Stamp } from "lucide-react";
 
 const serviceCards = [
   {
     icon: Briefcase,
     title: "Corporate Travel Management",
     description:
-      "Negotiated airfares, policy control, approval workflows, monthly reporting and 24/7 traveller care. Cut travel spend without cutting comfort.",
+      "Negotiated airfares, policy control, MICE logistics, monthly reporting and 24/7 traveller care. Cut travel spend without cutting comfort.",
     proof: "Average 20–30% spend reduction",
     to: "/corporate-travel",
   },
@@ -44,6 +44,14 @@ const serviceCards = [
       "Ground handling for inbound operators and event organisers: fleet, licensed guides, conference logistics and delegate management.",
     proof: "East Africa ground assets",
     to: "/dmc",
+  },
+  {
+    icon: Stamp,
+    title: "Immigration Services",
+    description:
+      "Kenya visa applications and renewals, work permits, residency support and relocation assistance — handled by specialists, end to end.",
+    proof: "Direct liaison with immigration authorities",
+    to: "/immigration-services",
   },
 ];
 

@@ -68,21 +68,24 @@ export function HeroVideo() {
             </span>
           </span>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
-            Travel managed properly.
+            Your Gateway to Kenya,
             <br />
-            <span className="italic font-normal">Every trip, every time.</span>
+            <span className="italic font-normal">East Africa, and Beyond.</span>
           </h1>
-          <p className="font-sans text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Corporate travel management, safaris, outbound holidays, educational trips and full
-            destination management — quoted in 24 hours, backed by 24/7 support.
+          <p className="font-sans text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            Paradise Vacations Kenya is a full-service travel management company delivering seamless,
+            world-class travel experiences across Kenya and East Africa — from corporate travel
+            management and curated tour packages to destination management (DMC) and immigration
+            support. Business trip, safari of a lifetime, school expedition or relocation — our travel
+            experts handle every detail, so you don't have to.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-9">
             <Link to="/book" className="btn-primary-cta">
-              Get a free quote in 24 hrs <ArrowRight size={16} />
+              Get a free quote <ArrowRight size={16} />
             </Link>
             <a href="tel:+254726927081" className="btn-ghost-cta">
-              <Phone size={16} /> Talk to a consultant
+              <Phone size={16} /> Talk to a travel consultant
             </a>
           </div>
 
