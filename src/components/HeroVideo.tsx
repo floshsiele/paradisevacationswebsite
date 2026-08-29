@@ -64,7 +64,7 @@ export function HeroVideo() {
           <span className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm">
             <Star className="w-3.5 h-3.5 fill-accent text-accent" />
             <span className="font-sans text-xs tracking-wider text-white/90">
-              Trusted by 200+ Kenyan corporates, schools and families
+              14 years · IATA · KATA · TRA · TOSK certified
             </span>
           </span>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">

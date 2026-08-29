@@ -56,9 +56,9 @@ const serviceCards = [
 ];
 
 const stats = [
+  { label: "Years in operation", value: "14" },
   { label: "Trips arranged", value: "1,000+" },
   { label: "Client satisfaction", value: "98%" },
-  { label: "Average corporate saving", value: "30%" },
   { label: "Support, every day", value: "24/7" },
 ];
 
