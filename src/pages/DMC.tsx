@@ -6,6 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBand } from "@/components/CtaBand";
+import { DmcInquiryForm } from "@/components/DmcInquiryForm";
 import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
@@ -335,6 +336,18 @@ const DMC = () => (
         intro="Conference convenors, operators and group leaders we have delivered for."
         limit={3}
       />
+
+      <section id="dmc-inquiry" className="py-20 px-6 md:px-16 bg-sand-dark">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <span className="chapter-title text-xs mb-3 block">DMC Inquiry</span>
+          <h2 className="font-display text-3xl md:text-4xl mb-4">Tell us about your group</h2>
+          <p className="font-sans text-muted-foreground">
+            Share the destination, dates, group size and services you need. Our ground operations team replies with
+            a costed programme within 48 hours.
+          </p>
+        </div>
+        <DmcInquiryForm />
+      </section>
 
       <FaqBlock faqs={faqs} eyebrow="DMC FAQs" heading="What partners ask before appointing us" tone="plain" />
 
