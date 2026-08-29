@@ -32,8 +32,8 @@ const AppRoutes = () => {
         <Route path="/packages/:slug" element={<PackageDetail />} />
         <Route path="/dmc" element={<DMC />} />
         <Route path="/immigration-services" element={<Immigration />} />
-        <Route path="/book" element={<Quote />} />
-        <Route path="/quote" element={<Navigate to="/book" replace />} />
+        <Route path="/packages#book" element={<Quote />} />
+        <Route path="/quote" element={<Navigate to="/packages#book" replace />} />
         <Route path="/services" element={<Navigate to="/packages" replace />} />
         <Route path="/safari-journeys" element={<Navigate to="/packages" replace />} />
         <Route path="/safari-journeys/:slug" element={<Navigate to="/packages" replace />} />

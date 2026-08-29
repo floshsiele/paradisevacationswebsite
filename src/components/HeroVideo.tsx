@@ -81,7 +81,7 @@ export function HeroVideo() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-9">
-            <Link to="/book" className="btn-primary-cta">
+            <Link to="/packages#book" className="btn-primary-cta">
               Get a free quote <ArrowRight size={16} />
             </Link>
             <a href="tel:+254726927081" className="btn-ghost-cta">

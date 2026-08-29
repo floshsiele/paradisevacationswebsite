@@ -35,7 +35,7 @@ export function LoyaltySection() {
             treatment every time you come back.
           </p>
           <Link
-            to="/book"
+            to="/packages#book"
             className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:opacity-90 transition-opacity"
           >
             Join with your first booking <ArrowRight size={16} />

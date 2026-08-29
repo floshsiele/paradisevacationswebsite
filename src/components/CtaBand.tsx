@@ -7,7 +7,7 @@ export function CtaBand({
   heading,
   text,
   primaryLabel = "Request my free quote",
-  primaryTo = "/book",
+  primaryTo = "/packages#book",
   secondary,
   tone = "light",
 }: {

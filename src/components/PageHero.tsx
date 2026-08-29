@@ -25,7 +25,7 @@ export function PageHero({
   imageAlt,
   badge,
   primaryLabel = "Get a free quote in 24 hrs",
-  primaryTo = "/book",
+  primaryTo = "/packages#book",
   secondaryLabel,
   secondaryTo,
   microcopy = "No planning fees · No obligation · Itemised pricing",

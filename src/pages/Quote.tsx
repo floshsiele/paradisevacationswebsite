@@ -68,7 +68,7 @@ const Quote = () => (
       <Seo
         title="Get a Free Travel Quote in 24 Hours | Paradise Vacations Kenya"
         description="Tell us your destination, dates and travellers and get a tailored, itemised travel quote within 24 hours. 14 years of trusted experience. No fee, no obligation."
-        path="/book"
+        path="/packages#book"
         jsonLd={[faqPageJsonLd(faqs)]}
       />
       <StaticNav />
