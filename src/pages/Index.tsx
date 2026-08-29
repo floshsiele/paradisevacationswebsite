@@ -4,7 +4,6 @@ import { StaticNav } from "@/components/FloatingNav";
 import { HeroVideo } from "@/components/HeroVideo";
 import { PageTransition } from "@/components/PageTransition";
 import { TrustBar } from "@/components/TrustBar";
-import { FeaturedPackages } from "@/components/FeaturedPackages";
 import { Testimonials } from "@/components/Testimonials";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
@@ -218,8 +217,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        <FeaturedPackages />
 
         {/* Stats */}
         <section className="py-16 px-6 md:px-16 bg-gradient-primary text-primary-foreground">
