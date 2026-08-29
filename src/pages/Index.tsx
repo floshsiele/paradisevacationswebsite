@@ -6,7 +6,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { TrustBar } from "@/components/TrustBar";
 import { FeaturedPackages } from "@/components/FeaturedPackages";
 import { Testimonials } from "@/components/Testimonials";
-import { HomeFaq, homeFaqs } from "@/components/HomeFaq";
+import { HomeFaq, homeFaqs, safariFaqs } from "@/components/HomeFaq";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
@@ -103,14 +103,14 @@ const Index = () => {
               },
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: homeFaqs.map((f) => ({
-                "@type": "Question",
-                name: f.question,
-                acceptedAnswer: { "@type": "Answer", text: f.answer },
-              })),
-            },
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [...homeFaqs, ...safariFaqs].map((f) => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
+          },
           ]}
         />
         <StaticNav />
