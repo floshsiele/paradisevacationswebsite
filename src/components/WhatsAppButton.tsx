@@ -14,7 +14,6 @@ const contextMessage: Record<string, string> = {
   "/dmc": "Hello Paradise Vacations, I'd like a DMC ground-handling proposal for a group coming to East Africa.",
   "/immigration-services":
     "Hello Paradise Vacations, I need assistance with a Kenyan visa / work permit application.",
-  "/book": "Hello Paradise Vacations, I'd like a free travel quote.",
   "/contact": "Hello Paradise Vacations, I'd like to speak to a travel consultant.",
 };
 

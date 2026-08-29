@@ -20,7 +20,7 @@ export function StickyCta() {
           <MessageCircle size={18} className="text-primary" /> WhatsApp
         </a>
         <Link
-          to="/book"
+          to="/packages#book"
           className="flex flex-col items-center justify-center gap-1 py-3 font-sans text-[11px] uppercase tracking-wider bg-primary text-primary-foreground"
         >
           <CalendarCheck size={18} /> Free Quote

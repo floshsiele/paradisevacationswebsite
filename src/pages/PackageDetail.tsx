@@ -211,7 +211,7 @@ const PackageDetail = () => {
               </div>
 
               <Link
-                to="/book"
+                to="/packages#book"
                 className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300 mb-3"
               >
                 Get Your Quote <ArrowRight size={16} />

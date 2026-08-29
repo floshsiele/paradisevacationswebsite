@@ -261,7 +261,7 @@ const Index = () => {
                 free, itemised and with no obligation to book.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/book" className="btn-primary-cta">
+                <Link to="/packages#book" className="btn-primary-cta">
                   Request my free quote <ArrowRight size={16} />
                 </Link>
                 <a
