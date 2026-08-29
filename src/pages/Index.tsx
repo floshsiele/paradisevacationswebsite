@@ -153,7 +153,7 @@ const Index = () => {
             <p className="font-sans text-sm text-muted-foreground mb-10">
               Fully licensed and accredited by the leading travel and tourism bodies in Kenya and worldwide.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-left">
               {accreditations.map((a, index) => (
                 <motion.div
                   key={a.name}
@@ -161,19 +161,24 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="flex flex-col items-center gap-3"
+                  className="flex sm:flex-col items-center sm:items-start gap-4 sm:gap-4 rounded-xl border border-border bg-card p-5 shadow-soft h-full"
                 >
-                  <div className="h-24 md:h-28 flex items-center justify-center">
+                  <div className="w-20 h-16 sm:w-full sm:h-24 shrink-0 flex items-center justify-center sm:justify-start">
                     <img
                       src={a.logo}
                       alt={`${a.name} — ${a.full} certification logo`}
                       loading="lazy"
-                      className="max-h-full max-w-[160px] object-contain"
+                      className="max-h-full max-w-[120px] sm:max-w-[150px] object-contain"
                     />
                   </div>
-                  <div className="font-sans text-xs font-semibold tracking-wide text-foreground">{a.name}</div>
+                  <div>
+                    <div className="font-sans text-sm font-semibold tracking-wide text-foreground">{a.name}</div>
+                    <div className="font-sans text-[11px] uppercase tracking-wider text-primary mb-2">{a.full}</div>
+                    <p className="font-sans text-xs text-muted-foreground leading-relaxed">{a.description}</p>
+                  </div>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </section>
