@@ -7,7 +7,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
-import { CtaBand } from "@/components/CtaBand";
+import { QuoteSection } from "@/components/QuoteSection";
 import { HomeFaq, homeFaqs, safariFaqs } from "@/components/HomeFaq";
 import { StickyCta } from "@/components/StickyCta";
 import { packages, type TravelPackage } from "@/data/packages";
