@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { PageTransition } from "@/components/PageTransition";
@@ -9,7 +10,7 @@ import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
-import { Globe, Shield, HeartHandshake, Award } from "lucide-react";
+import { Globe, Shield, HeartHandshake, Award, ArrowRight } from "lucide-react";
 import { photos } from "@/assets/photos";
 
 const values = [
