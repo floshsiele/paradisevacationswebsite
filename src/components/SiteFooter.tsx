@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 export function SiteFooter() {
@@ -33,7 +33,22 @@ export function SiteFooter() {
           </p>
           <p className="font-sans text-sm text-primary-foreground/70 mb-3">P.O. Box 101178 – 00100</p>
           <a href="tel:+254726927081" className="flex items-center gap-2 font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-2">
-            <Phone size={14} /> 0726 927 081
+            <Phone size={14} /> +254 726 927 081
+          </a>
+          <a href="tel:+254723045625" className="flex items-center gap-2 font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-2">
+            <Phone size={14} /> +254 723 045 625
+          </a>
+          <a href="tel:+254142647536" className="flex items-center gap-2 font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-3">
+            <Phone size={14} /> +254 142 647 536
+          </a>
+          <a href="mailto:bookings@paradisegrouptravels.com" className="flex items-center gap-2 font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-2">
+            <Mail size={14} /> bookings@paradisegrouptravels.com
+          </a>
+          <a href="mailto:tours@paradisegrouptravels.com" className="flex items-center gap-2 font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-2">
+            <Mail size={14} /> tours@paradisegrouptravels.com
+          </a>
+          <a href="mailto:marketing@paradisegrouptravels.com" className="flex items-center gap-2 font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+            <Mail size={14} /> marketing@paradisegrouptravels.com
           </a>
         </div>
       </div>
