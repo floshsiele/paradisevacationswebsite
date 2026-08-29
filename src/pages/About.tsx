@@ -40,10 +40,10 @@ const values = [
 ];
 
 const milestones = [
-  { year: "Founded", title: "Built by travel people", text: "Started in Nairobi by consultants who had already spent years ticketing, guiding and running ground operations." },
+  { year: "14 years", title: "Built by travel people", text: "Started in Nairobi by consultants who had already spent years ticketing, guiding and running ground operations. Today we are IATA, KATA, TRA and TOSK certified." },
   { year: "Corporate", title: "Managed travel programmes", text: "Kenyan SACCOs, NGOs, agri-businesses and professional firms moved their staff travel onto our desks." },
   { year: "Groups", title: "Schools and conferences", text: "Educational study tours abroad and multi-hundred delegate conferences on the ground in Kenya." },
-  { year: "Today", title: "Full-service travel house", text: "Corporate travel management, inbound and outbound tours, educational trips and full destination management under one roof." },
+  { year: "Today", title: "Full-service travel house", text: "Corporate travel management, inbound and outbound tours, educational trips, immigration support and full destination management under one roof." },
 ];
 
 const team = [
@@ -86,7 +86,7 @@ const faqs: Faq[] = [
   {
     question: "Are you licensed and accredited?",
     answer:
-      "Yes. We are a registered Kenyan travel agency operating to industry standards and working with recognised airline, hotel and tourism partners across Kenya and internationally.",
+      "Yes. Paradise Vacations Kenya is IATA, KATA, TRA and TOSK certified, with 14 years of operating experience. We work with recognised airline, hotel and tourism partners across Kenya and internationally.",
   },
 ];
 
@@ -296,13 +296,13 @@ const About = () => (
       {/* Partners */}
       <section className="py-16 px-6 md:px-16 bg-sand-dark">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="chapter-title text-xs mb-6 block">Industry Partners</span>
-          <h2 className="font-display text-2xl md:text-3xl mb-8">We work within the recognised travel trade</h2>
+          <span className="chapter-title text-xs mb-6 block">Certifications & Memberships</span>
+          <h2 className="font-display text-2xl md:text-3xl mb-8">Recognised by the travel trade for 14 years</h2>
           <div className="flex flex-wrap justify-center gap-8 text-muted-foreground font-sans text-sm uppercase tracking-wider">
-            <span>TOSK</span>
+            <span>IATA</span>
             <span>KATA</span>
-            <span>ATA</span>
-            <span>Ecotourism Kenya</span>
+            <span>TRA</span>
+            <span>TOSK</span>
             <span>Magical Kenya</span>
           </div>
         </div>
