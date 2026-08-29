@@ -9,7 +9,6 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-route
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Quote from "./pages/Quote";
 import CorporateTravel from "./pages/CorporateTravel";
 import DMC from "./pages/DMC";
 import Immigration from "./pages/Immigration";
@@ -32,7 +31,7 @@ const AppRoutes = () => {
         <Route path="/packages/:slug" element={<PackageDetail />} />
         <Route path="/dmc" element={<DMC />} />
         <Route path="/immigration-services" element={<Immigration />} />
-        <Route path="/packages#book" element={<Quote />} />
+        <Route path="/book" element={<Navigate to="/packages#book" replace />} />
         <Route path="/quote" element={<Navigate to="/packages#book" replace />} />
         <Route path="/services" element={<Navigate to="/packages" replace />} />
         <Route path="/safari-journeys" element={<Navigate to="/packages" replace />} />
