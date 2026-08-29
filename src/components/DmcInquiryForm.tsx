@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -7,9 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { whatsAppLink } from "@/components/WhatsAppButton";
-import { MessageCircle, Send } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { buildDmcMessage, setDmcDraft } from "@/lib/dmcDraft";
+import { MessageCircle, Paperclip, Send, X } from "lucide-react";
 
 const TEAM_EMAIL = "bookings@paradisegrouptravels.com";
+const MAX_FILE_BYTES = 10 * 1024 * 1024;
+const ACCEPTED =
+  ".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.csv,.jpg,.jpeg,.png,.heic";
 
 const SERVICE_OPTIONS = [
   "Airport meet & greet / transfers",
@@ -54,9 +59,18 @@ const initial = {
 export function DmcInquiryForm() {
   const [form, setForm] = useState(initial);
   const [services, setServices] = useState<string[]>([]);
+  const [file, setFile] = useState<File | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sending, setSending] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
+
+  // Keep the floating WhatsApp CTA in sync with what the visitor has typed.
+  useEffect(() => {
+    setDmcDraft({ ...form, services, attachmentName: file?.name });
+  }, [form, services, file]);
+
+  useEffect(() => () => setDmcDraft({}), []);
 
   const set = (key: keyof typeof initial) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [key]: e.target.value }));
@@ -64,23 +78,21 @@ export function DmcInquiryForm() {
   const toggleService = (service: string, checked: boolean) =>
     setServices((prev) => (checked ? [...prev, service] : prev.filter((s) => s !== service)));
 
-  const buildSummary = (data: z.infer<typeof schema>) =>
-    [
-      "DMC INQUIRY — Paradise Vacations Kenya",
-      "",
-      `Name: ${data.name}`,
-      data.company ? `Company: ${data.company}` : null,
-      `Email: ${data.email}`,
-      data.phone ? `Phone: ${data.phone}` : null,
-      `Destination(s): ${data.destination}`,
-      `Arrival: ${data.arrival}`,
-      data.departure ? `Departure: ${data.departure}` : null,
-      `Group size: ${data.groupSize}`,
-      `Services required: ${data.services.join(", ")}`,
-      data.notes ? `Notes: ${data.notes}` : null,
-    ]
-      .filter(Boolean)
-      .join("\n");
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selected = e.target.files?.[0] ?? null;
+    if (selected && selected.size > MAX_FILE_BYTES) {
+      setErrors((prev) => ({ ...prev, file: "File must be 10MB or smaller" }));
+      e.target.value = "";
+      return;
+    }
+    setErrors((prev) => ({ ...prev, file: "" }));
+    setFile(selected);
+  };
+
+  const clearFile = () => {
+    setFile(null);
+    if (fileRef.current) fileRef.current.value = "";
+  };
 
   const validate = () => {
     const result = schema.safeParse({ ...form, services });
@@ -97,26 +109,56 @@ export function DmcInquiryForm() {
     return result.data;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const data = validate();
     if (!data) return;
     setSending(true);
-    const body = buildSummary(data);
-    window.location.href = `mailto:${TEAM_EMAIL}?subject=${encodeURIComponent(
-      `DMC inquiry — ${data.destination} — ${data.groupSize} pax`,
-    )}&body=${encodeURIComponent(body)}`;
-    toast({
-      title: "Inquiry ready to send",
-      description: `Your email app is opening with the brief addressed to ${TEAM_EMAIL}. Prefer WhatsApp? Use the button below.`,
-    });
-    setTimeout(() => setSending(false), 1200);
+
+    try {
+      let attachmentPath: string | undefined;
+      if (file) {
+        const safeName = file.name.replace(/[^\w.\-]+/g, "_").slice(-80);
+        const path = `${crypto.randomUUID()}-${safeName}`;
+        const { error: uploadError } = await supabase.storage
+          .from("dmc-attachments")
+          .upload(path, file, { contentType: file.type || "application/octet-stream" });
+        if (uploadError) throw uploadError;
+        attachmentPath = path;
+      }
+
+      const { error } = await supabase.functions.invoke("submit-dmc-inquiry", {
+        body: { ...data, attachmentPath, attachmentName: file?.name },
+      });
+      if (error) throw error;
+
+      toast({
+        title: "Inquiry received",
+        description: `Thank you ${data.name} — your brief is with our DMC team. We respond with a costed ground programme within 48 hours.`,
+      });
+      setForm(initial);
+      setServices([]);
+      clearFile();
+    } catch (err) {
+      console.error(err);
+      toast({
+        title: "We couldn't send that",
+        description: `Please try again, or email us directly at ${TEAM_EMAIL}.`,
+        variant: "destructive",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleWhatsApp = () => {
     const data = validate();
     if (!data) return;
-    window.open(whatsAppLink(buildSummary(data)), "_blank", "noopener,noreferrer");
+    window.open(
+      whatsAppLink(buildDmcMessage({ ...data, attachmentName: file?.name })),
+      "_blank",
+      "noopener,noreferrer",
+    );
   };
 
   const field = (
@@ -200,13 +242,45 @@ export function DmcInquiryForm() {
         {errors.notes && <p className="font-sans text-xs text-destructive">{errors.notes}</p>}
       </div>
 
+      <div className="space-y-2">
+        <label htmlFor="attachment" className="chapter-title text-xs block">
+          Attach itinerary or requirements (optional)
+        </label>
+        <input
+          ref={fileRef}
+          id="attachment"
+          type="file"
+          accept={ACCEPTED}
+          onChange={handleFile}
+          className="block w-full font-sans text-sm text-muted-foreground file:mr-4 file:rounded-md file:border-0 file:bg-secondary file:px-4 file:py-2 file:font-sans file:text-sm file:text-secondary-foreground hover:file:bg-secondary/80 cursor-pointer"
+        />
+        {file && (
+          <div className="flex items-center gap-2 font-sans text-xs text-foreground">
+            <Paperclip className="w-3.5 h-3.5 text-primary" />
+            <span className="truncate">{file.name}</span>
+            <button
+              type="button"
+              onClick={clearFile}
+              aria-label="Remove attachment"
+              className="text-muted-foreground hover:text-destructive transition-colors"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        )}
+        <p className="font-sans text-xs text-muted-foreground">
+          PDF, Word, Excel, PowerPoint or image — up to 10MB.
+        </p>
+        {errors.file && <p className="font-sans text-xs text-destructive">{errors.file}</p>}
+      </div>
+
       <div className="flex flex-col sm:flex-row gap-3">
         <Button
           type="submit"
           disabled={sending}
           className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground rounded-md py-6 font-sans text-sm tracking-widest uppercase"
         >
-          <Send className="w-4 h-4 mr-2" /> {sending ? "Opening..." : "Send inquiry to our team"}
+          <Send className="w-4 h-4 mr-2" /> {sending ? "Sending..." : "Send inquiry to our team"}
         </Button>
         <Button
           type="button"

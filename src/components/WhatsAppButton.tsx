@@ -1,4 +1,6 @@
 import { useLocation } from "react-router-dom";
+import { buildDmcMessage, hasDmcDraft, useDmcDraft } from "@/lib/dmcDraft";
+
 
 export const WHATSAPP_NUMBER = "254726927081";
 export const WHATSAPP_DISPLAY = "+254 726 927 081";
@@ -22,11 +24,17 @@ export function whatsAppLink(message: string) {
 
 export function WhatsAppButton() {
   const { pathname } = useLocation();
+  const draft = useDmcDraft();
+
+  const dmcMessage = pathname === "/dmc" && hasDmcDraft(draft) ? buildDmcMessage(draft) : null;
+
   const message =
+    dmcMessage ??
     contextMessage[pathname] ??
     (pathname.startsWith("/packages/")
       ? "Hello Paradise Vacations, I'd like more details and pricing on this package."
       : contextMessage["/"]);
+
 
   return (
     <a
