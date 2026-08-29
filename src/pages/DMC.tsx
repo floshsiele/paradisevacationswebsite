@@ -189,9 +189,9 @@ const DMC = () => (
 
       <PageHero
         eyebrow="Destination Management Company"
-        badge="Costed ground programme within 48 hours"
+        badge="IATA · KATA · TRA · TOSK certified · 14 years on the ground"
         title={<>DMC Services — Your Local Experts for Kenya &amp; East Africa</>}
-        subtitle="Global tour operators, travel agencies and event planners need a partner on the ground they can trust. We provide the local expertise, infrastructure and network that turn ambitious travel plans into flawless, on-the-ground realities — across Kenya, Tanzania, Uganda, Rwanda and beyond."
+        subtitle="Global tour operators, travel agencies and event planners need a partner on the ground they can trust. With 14 years of destination management experience and IATA, KATA, TRA and TOSK certification, we provide the local expertise, infrastructure and network that turn ambitious travel plans into flawless, on-the-ground realities — across Kenya, Tanzania, Uganda, Rwanda and beyond."
         primaryLabel="Partner with our DMC team"
         image="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=85"
         imageAlt="Safari vehicle crossing the Kenyan savannah managed by Paradise Vacations DMC"
@@ -199,9 +199,9 @@ const DMC = () => (
         secondaryTo="/packages"
         microcopy="Net rates for trade partners · Confidential · No obligation"
         stats={[
+          { value: "14 yrs", label: "DMC experience" },
           { value: "48 hrs", label: "Quote turnaround" },
           { value: "400+", label: "Delegates handled" },
-          { value: "Owned", label: "Fleet & guides" },
           { value: "24/7", label: "Duty coordinator" },
         ]}
       />
