@@ -4,6 +4,7 @@ import { StaticNav } from "@/components/FloatingNav";
 import { HeroVideo } from "@/components/HeroVideo";
 import { PageTransition } from "@/components/PageTransition";
 import { TrustBar } from "@/components/TrustBar";
+import { FeaturedPackages } from "@/components/FeaturedPackages";
 import { Testimonials } from "@/components/Testimonials";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
