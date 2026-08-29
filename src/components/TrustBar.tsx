@@ -39,6 +39,22 @@ export function TrustBar() {
           </div>
         ))}
       </div>
+      <div className="max-w-7xl mx-auto px-6 md:px-16 pb-8 flex flex-wrap items-center justify-center gap-3">
+        <span className="font-sans text-[11px] tracking-widest uppercase text-muted-foreground mr-2">
+          Accredited &amp; Certified
+        </span>
+        {accreditations.map((a) => (
+          <span
+            key={a}
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 font-display text-sm font-semibold tracking-widest text-primary"
+          >
+            <BadgeCheck size={14} strokeWidth={2} /> {a}
+          </span>
+        ))}
+        <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-accent/40 bg-accent/10 font-display text-sm font-semibold tracking-widest text-accent-foreground">
+          <Award size={14} strokeWidth={2} /> 14 Years in Operation
+        </span>
+      </div>
     </section>
   );
 }
