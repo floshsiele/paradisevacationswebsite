@@ -52,39 +52,6 @@ const assurances = [
   { icon: Users, title: "Any package, tailored free", text: "Change the dates, the lodge, the group size or the route. Redesign and requoting costs you nothing." },
 ];
 
-const faqs: Faq[] = [
-  {
-    question: "Can I change a package to suit my dates or budget?",
-    answer:
-      "Yes — every listed itinerary is a starting point. We routinely change lodges, extend or shorten nights, add beach extensions and rebuild routes around your dates and budget, and redesigning a package costs nothing.",
-  },
-  {
-    question: "What is normally included in the price?",
-    answer:
-      "Each package page lists inclusions and exclusions in full. Typically the price covers accommodation, listed meals, park or entrance fees, transport with a driver-guide, and applicable taxes. International flights, visas, insurance, tips and personal spending are usually excluded unless stated.",
-  },
-  {
-    question: "How do I secure a booking and can I pay in instalments?",
-    answer:
-      "A deposit confirms your dates and holds accommodation. The balance can be paid in scheduled instalments before departure, and corporate accounts can be invoiced on approved credit terms.",
-  },
-  {
-    question: "Do you organise flights and visas as well?",
-    answer:
-      "Yes. We ticket domestic, regional and international flights, prepare and lodge visa applications, arrange travel insurance, and advise on entry and vaccination requirements for every destination we sell.",
-  },
-  {
-    question: "What group sizes do you handle?",
-    answer:
-      "From solo travellers and honeymoon couples to families, 40-student school groups and corporate parties of several hundred. Vehicles, guides and coordinators scale with the group.",
-  },
-  {
-    question: "What is your cancellation policy?",
-    answer:
-      "Cancellation terms depend on the suppliers in your itinerary and are stated in writing on your quotation before you pay anything. We will always tell you the deadlines that matter before you commit.",
-  },
-];
-
 const Packages = () => {
   const [active, setActive] = useState<Filter>("All");
   const visible = active === "All" ? packages : packages.filter((p) => p.category === active);
