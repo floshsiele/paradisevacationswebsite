@@ -59,9 +59,9 @@ const Contact = () => {
               <Phone className="w-8 h-8 text-primary mx-auto mb-4" strokeWidth={1.5} />
               <h3 className="font-display text-lg mb-2">Call Us</h3>
               <p className="font-sans text-sm text-muted-foreground">
-                <a href="tel:+254726927081" className="hover:text-primary transition-colors">0726 927 081</a><br />
-                <a href="tel:+254723045625" className="hover:text-primary transition-colors">0723 045 625</a><br />
-                <a href="tel:+254724448920" className="hover:text-primary transition-colors">0724 448 920</a>
+                <a href="tel:+254726927081" className="hover:text-primary transition-colors">+254 726 927 081</a><br />
+                <a href="tel:+254723045625" className="hover:text-primary transition-colors">+254 723 045 625</a><br />
+                <a href="tel:+254142647536" className="hover:text-primary transition-colors">+254 142 647 536</a>
               </p>
             </motion.div>
 
@@ -112,12 +112,11 @@ const Contact = () => {
                 <a href="https://www.tiktok.com/@paradise.vacations" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-muted-foreground hover:text-primary transition-colors">TikTok</a>
                 <a href="https://www.linkedin.com/in/paradise-vacations-kenya/" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-muted-foreground hover:text-primary transition-colors">LinkedIn</a>
               </div>
-              <a
-                href="mailto:info@paradisegrouptravels.com"
-                className="font-display text-xl md:text-2xl hover:text-primary transition-colors duration-400 link-underline"
-              >
-                info@paradisegrouptravels.com
-              </a>
+              <div className="flex flex-col items-center gap-2">
+                <a href="mailto:bookings@paradisegrouptravels.com" className="font-display text-lg md:text-xl hover:text-primary transition-colors duration-400 link-underline">bookings@paradisegrouptravels.com</a>
+                <a href="mailto:tours@paradisegrouptravels.com" className="font-display text-lg md:text-xl hover:text-primary transition-colors duration-400 link-underline">tours@paradisegrouptravels.com</a>
+                <a href="mailto:marketing@paradisegrouptravels.com" className="font-display text-lg md:text-xl hover:text-primary transition-colors duration-400 link-underline">marketing@paradisegrouptravels.com</a>
+              </div>
             </motion.div>
           </div>
         </section>
