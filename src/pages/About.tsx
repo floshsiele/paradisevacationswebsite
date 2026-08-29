@@ -10,7 +10,7 @@ import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
-import { Globe, Shield, HeartHandshake, Award, ArrowRight } from "lucide-react";
+import { Globe, Shield, HeartHandshake, Award, ArrowRight, Mail, Briefcase } from "lucide-react";
 import { photos } from "@/assets/photos";
 
 const values = [
@@ -305,6 +305,34 @@ const About = () => (
           <Link to="/" className="inline-flex items-center gap-2 font-sans text-sm text-primary hover:underline">
             View our certifications <ArrowRight size={14} />
           </Link>
+        </div>
+      </section>
+
+      {/* Work with us */}
+      <section className="py-20 px-6 md:px-16 bg-ocean-light">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+              <Briefcase className="w-7 h-7 text-primary" strokeWidth={1.6} />
+            </div>
+            <span className="chapter-title text-xs mb-4 block">Careers</span>
+            <h2 className="font-display text-3xl md:text-5xl mb-5">Work with us</h2>
+            <p className="font-sans text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
+              Passionate about travel? Join a team where consultants own every trip from first quote to safe return.
+              Send your CV and a short note telling us why travel matters to you.
+            </p>
+            <a
+              href="mailto:careers@paradisegrouptravels.com"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors"
+            >
+              <Mail size={16} /> careers@paradisegrouptravels.com
+            </a>
+          </motion.div>
         </div>
       </section>
 
