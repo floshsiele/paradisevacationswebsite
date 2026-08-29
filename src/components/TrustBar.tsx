@@ -1,4 +1,6 @@
-import { ShieldCheck, Clock4, Award, Wallet } from "lucide-react";
+import { ShieldCheck, Clock4, Award, Wallet, BadgeCheck } from "lucide-react";
+
+const accreditations = ["IATA", "KATA", "TRA", "TOSK"];
 
 const points = [
   {
