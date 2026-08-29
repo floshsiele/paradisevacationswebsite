@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div>
           <Logo variant="light" className="mb-5" />
           <p className="font-sans text-primary-foreground/70 text-sm leading-relaxed">
-            14 years of trusted travel management across Kenya and East Africa. IATA, KATA, TRA and TOSK certified — corporate travel, safaris, educational trips, DMC and immigration services under one roof.
+            14 years of trusted travel management across Kenya and East Africa — corporate travel, safaris, educational trips, DMC and immigration services under one roof.
           </p>
         </div>
 

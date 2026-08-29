@@ -126,7 +126,7 @@ const Immigration = () => (
 
       <PageHero
         eyebrow="Immigration Services"
-        badge="14 years · IATA · KATA · TRA · TOSK certified"
+        badge="14 years of trusted documentation support"
         title={<>Immigration Services — Your Trusted Partner for Visas, Permits &amp; Relocation</>}
         subtitle="Navigating immigration procedures can be confusing, time-consuming and stressful. With 14 years of handling travel and relocation documentation for individuals, families and corporate clients, we take the guesswork and hassle out of the process — for anyone relocating to or from Kenya."
         image="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1800&q=85"

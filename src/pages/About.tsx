@@ -40,7 +40,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "14 years", title: "Built by travel people", text: "Started in Nairobi by consultants who had already spent years ticketing, guiding and running ground operations. Today we are IATA, KATA, TRA and TOSK certified." },
+  { year: "14 years", title: "Built by travel people", text: "Started in Nairobi by consultants who had already spent years ticketing, guiding and running ground operations — and we've been serving travellers ever since." },
   { year: "Corporate", title: "Managed travel programmes", text: "Kenyan SACCOs, NGOs, agri-businesses and professional firms moved their staff travel onto our desks." },
   { year: "Groups", title: "Schools and conferences", text: "Educational study tours abroad and multi-hundred delegate conferences on the ground in Kenya." },
   { year: "Today", title: "Full-service travel house", text: "Corporate travel management, inbound and outbound tours, educational trips, immigration support and full destination management under one roof." },
@@ -50,7 +50,7 @@ const team = [
   {
     name: "Corporate desk",
     role: "Managed travel & ticketing",
-    text: "IATA-trained consultants issuing, reissuing and auditing fares against your travel policy every working day.",
+    text: "Accredited consultants issuing, reissuing and auditing fares against your travel policy every working day.",
     image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=85",
   },
   {
@@ -86,7 +86,7 @@ const faqs: Faq[] = [
   {
     question: "Are you licensed and accredited?",
     answer:
-      "Yes. Paradise Vacations Kenya is IATA, KATA, TRA and TOSK certified, with 14 years of operating experience. We work with recognised airline, hotel and tourism partners across Kenya and internationally.",
+      "Yes. Paradise Vacations Kenya is fully licensed and accredited by the leading international and Kenyan travel and tourism bodies, with 14 years of operating experience. You'll find our certification logos on the home page.",
   },
 ];
 
@@ -296,15 +296,14 @@ const About = () => (
       {/* Partners */}
       <section className="py-16 px-6 md:px-16 bg-sand-dark">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="chapter-title text-xs mb-6 block">Certifications & Memberships</span>
-          <h2 className="font-display text-2xl md:text-3xl mb-8">Recognised by the travel trade for 14 years</h2>
-          <div className="flex flex-wrap justify-center gap-8 text-muted-foreground font-sans text-sm uppercase tracking-wider">
-            <span>IATA</span>
-            <span>KATA</span>
-            <span>TRA</span>
-            <span>TOSK</span>
-            <span>Magical Kenya</span>
-          </div>
+          <span className="chapter-title text-xs mb-6 block">Trusted for 14 Years</span>
+          <h2 className="font-display text-2xl md:text-3xl mb-4">Fully licensed &amp; internationally accredited</h2>
+          <p className="font-sans text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
+            Paradise Vacations Kenya holds certifications from the world's leading travel and tourism bodies. See our full accreditation on the home page.
+          </p>
+          <Link to="/" className="inline-flex items-center gap-2 font-sans text-sm text-primary hover:underline">
+            View our certifications <ArrowRight size={14} />
+          </Link>
         </div>
       </section>
 

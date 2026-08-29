@@ -189,9 +189,9 @@ const DMC = () => (
 
       <PageHero
         eyebrow="Destination Management Company"
-        badge="IATA · KATA · TRA · TOSK certified · 14 years on the ground"
+        badge="14 years on the ground · Fully licensed & accredited"
         title={<>DMC Services — Your Local Experts for Kenya &amp; East Africa</>}
-        subtitle="Global tour operators, travel agencies and event planners need a partner on the ground they can trust. With 14 years of destination management experience and IATA, KATA, TRA and TOSK certification, we provide the local expertise, infrastructure and network that turn ambitious travel plans into flawless, on-the-ground realities — across Kenya, Tanzania, Uganda, Rwanda and beyond."
+        subtitle="Global tour operators, travel agencies and event planners need a partner on the ground they can trust. With 14 years of destination management experience, we provide the local expertise, infrastructure and network that turn ambitious travel plans into flawless, on-the-ground realities — across Kenya, Tanzania, Uganda, Rwanda and beyond."
         primaryLabel="Partner with our DMC team"
         image="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=85"
         imageAlt="Safari vehicle crossing the Kenyan savannah managed by Paradise Vacations DMC"
