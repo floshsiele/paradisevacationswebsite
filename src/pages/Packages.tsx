@@ -255,14 +255,9 @@ const Packages = () => {
           intro="Families, honeymooners, schools and corporate groups on our packages."
         />
 
-        <HomeFaq />
+        <QuoteSection />
 
-        <CtaBand
-          eyebrow="Tailored Trips"
-          heading="Not seeing your exact trip? That's normal."
-          text="Most of what we sell never appears on this page. Tell us the destination, dates, budget and group and we'll design something and price it within 24 hours."
-          primaryLabel="Request a custom quote"
-        />
+        <HomeFaq />
 
         <SiteFooter />
         <StickyCta />
