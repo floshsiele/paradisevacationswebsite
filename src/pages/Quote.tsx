@@ -34,9 +34,9 @@ const reasons = [
 ];
 
 const contactCards = [
-  { icon: Phone, label: "Call a consultant", value: "+254 720 690 690", href: "tel:+254720690690" },
-  { icon: MessageCircle, label: "WhatsApp us", value: "Chat now", href: "https://wa.me/254720690690" },
-  { icon: Mail, label: "Email the team", value: "info@paradisegrouptravels.com", href: "mailto:info@paradisegrouptravels.com" },
+  { icon: Phone, label: "Call a consultant", value: "+254 726 927 081", href: "tel:+254726927081" },
+  { icon: MessageCircle, label: "WhatsApp us", value: "Chat now", href: "https://wa.me/254726927081" },
+  { icon: Mail, label: "Email the team", value: "bookings@paradisegrouptravels.com", href: "mailto:bookings@paradisegrouptravels.com" },
 ];
 
 const faqs: Faq[] = [
