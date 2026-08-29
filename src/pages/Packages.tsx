@@ -255,7 +255,7 @@ const Packages = () => {
           intro="Families, honeymooners, schools and corporate groups on our packages."
         />
 
-        <FaqBlock faqs={faqs} eyebrow="Package FAQs" heading="Everything you'd ask before booking" />
+        <HomeFaq />
 
         <CtaBand
           eyebrow="Tailored Trips"
