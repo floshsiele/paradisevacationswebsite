@@ -47,7 +47,7 @@ const categoryBlurbs: { key: TravelPackage["category"]; title: string; text: str
 ];
 
 const assurances = [
-  { icon: ShieldCheck, title: "Prices you can hold us to", text: "Every package price is itemised. What is included is listed; what is not is listed too. No surprise supplements at the airport." },
+  { icon: ShieldCheck, title: "IATA & KATA certified operator", text: "14 years in business, fully licensed and bonded. Your booking, payments and travel documents are handled by accredited professionals." },
   { icon: CreditCard, title: "Deposit now, pay in instalments", text: "Secure your dates with a deposit and settle the balance in scheduled instalments before departure." },
   { icon: Users, title: "Any package, tailored free", text: "Change the dates, the lodge, the group size or the route. Redesign and requoting costs you nothing." },
 ];
@@ -115,7 +115,7 @@ const Packages = () => {
 
         <PageHero
           eyebrow="Tour Packages"
-          badge="Every itinerary tailored to your dates — at no extra cost"
+          badge="IATA · KATA · TRA · TOSK certified · 14 years of trusted service"
           title={<>Tour Packages — Experience the World, Starting with Kenya</>}
           subtitle="We don't just book trips — we design experiences. Inbound safaris and beach escapes, outbound holidays and international school trips, each with a day-by-day itinerary, honest inclusions and a from-price you can budget against."
           image={photos.dunesLamu}
@@ -125,7 +125,7 @@ const Packages = () => {
           secondaryTo="/corporate-travel"
           microcopy="Deposit to secure · Instalments available · Free redesign"
           stats={[
-            { value: "24 hrs", label: "Quote turnaround" },
+            { value: "14 yrs", label: "In operation" },
             { value: "4.9/5", label: "Client rating" },
             { value: "60%+", label: "Repeat travellers" },
             { value: "24/7", label: "On-trip support" },
