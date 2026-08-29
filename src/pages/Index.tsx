@@ -17,11 +17,36 @@ import certTra from "@/assets/cert-tra.png";
 import certTosk from "@/assets/cert-tosk.png";
 
 const accreditations = [
-  { logo: certIata, name: "IATA", full: "International Air Transport Association" },
-  { logo: certKata, name: "KATA", full: "Kenya Association of Travel Agents" },
-  { logo: certTra, name: "TRA", full: "Tourism Regulatory Authority" },
-  { logo: certTosk, name: "TOSK", full: "Tour Operators Society of Kenya" },
+  {
+    logo: certIata,
+    name: "IATA",
+    full: "International Air Transport Association",
+    description:
+      "Global airline accreditation — we ticket directly on IATA carriers, access negotiated corporate fares and reissue or refund tickets in-house.",
+  },
+  {
+    logo: certKata,
+    name: "KATA",
+    full: "Kenya Association of Travel Agents",
+    description:
+      "Membership of Kenya's national travel agents body, binding us to its professional code of conduct and client-funds protection standards.",
+  },
+  {
+    logo: certTra,
+    name: "TRA",
+    full: "Tourism Regulatory Authority",
+    description:
+      "Licensed and regularly inspected by Kenya's government tourism regulator, covering our tour operations, vehicles and guiding standards.",
+  },
+  {
+    logo: certTosk,
+    name: "TOSK",
+    full: "Tour Operators Society of Kenya",
+    description:
+      "Recognised tour operator status, giving our clients park-rate access, vetted supplier networks and peer-audited safari standards.",
+  },
 ];
+
 
 const serviceCards = [
   {
