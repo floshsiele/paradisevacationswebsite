@@ -11,6 +11,17 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
 import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone, CheckCircle2, Stamp } from "lucide-react";
+import certIata from "@/assets/cert-iata.png";
+import certKata from "@/assets/cert-kata.png";
+import certTra from "@/assets/cert-tra.png";
+import certTosk from "@/assets/cert-tosk.png";
+
+const accreditations = [
+  { logo: certIata, name: "IATA", full: "International Air Transport Association" },
+  { logo: certKata, name: "KATA", full: "Kenya Association of Travel Agents" },
+  { logo: certTra, name: "TRA", full: "Tourism Regulatory Authority" },
+  { logo: certTosk, name: "TOSK", full: "Tour Operators Society of Kenya" },
+];
 
 const serviceCards = [
   {
@@ -106,6 +117,41 @@ const Index = () => {
 
         <HeroVideo />
         <TrustBar />
+
+        {/* Accreditations — home page only */}
+        <section className="py-14 px-6 md:px-16 bg-background">
+          <div className="max-w-5xl mx-auto text-center">
+            <span className="chapter-title text-xs mb-3 block">Accredited &amp; Certified</span>
+            <h2 className="font-display text-2xl md:text-3xl mb-2">
+              14 years of trusted, certified travel expertise
+            </h2>
+            <p className="font-sans text-sm text-muted-foreground mb-10">
+              Fully licensed and accredited by the leading travel and tourism bodies in Kenya and worldwide.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center">
+              {accreditations.map((a, index) => (
+                <motion.div
+                  key={a.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  className="flex flex-col items-center gap-3"
+                >
+                  <div className="h-24 md:h-28 flex items-center justify-center">
+                    <img
+                      src={a.logo}
+                      alt={`${a.name} — ${a.full} certification logo`}
+                      loading="lazy"
+                      className="max-h-full max-w-[160px] object-contain"
+                    />
+                  </div>
+                  <div className="font-sans text-xs font-semibold tracking-wide text-foreground">{a.name}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Service Pillars */}
         <section id="services" className="py-20 px-6 md:px-16 bg-sand-dark">
