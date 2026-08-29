@@ -14,7 +14,57 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      dmc_inquiries: {
+        Row: {
+          arrival: string
+          attachment_name: string | null
+          attachment_path: string | null
+          company: string | null
+          created_at: string
+          departure: string | null
+          destination: string
+          email: string
+          group_size: number
+          id: string
+          name: string
+          notes: string | null
+          phone: string | null
+          services: string[]
+        }
+        Insert: {
+          arrival: string
+          attachment_name?: string | null
+          attachment_path?: string | null
+          company?: string | null
+          created_at?: string
+          departure?: string | null
+          destination: string
+          email: string
+          group_size: number
+          id?: string
+          name: string
+          notes?: string | null
+          phone?: string | null
+          services?: string[]
+        }
+        Update: {
+          arrival?: string
+          attachment_name?: string | null
+          attachment_path?: string | null
+          company?: string | null
+          created_at?: string
+          departure?: string | null
+          destination?: string
+          email?: string
+          group_size?: number
+          id?: string
+          name?: string
+          notes?: string | null
+          phone?: string | null
+          services?: string[]
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
