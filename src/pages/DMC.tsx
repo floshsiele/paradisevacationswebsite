@@ -195,7 +195,6 @@ const DMC = () => (
         primaryLabel="Partner with our DMC team"
         image="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=85"
         imageAlt="Safari vehicle crossing the Kenyan savannah managed by Paradise Vacations DMC"
-        primaryLabel="Request a ground quote"
         secondaryLabel="View sample programmes"
         secondaryTo="/packages"
         microcopy="Net rates for trade partners · Confidential · No obligation"
