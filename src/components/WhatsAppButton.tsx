@@ -24,11 +24,17 @@ export function whatsAppLink(message: string) {
 
 export function WhatsAppButton() {
   const { pathname } = useLocation();
+  const draft = useDmcDraft();
+
+  const dmcMessage = pathname === "/dmc" && hasDmcDraft(draft) ? buildDmcMessage(draft) : null;
+
   const message =
+    dmcMessage ??
     contextMessage[pathname] ??
     (pathname.startsWith("/packages/")
       ? "Hello Paradise Vacations, I'd like more details and pricing on this package."
       : contextMessage["/"]);
+
 
   return (
     <a
