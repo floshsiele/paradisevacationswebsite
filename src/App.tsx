@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import CorporateTravel from "./pages/CorporateTravel";
 import DMC from "./pages/DMC";
+import Immigration from "./pages/Immigration";
 import Packages from "./pages/Packages";
 import PackageDetail from "./pages/PackageDetail";
 import NotFound from "./pages/NotFound";
@@ -29,6 +30,7 @@ const AppRoutes = () => {
         <Route path="/packages" element={<Packages />} />
         <Route path="/packages/:slug" element={<PackageDetail />} />
         <Route path="/dmc" element={<DMC />} />
+        <Route path="/immigration-services" element={<Immigration />} />
         <Route path="/book" element={<Quote />} />
         <Route path="/quote" element={<Navigate to="/book" replace />} />
         <Route path="/services" element={<Navigate to="/packages" replace />} />

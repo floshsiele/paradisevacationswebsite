@@ -11,6 +11,7 @@ const navItems = [
   { name: "Corporate Travel Management", path: "/corporate-travel" },
   { name: "Packages", path: "/packages" },
   { name: "DMC", path: "/dmc" },
+  { name: "Immigration", path: "/immigration-services" },
 ];
 
 // Pages with dark backgrounds (hero with dark overlay)
