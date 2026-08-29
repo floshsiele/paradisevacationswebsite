@@ -130,7 +130,7 @@ export function StaticNav() {
             <a
               href="tel:+254726927081"
               className={cn(
-                "hidden xl:flex items-center gap-2 font-sans text-sm tracking-widest whitespace-nowrap transition-colors duration-400",
+                "hidden min-[1500px]:flex items-center gap-2 font-sans text-sm tracking-widest whitespace-nowrap transition-colors duration-400",
                 isDarkBackground ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-foreground"
               )}
             >
