@@ -8,7 +8,7 @@ import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBand } from "@/components/CtaBand";
-import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
+import { HomeFaq, homeFaqs, safariFaqs } from "@/components/HomeFaq";
 import { StickyCta } from "@/components/StickyCta";
 import { packages, type TravelPackage } from "@/data/packages";
 import { Seo } from "@/components/Seo";
