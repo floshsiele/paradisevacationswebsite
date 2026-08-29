@@ -167,8 +167,8 @@ const DMC = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
       <Seo
-        title="Kenya DMC | Destination Management for Operators & Events"
-        description="Kenyan DMC with owned fleet and licensed guides: airport meet-and-greet, venue sourcing and event logistics, ground operations, tailor-made programmes and 24/7 support. Costed ground quote in 48 hours."
+        title="DMC Kenya | Destination Management Company for Kenya & East Africa – Paradise Vacations Kenya"
+        description="Paradise Vacations Kenya is a leading Destination Management Company (DMC) offering ground handling, event logistics, and bespoke travel solutions for tour operators and agencies across Kenya and East Africa."
         path="/dmc"
         jsonLd={[
           {
@@ -188,10 +188,11 @@ const DMC = () => (
       <StaticNav />
 
       <PageHero
-        eyebrow="Destination Management"
+        eyebrow="Destination Management Company"
         badge="Costed ground programme within 48 hours"
-        title={<>Your ground operation in Kenya &amp; East Africa</>}
-        subtitle="Owned fleet, licensed guides, held permits and a single accountable contact — for overseas operators, corporates and event organisers who cannot afford a surprise."
+        title={<>DMC Services — Your Local Experts for Kenya &amp; East Africa</>}
+        subtitle="Global tour operators, travel agencies and event planners need a partner on the ground they can trust. We provide the local expertise, infrastructure and network that turn ambitious travel plans into flawless, on-the-ground realities — across Kenya, Tanzania, Uganda, Rwanda and beyond."
+        primaryLabel="Partner with our DMC team"
         image="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=85"
         imageAlt="Safari vehicle crossing the Kenyan savannah managed by Paradise Vacations DMC"
         primaryLabel="Request a ground quote"

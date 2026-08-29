@@ -28,20 +28,20 @@ const filters: { key: Filter; label: string }[] = [
 const categoryBlurbs: { key: TravelPackage["category"]; title: string; text: string; image: string }[] = [
   {
     key: "Inbound",
-    title: "Inbound Tours",
-    text: "Safaris, beach holidays and cultural journeys inside Kenya and East Africa for visitors and residents — Masai Mara, Amboseli, Diani and beyond, with licensed guides and 4x4 safari vehicles.",
+    title: "Inbound Tours — Discover the Magic of Kenya",
+    text: "From the Great Migration in the Maasai Mara to the white-sand beaches of Diani and Watamu, Amboseli's elephants beneath Kilimanjaro and the Great Rift Valley's lakes — park permits, licensed guides, curated itineraries and accommodation from budget camps to luxury lodges, all handled for you.",
     image: photos.safariConvoy,
   },
   {
     key: "Outbound",
-    title: "Outbound Tours",
-    text: "Holidays abroad for Kenyan travellers — Dubai, Zanzibar, Mauritius, Europe and Asia — with flights, visas, hotels and transfers arranged end to end.",
+    title: "Outbound Tours — Kenya to the World",
+    text: "Dreaming of Dubai, Bali, Thailand, Europe or the Caribbean? Fully managed international holidays — flights, visas, accommodation, guided excursions and travel insurance wrapped into one seamless package for honeymoons, group getaways and solo bucket-list adventures.",
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
   },
   {
     key: "Educational",
-    title: "International Educational Trips",
-    text: "Supervised study tours for schools, colleges and universities: campus visits, museum and STEM workshops, cultural immersion, full risk assessment and teacher support throughout.",
+    title: "International School Trips — Learning Beyond the Classroom",
+    text: "Safe, enriching and expertly supervised trips for schools and universities — from wildlife conservation education in the Maasai Mara to international exchange tours — with safety protocols, group discounts, parental communication and 24/7 chaperone support.",
     image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=85",
   },
 ];
@@ -93,8 +93,8 @@ const Packages = () => {
     <PageTransition>
       <div className="min-h-screen bg-background">
         <Seo
-          title="Kenya Safari, Beach & Outbound Travel Packages | Prices & Itineraries"
-          description="Masai Mara and Diani inbound tours, Dubai and Zanzibar outbound holidays, and international educational trips for schools — day-by-day itineraries, inclusions and from-prices. Tailored free."
+          title="Tour Packages Kenya | Inbound, Outbound & School Trips – Paradise Vacations Kenya"
+          description="Discover unforgettable tour packages with Paradise Vacations Kenya — Kenya safaris, inbound and outbound tours, and international school trips designed for adventure, education, and discovery."
           path="/packages"
           jsonLd={[
             {
@@ -114,10 +114,10 @@ const Packages = () => {
         <StaticNav />
 
         <PageHero
-          eyebrow="Packages"
+          eyebrow="Tour Packages"
           badge="Every itinerary tailored to your dates — at no extra cost"
-          title={<>Trips worth taking, priced without games</>}
-          subtitle="Inbound safaris and beach escapes, outbound holidays and international educational trips — each with a day-by-day itinerary, honest inclusions and a from-price you can budget against."
+          title={<>Tour Packages — Experience the World, Starting with Kenya</>}
+          subtitle="We don't just book trips — we design experiences. Inbound safaris and beach escapes, outbound holidays and international school trips, each with a day-by-day itinerary, honest inclusions and a from-price you can budget against."
           image={photos.dunesLamu}
           imageAlt="Elephants on the Kenyan plains with Mount Kilimanjaro behind"
           primaryLabel="Get a tailored quote"
