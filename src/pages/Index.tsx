@@ -67,8 +67,8 @@ const Index = () => {
     <PageTransition>
       <div className="min-h-screen">
         <Seo
-          title="Paradise Vacations Kenya | Corporate Travel, Safaris & DMC"
-          description="Kenya's client-first travel agency: corporate travel management, safari and beach packages, outbound holidays, educational trips and full DMC services. Free quote in 24 hours."
+          title="Paradise Vacations Kenya | 14 Years · IATA · KATA · TRA · TOSK"
+          description="Kenya's trusted travel management company: corporate travel, safaris, outbound holidays, educational trips, DMC and immigration services. IATA, KATA, TRA and TOSK certified with 14 years of experience. Free quote in 24 hours."
           path="/"
           jsonLd={[
             {
