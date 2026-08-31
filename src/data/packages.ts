@@ -712,3 +712,13 @@ export const getPackageFaqs = (pkg: TravelPackage): PackageFaq[] => [
     answer: "Request a quote or message us on WhatsApp with your dates and traveller numbers. Bookings are confirmed with a deposit, with the balance due before travel; we will share the exact schedule with your quote.",
   },
 ];
+
+/** Tea / coffee / sugar agritourism tours — presented on the Tea Tourism page, not in the main packages grid. */
+export const agritourismSlugs = [
+  "ultimate-kenya-tea-experience-4-day",
+  "kericho-tea-sugar-tour-4-day",
+  "kenya-coffee-tea-sugar-tour-4-day",
+];
+
+export const agritourismPackages = packages.filter((p) => agritourismSlugs.includes(p.slug));
+export const mainPackages = packages.filter((p) => !agritourismSlugs.includes(p.slug));

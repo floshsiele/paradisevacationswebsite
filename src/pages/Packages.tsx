@@ -11,7 +11,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { QuoteSection } from "@/components/QuoteSection";
 import { HomeFaq, homeFaqs, safariFaqs } from "@/components/HomeFaq";
 import { StickyCta } from "@/components/StickyCta";
-import { packages, type TravelPackage } from "@/data/packages";
+import { mainPackages as packages, type TravelPackage } from "@/data/packages";
 import { Seo } from "@/components/Seo";
 import { ArrowRight, Clock, MapPin, Flame, ShieldCheck, CreditCard, Users } from "lucide-react";
 import { photos } from "@/assets/photos";
