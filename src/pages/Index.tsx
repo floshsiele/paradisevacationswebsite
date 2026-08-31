@@ -11,10 +11,15 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
 import { Plane, Map, Briefcase, GraduationCap, ArrowRight, Phone, CheckCircle2, Stamp } from "lucide-react";
-import certIata from "@/assets/cert-iata.png";
-import certKata from "@/assets/cert-kata.png";
-import certTra from "@/assets/cert-tra.png";
-import certTosk from "@/assets/cert-tosk.png";
+import certIataAsset from "@/assets/cert-iata.jpg.asset.json";
+import certKataAsset from "@/assets/cert-kata.jpg.asset.json";
+import certTraAsset from "@/assets/cert-tra.jpg.asset.json";
+import certToskAsset from "@/assets/cert-tosk.jpg.asset.json";
+
+const certIata = certIataAsset.url;
+const certKata = certKataAsset.url;
+const certTra = certTraAsset.url;
+const certTosk = certToskAsset.url;
 import teaGardens from "@/assets/tea-gardens-kericho.jpg";
 
 const accreditations = [
