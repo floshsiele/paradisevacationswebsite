@@ -22,6 +22,7 @@ import {
   Factory,
   Leaf,
   BadgeCheck,
+  Ship,
 } from "lucide-react";
 import teaGardens from "@/assets/tea-gardens-kericho.jpg";
 import teaFactory from "@/assets/tea-factory-tour.jpg";
@@ -54,7 +55,7 @@ const support = [
     text: "Introductions are only the start — we book and confirm every meeting time, factory slot and cupping session in advance, so your entire buyer schedule is locked in before you board your flight.",
   },
   {
-    icon: Handshake,
+    icon: Ship,
     title: "Meet the export team",
     text: "We also ensure you meet the team from the tea factories that will be handling the export of your tea — so you understand the process, timelines and documentation before you commit.",
   },
