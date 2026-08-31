@@ -1,8 +1,4 @@
-import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { trackCta } from "@/lib/analytics";
-import { ArrowRight, Phone, Star } from "lucide-react";
 const heroVideoUrl = "/hero-corporate.mp4";
 const heroPosterUrl = "/hero-corporate-poster.jpg";
 
