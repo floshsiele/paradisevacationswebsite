@@ -16,6 +16,7 @@ import {
   Bus,
   Handshake,
   Users,
+  CalendarCheck,
   Palmtree,
   Check,
   Factory,
