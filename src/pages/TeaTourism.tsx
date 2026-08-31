@@ -186,12 +186,12 @@ const TeaTourism = () => (
         primaryTo="/tea-tourism#tea-enquiry"
         secondaryLabel="Enquire about factory partnerships"
         secondaryTo="/tea-tourism#tea-enquiry"
-        microcopy="Visa · Flights · Factory access · Negotiation support · 2-day getaway"
+        microcopy="Visa · Flights · Factory access · Negotiation support · Optional 2-day getaway"
         stats={[
           { value: "10+", label: "Partner factories" },
           { value: "5", label: "Tea regions" },
           { value: "14 yrs", label: "In operation" },
-          { value: "2 days", label: "Bonus getaway" },
+          { value: "2 days", label: "Optional getaway" },
         ]}
       />
 
