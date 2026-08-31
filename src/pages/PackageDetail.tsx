@@ -205,6 +205,23 @@ const PackageDetail = () => {
               <span className="font-sans text-xs tracking-widest uppercase text-muted-foreground">Price from</span>
               <div className="font-display text-3xl mb-6">{pkg.priceFrom}</div>
 
+              {pkg.rates && (
+                <div className="mb-8 border-t border-border pt-5">
+                  <span className="font-sans text-xs tracking-widest uppercase text-muted-foreground">Season rates</span>
+                  <ul className="mt-3 space-y-3">
+                    {pkg.rates.map((r) => (
+                      <li key={r.label} className="font-sans text-sm">
+                        <div className="text-foreground">{r.label}</div>
+                        <div className="text-muted-foreground">
+                          {r.sharing} per person sharing
+                          {r.solo ? ` · ${r.solo} solo traveller` : ""}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               <div className="space-y-4 mb-8 font-sans text-sm text-muted-foreground">
                 <p className="flex items-start gap-2"><Clock size={15} className="text-primary mt-0.5" /> {pkg.duration}</p>
                 <p className="flex items-start gap-2"><MapPin size={15} className="text-primary mt-0.5" /> {pkg.destination}</p>
