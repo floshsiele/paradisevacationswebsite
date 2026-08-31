@@ -19,15 +19,16 @@ export function Logo({ variant = "dark", className }: LogoProps) {
       className={cn("inline-flex items-center gap-2 sm:gap-3 group", className)}
       aria-label="Paradise Vacations home"
     >
-      <div className="h-10 sm:h-12 md:h-14 w-10 sm:w-12 md:w-14 shrink-0 overflow-hidden rounded-full bg-transparent ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105">
+      <div className="h-10 sm:h-12 md:h-14 w-10 sm:w-12 md:w-14 shrink-0 overflow-hidden rounded-full bg-transparent transition-transform duration-500 group-hover:scale-105">
         <img
           src="/paradise-emblem.png"
           alt="Paradise Vacations emblem"
-          className="h-full w-full object-contain"
-          width={246}
-          height={246}
+          className="h-full w-full object-cover"
+          width={512}
+          height={512}
         />
       </div>
+
       <span className="flex flex-col leading-none min-w-0">
         <span
           className={cn(
