@@ -48,6 +48,11 @@ const support = [
     text: "You meet the right people at each factory: production managers, sales teams and agronomists who can walk you through quality, volumes and pricing.",
   },
   {
+    icon: CalendarCheck,
+    title: "Appointment scheduling, confirmed before you land",
+    text: "Introductions are only the start — we book and confirm every meeting time, factory slot and cupping session in advance, so your entire buyer schedule is locked in before you board your flight.",
+  },
+  {
     icon: Handshake,
     title: "Negotiation support",
     text: "We facilitate price discussions and sourcing conversations between you and factory representatives, giving you the local context and relationships to negotiate with confidence.",
@@ -67,6 +72,7 @@ const includes = [
   "Professional tea cupping and tasting sessions with different grades and selections",
   "Meet-the-producer sessions with factory management and tea agronomists",
   "Facilitated introductions and negotiation support for tea pricing and supply deals",
+  "Pre-confirmed appointment scheduling — every factory visit, meeting and cupping session booked before you arrive",
   "Private ground transport between all factories and accommodation",
   "Comfortable accommodation throughout your stay",
   "A complimentary 2-day vacation to the Maasai Mara or the Kenyan Coast before departure",
