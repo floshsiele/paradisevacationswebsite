@@ -14,6 +14,7 @@ import DMC from "./pages/DMC";
 import Immigration from "./pages/Immigration";
 import Packages from "./pages/Packages";
 import PackageDetail from "./pages/PackageDetail";
+import TeaTourism from "./pages/TeaTourism";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,8 @@ const AppRoutes = () => {
         <Route path="/packages" element={<Packages />} />
         <Route path="/packages/:slug" element={<PackageDetail />} />
         <Route path="/dmc" element={<DMC />} />
+        <Route path="/tea-tourism" element={<TeaTourism />} />
+        <Route path="/tea-buyer-tours" element={<Navigate to="/tea-tourism" replace />} />
         <Route path="/immigration-services" element={<Immigration />} />
         <Route path="/book" element={<Navigate to="/packages#book" replace />} />
         <Route path="/quote" element={<Navigate to="/packages#book" replace />} />

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
@@ -328,6 +329,17 @@ const DMC = () => (
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="py-10 px-6 md:px-16 bg-background">
+        <p className="max-w-3xl mx-auto text-center font-sans text-muted-foreground">
+          Looking to combine business with discovery?{" "}
+          <Link to="/tea-tourism" className="text-primary underline underline-offset-4">
+            Explore our exclusive Tea Tourism experiences
+          </Link>{" "}
+          — end-to-end sourcing journeys for international tea buyers, with factory access, negotiation support and a
+          2-day Maasai Mara or coast getaway.
+        </p>
       </section>
 
       <Testimonials

@@ -21,6 +21,7 @@ export function SiteFooter() {
             <Link to="/corporate-travel" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Corporate Travel Management</Link>
             <Link to="/packages" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Packages</Link>
             <Link to="/dmc" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">DMC</Link>
+            <Link to="/tea-tourism" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Tea Tourism</Link>
             <Link to="/immigration-services" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Immigration Services</Link>
             <Link to="/contact" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact</Link>
           </nav>
