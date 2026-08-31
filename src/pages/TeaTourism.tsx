@@ -41,7 +41,7 @@ const support = [
   {
     icon: Bus,
     title: "Factory-to-factory transport",
-    text: "Private, reliable ground transport between your accommodation and each of our 10+ partner tea factories, across Kericho, Nandi, Nyeri, Murang'a and the Rift Valley.",
+    text: "Private, reliable ground transport between your accommodation and each of our 10+ partner tea factories, across Kericho, Nandi, Bomet, Murang'a and the Rift Valley.",
   },
   {
     icon: Users,
@@ -106,7 +106,7 @@ const whyUs = [
 const regions = [
   { name: "Kericho", text: "Kenya's tea heartland — large estates, consistent CTC volumes and world-class processing infrastructure." },
   { name: "Nandi", text: "High-altitude gardens producing bright, brisk liquors prized by blenders and single-origin buyers." },
-  { name: "Nyeri", text: "Central highland smallholder factories with strong quality control and distinctive character." },
+  { name: "Bomet", text: "Fertile highland zone with fast-growing smallholder factories and competitively priced, well-graded black CTC." },
   { name: "Murang'a", text: "Rich volcanic soils and cooperative-run factories with excellent traceability." },
   { name: "Rift Valley", text: "Diverse elevations and estates offering everything from orthodox specialty to purple tea." },
 ];
@@ -127,7 +127,7 @@ const faqs: Faq[] = [
   {
     question: "How many tea factories will I visit?",
     answer:
-      "We hold relationships with over 10 partner tea factories across Kericho, Nandi, Nyeri, Murang'a and the Rift Valley. Your itinerary is built around your grades and volumes — most buyers visit three to six factories in a single trip.",
+      "We hold relationships with over 10 partner tea factories across Kericho, Nandi, Bomet, Murang'a and the Rift Valley. Your itinerary is built around your grades and volumes — most buyers visit three to six factories in a single trip.",
   },
   {
     question: "Do you handle my visa and flights?",
@@ -167,7 +167,7 @@ const TeaTourism = () => (
             areaServed: "Kenya",
             url: "/tea-tourism",
             description:
-              "Curated tea buyer tours in Kenya with visa processing, flights, private transport, access to 10+ partner tea factories in Kericho, Nandi, Nyeri, Murang'a and the Rift Valley, cupping sessions, negotiation support and a complimentary 2-day Maasai Mara or coast getaway.",
+              "Curated tea buyer tours in Kenya with visa processing, flights, private transport, access to 10+ partner tea factories in Kericho, Nandi, Bomet, Murang'a and the Rift Valley, cupping sessions, negotiation support and a complimentary 2-day Maasai Mara or coast getaway.",
             provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
             audience: { "@type": "BusinessAudience", name: "Tea buyers, importers and distributors" },
           },
@@ -219,7 +219,7 @@ const TeaTourism = () => (
               </p>
               <p>
                 Through exclusive partnerships with over 10 tea factories across Kenya's premier tea-growing regions —
-                including the highlands of Kericho, Nandi, Nyeri, Murang'a and the Rift Valley — you get behind-the-scenes
+                including the highlands of Kericho, Nandi, Bomet, Murang'a and the Rift Valley — you get behind-the-scenes
                 access to production floors, plucking demonstrations in the gardens, expert-led cupping and tasting
                 sessions, and direct conversations with factory management and agronomists.
               </p>
