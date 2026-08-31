@@ -16,26 +16,26 @@ export function Logo({ variant = "dark", className }: LogoProps) {
   return (
     <Link
       to="/"
-      className={cn("inline-flex items-center gap-3 group", className)}
+      className={cn("inline-flex items-center gap-2 sm:gap-3 group", className)}
       aria-label="Paradise Vacations home"
     >
       <img
         src="/paradise-emblem.png"
         alt="Paradise Vacations emblem"
-        className="h-12 md:h-16 w-12 md:w-16 shrink-0 rounded-full object-cover ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105"
+        className="h-10 sm:h-12 md:h-14 w-10 sm:w-12 md:w-14 shrink-0 rounded-full object-cover ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105"
         width={246}
         height={246}
       />
-      <span className="flex flex-col leading-none">
+      <span className="flex flex-col leading-none min-w-0">
         <span
           className={cn(
-            "font-display text-xl md:text-2xl tracking-tight whitespace-nowrap",
+            "font-display text-lg sm:text-xl md:text-2xl tracking-tight whitespace-nowrap",
             isLight ? "text-white" : "text-foreground"
           )}
         >
           Paradise Vacations
         </span>
-        <span className="font-sans text-[10px] md:text-xs font-semibold tracking-[0.28em] text-accent mt-1.5 whitespace-nowrap">
+        <span className="font-sans text-[9px] sm:text-[10px] md:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.28em] text-accent mt-1 sm:mt-1.5 whitespace-nowrap">
           DREAM. EXPLORE. DISCOVER.
         </span>
       </span>

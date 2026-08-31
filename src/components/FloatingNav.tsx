@@ -8,7 +8,7 @@ import { Logo } from "@/components/Logo";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Corporate Travel Management", path: "/corporate-travel" },
+  { name: "CTM", path: "/corporate-travel" },
   { name: "Packages", path: "/packages" },
   { name: "DMC", path: "/dmc" },
   { name: "Tea Tourism", path: "/tea-tourism" },
