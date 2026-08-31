@@ -15,6 +15,7 @@ import certIata from "@/assets/cert-iata.png";
 import certKata from "@/assets/cert-kata.png";
 import certTra from "@/assets/cert-tra.png";
 import certTosk from "@/assets/cert-tosk.png";
+import teaGardens from "@/assets/tea-gardens-kericho.jpg";
 
 const accreditations = [
   {
@@ -218,6 +219,45 @@ const Index = () => {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* Signature Experience — Tea Tourism */}
+        <section className="py-20 px-6 md:px-16 bg-background">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-border shadow-elevated"
+          >
+            <div className="relative min-h-[280px]">
+              <img
+                src={teaGardens}
+                alt="Kenyan highland tea estate with pluckers harvesting leaf at sunrise"
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-8 md:p-12 bg-card">
+              <span className="chapter-title text-xs mb-4 block">Signature Experience</span>
+              <h2 className="font-display text-3xl md:text-4xl mb-4 leading-tight">
+                Tea Tourism — source Kenya's finest tea, straight from the source
+              </h2>
+              <p className="font-sans text-muted-foreground leading-relaxed mb-6">
+                Exclusive buyer experiences for international tea importers and distributors: visa and flights handled,
+                access to 10+ partner factories across Kericho, Nandi, Nyeri, Murang'a and the Rift Valley, expert-led
+                cupping sessions, negotiation support — and a complimentary 2-day Maasai Mara or coast getaway before
+                you fly home.
+              </p>
+              <Link
+                to="/tea-tourism"
+                onClick={() => trackCta("Explore Tea Tourism", { cta_location: "home_tea_banner", destination: "/tea-tourism" })}
+                className="btn-primary-cta"
+              >
+                Explore tea buyer tours <ArrowRight size={16} />
+              </Link>
+            </div>
+          </motion.div>
         </section>
 
         <FeaturedPackages />
