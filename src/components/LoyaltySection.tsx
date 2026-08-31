@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { trackCta } from "@/lib/analytics";
 import { motion } from "framer-motion";
 import { Gift, RefreshCcw, Crown, ArrowRight } from "lucide-react";
 
@@ -36,6 +37,7 @@ export function LoyaltySection() {
           </p>
           <Link
             to="/packages#book"
+            onClick={() => trackCta("Loyalty quote", { cta_location: "loyalty_section", destination: "/packages#book" })}
             className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:opacity-90 transition-opacity"
           >
             Join with your first booking <ArrowRight size={16} />

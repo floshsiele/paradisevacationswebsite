@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Star } from "lucide-react";
+import { trackCta } from "@/lib/analytics";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -49,11 +50,19 @@ export function PageHero({
           <p className="font-sans text-lg text-white/90 max-w-2xl leading-relaxed">{subtitle}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-9">
-            <Link to={primaryTo} className="btn-primary-cta">
+            <Link
+              to={primaryTo}
+              className="btn-primary-cta"
+              onClick={() => trackCta(primaryLabel, { cta_location: "page_hero", destination: primaryTo })}
+            >
               {primaryLabel} <ArrowRight size={16} />
             </Link>
             {secondaryLabel && secondaryTo ? (
-              <Link to={secondaryTo} className="btn-ghost-cta">
+              <Link
+                to={secondaryTo}
+                className="btn-ghost-cta"
+                onClick={() => trackCta(secondaryLabel, { cta_location: "page_hero_secondary", destination: secondaryTo })}
+              >
                 {secondaryLabel}
               </Link>
             ) : (

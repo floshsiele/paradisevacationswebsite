@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { trackCta } from "@/lib/analytics";
 import { ArrowRight, Phone, Star } from "lucide-react";
 const heroVideoUrl = "/hero-corporate.mp4";
 const heroPosterUrl = "/hero-corporate-poster.jpg";
@@ -81,7 +82,11 @@ export function HeroVideo() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-9">
-            <Link to="/packages#book" className="btn-primary-cta">
+            <Link
+              to="/packages#book"
+              className="btn-primary-cta"
+              onClick={() => trackCta("Get a free quote", { cta_location: "home_hero", destination: "/packages#book" })}
+            >
               Get a free quote <ArrowRight size={16} />
             </Link>
             <a href="tel:+254726927081" className="btn-ghost-cta">

@@ -3,12 +3,15 @@ import { useLocation } from "react-router-dom";
 import { useReducedMotion } from "framer-motion";
 
 export function ScrollToTop() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (hash) {
-      const id = hash.slice(1);
+      const id = decodeURIComponent(hash.slice(1));
+      let attempts = 0;
+      let timer = 0;
+
       const scrollToTarget = () => {
         const el = document.getElementById(id);
         if (el) {
@@ -17,8 +20,15 @@ export function ScrollToTop() {
         }
         return false;
       };
-      if (scrollToTarget()) return;
-      const timer = window.setTimeout(scrollToTarget, 250);
+
+      // Retry while the target section mounts (lazy pages, images, animations).
+      const poll = () => {
+        if (scrollToTarget() || attempts > 20) return;
+        attempts += 1;
+        timer = window.setTimeout(poll, 100);
+      };
+      poll();
+
       return () => window.clearTimeout(timer);
     }
 
@@ -27,7 +37,8 @@ export function ScrollToTop() {
       left: 0,
       behavior: reduceMotion ? "auto" : "smooth",
     });
-  }, [pathname, hash, reduceMotion]);
+    // `key` is included so clicking the same #book CTA twice still scrolls.
+  }, [pathname, hash, key, reduceMotion]);
 
   return null;
 }

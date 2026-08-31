@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import { trackPackageCta } from "@/lib/analytics";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
@@ -212,12 +213,14 @@ const PackageDetail = () => {
 
               <Link
                 to="/packages#book"
+                onClick={() => trackPackageCta(pkg.slug, pkg.name, { cta_label: "Get Your Quote", cta_location: "package_detail_sidebar", destination: "/packages#book" })}
                 className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/90 transition-all duration-300 mb-3"
               >
                 Get Your Quote <ArrowRight size={16} />
               </Link>
               <a
-                href="https://api.whatsapp.com/send?phone=254723045625"
+                href="https://api.whatsapp.com/send?phone=254726927081"
+                onClick={() => trackPackageCta(pkg.slug, pkg.name, { cta_label: "Chat on WhatsApp", cta_location: "package_detail_sidebar" })}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 border border-primary/40 text-primary font-sans text-sm tracking-widest uppercase rounded-md hover:bg-primary/5 transition-all duration-300"
