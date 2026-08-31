@@ -48,7 +48,7 @@ const services = [
 const audiences = [
   {
     title: "Expatriates & Professionals",
-    text: "Relocating to Kenya for a new role? We handle your permit class, documentation and timelines so you can focus on the job, not the paperwork.",
+    text: "Taking up a new role in Kenya? We handle your permit class, documentation and timelines so you can focus on the job, not the paperwork.",
   },
   {
     title: "Companies Sponsoring Staff",
@@ -56,7 +56,7 @@ const audiences = [
   },
   {
     title: "Families & Individuals",
-    text: "Dependent passes, residency applications and visa renewals for families settling or reuniting in Kenya — handled with discretion and care.",
+    text: "Dependent passes, residency applications and visa renewals for families reuniting in Kenya — handled with discretion and care.",
   },
 ];
 
@@ -105,19 +105,19 @@ const Immigration = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
       <Seo
-        title="Immigration Services Kenya | Visa, Work Permit & Relocation Support – Paradise Vacations Kenya"
-        description="Simplify your move to or from Kenya with Paradise Vacations Kenya's immigration services — visa applications, work permits, residency support, and relocation assistance handled by experts."
+        title="Immigration Services Kenya | Visa, Work Permit & Permit Support – Paradise Vacations Kenya"
+        description="Simplify your Kenya visa and permit paperwork with Paradise Vacations Kenya — visa applications, work permits, residency support, and documentation handled by experts."
         path="/immigration-services"
         jsonLd={[
           {
             "@context": "https://schema.org",
             "@type": "Service",
             name: "Immigration Services Kenya",
-            serviceType: "Immigration and relocation support",
+            serviceType: "Immigration and permit support",
             areaServed: "Kenya",
             url: "/immigration-services",
             description:
-              "Kenya visa applications and renewals, work permits and special passes, residency and dependent permits, business and investor visas, and relocation support with government liaison.",
+              "Kenya visa applications and renewals, work permits and special passes, residency and dependent permits, business and investor visas, and documentation support with government liaison.",
             provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
           },
           faqPageJsonLd(faqs),
@@ -128,8 +128,8 @@ const Immigration = () => (
       <PageHero
         eyebrow="Immigration Services"
         badge="14 years of trusted documentation support"
-        title={<>Immigration Services — Your Trusted Partner for Visas, Permits &amp; Relocation</>}
-        subtitle="Navigating immigration procedures can be confusing, time-consuming and stressful. With 14 years of handling travel and relocation documentation for individuals, families and corporate clients, we take the guesswork and hassle out of the process — for anyone relocating to or from Kenya."
+        title={<>Immigration Services — Your Trusted Partner for Visas, Permits &amp; Documentation</>}
+        subtitle="Navigating immigration procedures can be confusing, time-consuming and stressful. With 14 years of handling travel documentation for individuals, families and corporate clients, we take the guesswork and hassle out of the process — for anyone travelling to or from Kenya."
         image={photos.visaPassportCanada}
         imageAlt="Passport and visa documentation for Kenya immigration services"
         primaryLabel="Get immigration assistance"
@@ -153,7 +153,7 @@ const Immigration = () => (
             <span className="chapter-title text-xs mb-4 block">What We Handle</span>
             <h2 className="font-display text-3xl md:text-5xl mb-4">Every immigration need, under one roof</h2>
             <p className="font-sans text-muted-foreground text-lg">
-              Whether you're an expatriate relocating for a new job, a company sponsoring foreign staff,
+              Whether you're an expatriate taking up a new role, a company sponsoring foreign staff,
               or a family reuniting in Kenya — we provide clear guidance and hands-on support.
             </p>
           </div>
@@ -213,7 +213,7 @@ const Immigration = () => (
           >
             <img
               src={photos.visaStampPassport}
-              alt="Visa stamp in a passport for Kenya work permit and relocation support"
+              alt="Visa stamp in a passport for Kenya work permit and visa support"
               loading="lazy"
               className="w-full h-full object-cover"
             />
@@ -277,7 +277,7 @@ const Immigration = () => (
 
       <Testimonials
         eyebrow="Client Stories"
-        heading="Settled in Kenya, without the stress"
+        heading="Approved in Kenya, without the stress"
         intro="Expatriates, families and HR teams we've guided through the process."
         limit={3}
       />
