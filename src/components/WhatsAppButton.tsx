@@ -13,6 +13,8 @@ const contextMessage: Record<string, string> = {
     "Hello Paradise Vacations, I'd like to discuss corporate travel management for my organisation.",
   "/packages": "Hello Paradise Vacations, I'm interested in one of your tour packages. Could you share details?",
   "/dmc": "Hello Paradise Vacations, I'd like a DMC ground-handling proposal for a group coming to East Africa.",
+  "/tea-tourism":
+    "Hello Paradise Vacations, I'm interested in your Kenya tea buyer tours. Could you send me details on factory access and pricing?",
   "/immigration-services":
     "Hello Paradise Vacations, I need assistance with a Kenyan visa / work permit application.",
   "/contact": "Hello Paradise Vacations, I'd like to speak to a travel consultant.",
