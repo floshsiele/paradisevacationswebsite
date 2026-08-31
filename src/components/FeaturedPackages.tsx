@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, MapPin, Flame } from "lucide-react";
 import { packages } from "@/data/packages";
+import { trackCta, trackPackageCta } from "@/lib/analytics";
 
 const featuredSlugs = ["masai-mara-safari", "dubai-city-break", "diani-beach-escape", "uk-educational-trip"];
 
@@ -23,6 +24,7 @@ export function FeaturedPackages() {
           </div>
           <Link
             to="/packages"
+            onClick={() => trackCta("View all packages", { cta_location: "home_featured_packages", destination: "/packages" })}
             className="inline-flex items-center gap-2 font-sans text-sm uppercase tracking-widest text-primary link-underline shrink-0"
           >
             View all packages <ArrowRight size={16} />
@@ -39,7 +41,11 @@ export function FeaturedPackages() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className="group bg-card rounded-xl overflow-hidden border border-border shadow-soft hover:shadow-elevated transition-all duration-500"
             >
-              <Link to={`/packages/${p.slug}`} className="block h-full flex flex-col">
+              <Link
+                to={`/packages/${p.slug}`}
+                onClick={() => trackPackageCta(p.slug, p.name, { cta_label: "Featured card", cta_location: "home_featured_packages" })}
+                className="block h-full flex flex-col"
+              >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={p.image}

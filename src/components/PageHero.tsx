@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Star } from "lucide-react";
+import { trackCta } from "@/lib/analytics";
 
 type PageHeroProps = {
   eyebrow: string;

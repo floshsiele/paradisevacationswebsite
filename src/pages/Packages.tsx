@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { trackPackageCta } from "@/lib/analytics";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
@@ -172,7 +173,11 @@ const Packages = () => {
                   transition={{ duration: 0.5, delay: index * 0.06 }}
                   className="group flex flex-col rounded-xl overflow-hidden border border-border bg-background shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-500"
                 >
-                  <Link to={`/packages/${pkg.slug}`} className="relative aspect-[16/10] overflow-hidden">
+                  <Link
+                    to={`/packages/${pkg.slug}`}
+                    onClick={() => trackPackageCta(pkg.slug, pkg.name, { cta_label: "Card image", cta_location: "packages_grid" })}
+                    className="relative aspect-[16/10] overflow-hidden"
+                  >
                     <img
                       src={pkg.image}
                       alt={pkg.name}
@@ -191,7 +196,11 @@ const Packages = () => {
 
                   <div className="flex flex-col flex-1 p-6">
                     <h3 className="font-display text-xl mb-2">
-                      <Link to={`/packages/${pkg.slug}`} className="hover:text-primary transition-colors">
+                      <Link
+                        to={`/packages/${pkg.slug}`}
+                        onClick={() => trackPackageCta(pkg.slug, pkg.name, { cta_label: "Card title", cta_location: "packages_grid" })}
+                        className="hover:text-primary transition-colors"
+                      >
                         {pkg.name}
                       </Link>
                     </h3>
@@ -209,6 +218,7 @@ const Packages = () => {
                       </div>
                       <Link
                         to={`/packages/${pkg.slug}`}
+                        onClick={() => trackPackageCta(pkg.slug, pkg.name, { cta_label: "View trip", cta_location: "packages_grid" })}
                         className="inline-flex items-center gap-1.5 font-sans text-sm tracking-widest uppercase text-primary hover:gap-3 transition-all"
                       >
                         View trip <ArrowRight size={14} />

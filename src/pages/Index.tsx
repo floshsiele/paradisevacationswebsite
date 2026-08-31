@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { trackCta } from "@/lib/analytics";
 import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { HeroVideo } from "@/components/HeroVideo";
@@ -261,7 +262,11 @@ const Index = () => {
                 free, itemised and with no obligation to book.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/packages#book" className="btn-primary-cta">
+                <Link
+                  to="/packages#book"
+                  onClick={() => trackCta("Request my free quote", { cta_location: "home_final_cta", destination: "/packages#book" })}
+                  className="btn-primary-cta"
+                >
                   Request my free quote <ArrowRight size={16} />
                 </Link>
                 <a
