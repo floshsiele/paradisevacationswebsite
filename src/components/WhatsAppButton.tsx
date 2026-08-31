@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { trackCta } from "@/lib/analytics";
 import { buildDmcMessage, hasDmcDraft, useDmcDraft } from "@/lib/dmcDraft";
 
 
@@ -40,6 +41,7 @@ export function WhatsAppButton() {
       href={whatsAppLink(message)}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackCta("Chat on WhatsApp", { cta_location: "floating_whatsapp" })}
       aria-label={`Chat with Paradise Vacations on WhatsApp (${WHATSAPP_DISPLAY})`}
       className="hidden md:flex fixed bottom-6 right-6 z-50 items-center gap-3 rounded-full bg-[#25D366] pl-4 pr-5 py-3 text-white shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300"
     >
