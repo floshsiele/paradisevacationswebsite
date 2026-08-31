@@ -106,7 +106,7 @@ const whyUs = [
 const regions = [
   { name: "Kericho", text: "Kenya's tea heartland — large estates, consistent CTC volumes and world-class processing infrastructure." },
   { name: "Nandi", text: "High-altitude gardens producing bright, brisk liquors prized by blenders and single-origin buyers." },
-  { name: "Nyeri", text: "Central highland smallholder factories with strong quality control and distinctive character." },
+  { name: "Bomet", text: "Fertile highland zone with fast-growing smallholder factories and competitively priced, well-graded black CTC." },
   { name: "Murang'a", text: "Rich volcanic soils and cooperative-run factories with excellent traceability." },
   { name: "Rift Valley", text: "Diverse elevations and estates offering everything from orthodox specialty to purple tea." },
 ];
