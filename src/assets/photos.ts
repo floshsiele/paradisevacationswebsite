@@ -8,6 +8,11 @@ import brandTee from "./travel-is-my-business.jpg.asset.json";
 import safariConvoy from "./safari-convoy.png.asset.json";
 import safariElephant from "./safari-elephant-game-drive.png.asset.json";
 import safariFleet from "./safari-fleet-track.png.asset.json";
+import corporateLounge from "./corporate-lounge-laptop.jpg.asset.json";
+import corporateConfidence from "./corporate-traveller-confidence.jpg.asset.json";
+import airportDeparture from "./airport-terminal-departure.jpg.asset.json";
+import groupPlanning from "./group-travel-planning.jpg.asset.json";
+import tripPlanning from "./trip-planning-tips.jpg.asset.json";
 
 export const photos = {
   lionessSafari: lioness.url,
@@ -20,4 +25,9 @@ export const photos = {
   safariConvoy: safariConvoy.url,
   safariElephant: safariElephant.url,
   safariFleet: safariFleet.url,
+  corporateLounge: corporateLounge.url,
+  corporateConfidence: corporateConfidence.url,
+  airportDeparture: airportDeparture.url,
+  groupPlanning: groupPlanning.url,
+  tripPlanning: tripPlanning.url,
 };

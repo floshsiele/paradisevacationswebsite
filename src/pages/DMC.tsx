@@ -36,7 +36,7 @@ const services = [
     id: "arrival",
     label: "Arrivals",
     title: "Arrival, Transfers & VIP Handling",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1400&q=85",
+    image: photos.airportDeparture,
     icon: PlaneLanding,
     intro:
       "Your guests are met the moment they land at JKIA, Moi International or any regional airport, and handed over to a named coordinator.",
