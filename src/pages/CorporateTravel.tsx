@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { photos } from "@/assets/photos";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
@@ -58,7 +59,7 @@ const pillars = [
   {
     id: "air-ticketing",
     title: "Air Ticketing & Fare Management",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1400&q=85",
+    image: photos.airportDeparture,
     icon: Ticket,
     intro:
       "Competitive fares and flexible bookings on all major domestic, regional and international airlines, issued by accredited consultants with 14 years of ticketing experience.",
@@ -76,7 +77,7 @@ const pillars = [
   {
     id: "programme",
     title: "Managed Travel Programme",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=85",
+    image: photos.corporateLounge,
     icon: BarChart3,
     intro:
       "We act as an extension of your admin and finance teams, running bookings inside your travel policy with consolidated invoicing and clear reporting.",
@@ -93,7 +94,7 @@ const pillars = [
   {
     id: "mice",
     title: "MICE, Incentives & Team Travel",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1400&q=85",
+    image: photos.groupPlanning,
     icon: Users,
     intro:
       "Meetings, incentives, conferences and exhibitions planned and delivered end to end, in Kenya and abroad.",
@@ -187,8 +188,8 @@ const CorporateTravel = () => (
         badge="14 years · Trusted by Kenyan corporates"
         title={<>Corporate Travel Management in Kenya — Travel Smarter, Not Harder</>}
         subtitle="Time is money, and every business trip should move your company forward. With 14 years of experience, we manage the full travel lifecycle for businesses, NGOs and government institutions — flights, hotels, transfers, visas, MICE logistics and real-time 24/7 traveller assistance."
-        image="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1800&q=85"
-        imageAlt="Business travellers in a corporate meeting arranged by Paradise Vacations Kenya"
+        image={photos.corporateConfidence}
+        imageAlt="Corporate traveller walking through an airport terminal on a trip managed by Paradise Vacations Kenya"
         primaryLabel="Request a corporate travel consultation"
         microcopy="No obligation · Confidential · Written savings projection"
         stats={[
@@ -274,7 +275,7 @@ const CorporateTravel = () => (
               transition={{ duration: 0.8 }}
               className={`relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated ${index % 2 === 0 ? "" : "lg:order-1"}`}
             >
-              <img src={pillar.image} alt={pillar.title} loading="lazy" className="w-full h-full object-cover" />
+              <img src={pillar.image} alt={pillar.imageAlt ?? pillar.title} loading="lazy" className="w-full h-full object-cover" />
             </motion.div>
           </div>
         </section>
