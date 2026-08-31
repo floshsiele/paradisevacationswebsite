@@ -428,7 +428,62 @@ const TeaTourism = () => (
         </div>
       </section>
 
-      {/* Buyer enquiry form */}
+      {/* Tea, coffee & sugar tour packages */}
+      <section id="tea-packages" className="py-20 px-6 md:px-16 scroll-mt-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="chapter-title text-xs mb-4 block">Tea, Coffee &amp; Sugar Tours</span>
+            <h2 className="font-display text-3xl md:text-5xl mb-4">Ready-made agritourism packages</h2>
+            <p className="font-sans text-muted-foreground text-lg">
+              Prefer a set itinerary? These fully costed tea, coffee and sugar tours run through Limuru, Kiambu and the
+              Kericho highlands — and can be tailored to your dates and group size.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {agritourismPackages.map((pkg, index) => (
+              <motion.article
+                key={pkg.slug}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-card rounded-xl overflow-hidden border border-border shadow-soft flex flex-col"
+              >
+                <Link to={`/packages/${pkg.slug}`} className="block aspect-[4/3] overflow-hidden">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </Link>
+                <div className="p-7 flex flex-col flex-1">
+                  <p className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-2">
+                    {pkg.duration} · {pkg.destination}
+                  </p>
+                  <h3 className="font-display text-xl mb-3">
+                    <Link to={`/packages/${pkg.slug}`} className="hover:text-primary transition-colors">
+                      {pkg.name}
+                    </Link>
+                  </h3>
+                  <p className="font-sans text-sm text-muted-foreground leading-relaxed mb-5">{pkg.summary}</p>
+                  <div className="mt-auto flex items-center justify-between">
+                    <span className="font-display text-primary">{pkg.priceFrom}</span>
+                    <Link
+                      to={`/packages/${pkg.slug}`}
+                      className="font-sans text-sm text-primary underline underline-offset-4"
+                    >
+                      View itinerary
+                    </Link>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       <section id="tea-enquiry" className="py-20 px-6 md:px-16 bg-ocean-light scroll-mt-24">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <span className="chapter-title text-xs mb-4 block">Buyer Enquiry</span>
