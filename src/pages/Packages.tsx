@@ -142,6 +142,14 @@ const Packages = () => {
                 </button>
               ))}
             </div>
+            <p className="text-center font-sans text-sm text-muted-foreground mt-10 max-w-3xl mx-auto">
+              Curious about Kenya's tea country? Our{" "}
+              <Link to="/tea-tourism" className="text-primary underline underline-offset-4">
+                Tea Tourism experiences
+              </Link>{" "}
+              take you into the highland estates and factories of Kericho, Nandi and beyond — for buyers and curious
+              travellers alike.
+            </p>
           </div>
         </section>
 
