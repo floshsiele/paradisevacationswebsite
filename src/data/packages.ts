@@ -546,7 +546,7 @@ export const packages: TravelPackage[] = [
     priceFrom: "USD 950 per person",
     summary:
       "Skyscrapers, desert dunes, and world-class shopping — an easy, high-impact getaway from Nairobi.",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=85",
+    image: photos.dubaiBurjAlArab,
     highlights: [
       "Burj Khalifa At the Top ticket",
       "Desert safari with BBQ dinner",

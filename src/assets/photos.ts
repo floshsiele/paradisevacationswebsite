@@ -15,6 +15,7 @@ import groupPlanning from "./group-travel-planning.jpg.asset.json";
 import tripPlanning from "./trip-planning-tips.jpg.asset.json";
 import visaPassportCanada from "./visa-passport-canada.jpg.asset.json";
 import visaStampPassport from "./visa-stamp-passport.jpg.asset.json";
+import dubaiBurjAlArab from "./dubai-burj-al-arab.jpg.asset.json";
 
 export const photos = {
   lionessSafari: lioness.url,
@@ -34,4 +35,5 @@ export const photos = {
   tripPlanning: tripPlanning.url,
   visaPassportCanada: visaPassportCanada.url,
   visaStampPassport: visaStampPassport.url,
+  dubaiBurjAlArab: dubaiBurjAlArab.url,
 };
