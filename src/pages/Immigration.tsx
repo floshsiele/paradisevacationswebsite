@@ -212,8 +212,8 @@ const Immigration = () => (
             className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated"
           >
             <img
-              src={photos.corporateLounge}
-              alt="Consultant advising clients on Kenya work permit and relocation paperwork"
+              src={photos.visaStampPassport}
+              alt="Visa stamp in a passport for Kenya work permit and relocation support"
               loading="lazy"
               className="w-full h-full object-cover"
             />
