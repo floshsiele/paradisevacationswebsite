@@ -60,8 +60,8 @@ const support = [
   },
   {
     icon: Palmtree,
-    title: "A 2-day reward getaway",
-    text: "Before you fly home, unwind with a complimentary 2-day vacation to either the Maasai Mara or the Kenyan Coast, fully arranged by our team.",
+    title: "Optional 2-day reward getaway",
+    text: "Before you fly home, add on a 2-day vacation to either the Maasai Mara or the Kenyan Coast, fully arranged by our team.",
   },
 ];
 
@@ -76,8 +76,7 @@ const includes = [
   "Pre-confirmed appointment scheduling — every factory visit, meeting and cupping session booked before you arrive",
   "Private ground transport between all factories and accommodation",
   "Comfortable accommodation throughout your stay",
-  "A complimentary 2-day vacation to the Maasai Mara or the Kenyan Coast before departure",
-  "Optional add-ons: extended wildlife excursions, cultural experiences and Nairobi city tours",
+  "Optional add-ons: a 2-day Maasai Mara or Kenyan Coast getaway, extended wildlife excursions, cultural experiences and Nairobi city tours",
 ];
 
 const whyUs = [
@@ -115,7 +114,7 @@ const steps = [
   { n: "01", title: "Tell us your sourcing goals", text: "Grades, volumes, certifications and budget. We map the regions and factories that fit." },
   { n: "02", title: "We build your buyer itinerary", text: "Factory schedule, cupping sessions, meetings, transport, accommodation, flights and visa — costed and confirmed." },
   { n: "03", title: "You travel and source", text: "Factory floors, gardens, cupping tables and negotiation rooms, with our team beside you throughout." },
-  { n: "04", title: "Unwind, then fly home", text: "A complimentary 2-day Maasai Mara or coast getaway before departure — and follow-up support on your supply conversations." },
+  { n: "04", title: "Unwind, then fly home", text: "Add on an optional 2-day Maasai Mara or coast getaway before departure — and receive follow-up support on your supply conversations." },
 ];
 
 const faqs: Faq[] = [
@@ -145,9 +144,9 @@ const faqs: Faq[] = [
       "Black CTC and orthodox, green tea, Kenya's distinctive purple tea, white and specialty selections, plus certified and single-estate options. Tell us what you're after and we'll route you to the factories that produce it.",
   },
   {
-    question: "Is the 2-day getaway really included?",
+    question: "Can I add a Maasai Mara or coast getaway to the trip?",
     answer:
-      "Yes — every tea buyer tour ends with a complimentary two-day vacation to either the Maasai Mara or the Kenyan Coast, arranged by our team, before your departure flight.",
+      "Yes — you can add an optional two-day vacation to either the Maasai Mara or the Kenyan Coast before your departure flight. It's a popular add-on for buyers who want to experience Kenya beyond the factory floor.",
   },
 ];
 
@@ -156,7 +155,7 @@ const TeaTourism = () => (
     <div className="min-h-screen bg-background">
       <Seo
         title="Kenya Tea Tourism | Tea Buyer Tours & Factory Visits – Paradise Vacations Kenya"
-        description="Experience exclusive Kenya tea tourism with Paradise Vacations Kenya — end-to-end buyer support including visa processing, flights, factory access to 10+ partner factories, price negotiation, and a bonus Maasai Mara or coast getaway."
+        description="Experience exclusive Kenya tea tourism with Paradise Vacations Kenya — end-to-end buyer support including visa processing, flights, factory access to 10+ partner factories, price negotiation, and an optional Maasai Mara or coast getaway."
         path="/tea-tourism"
         jsonLd={[
           {
@@ -167,7 +166,7 @@ const TeaTourism = () => (
             areaServed: "Kenya",
             url: "/tea-tourism",
             description:
-              "Curated tea buyer tours in Kenya with visa processing, flights, private transport, access to 10+ partner tea factories in Kericho, Nandi, Bomet, Murang'a and the Rift Valley, cupping sessions, negotiation support and a complimentary 2-day Maasai Mara or coast getaway.",
+              "Curated tea buyer tours in Kenya with visa processing, flights, private transport, access to 10+ partner tea factories in Kericho, Nandi, Bomet, Murang'a and the Rift Valley, cupping sessions, negotiation support and an optional 2-day Maasai Mara or coast getaway.",
             provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
             audience: { "@type": "BusinessAudience", name: "Tea buyers, importers and distributors" },
           },
@@ -187,12 +186,12 @@ const TeaTourism = () => (
         primaryTo="/tea-tourism#tea-enquiry"
         secondaryLabel="Enquire about factory partnerships"
         secondaryTo="/tea-tourism#tea-enquiry"
-        microcopy="Visa · Flights · Factory access · Negotiation support · 2-day getaway"
+        microcopy="Visa · Flights · Factory access · Negotiation support · Optional 2-day getaway"
         stats={[
           { value: "10+", label: "Partner factories" },
           { value: "5", label: "Tea regions" },
           { value: "14 yrs", label: "In operation" },
-          { value: "2 days", label: "Bonus getaway" },
+          { value: "2 days", label: "Optional getaway" },
         ]}
       />
 
