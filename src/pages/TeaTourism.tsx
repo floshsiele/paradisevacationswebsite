@@ -55,6 +55,11 @@ const support = [
   },
   {
     icon: Handshake,
+    title: "Meet the export team",
+    text: "We also ensure you meet the team from the tea factories that will be handling the export of your tea — so you understand the process, timelines and documentation before you commit.",
+  },
+  {
+    icon: Handshake,
     title: "Negotiation support",
     text: "We facilitate price discussions and sourcing conversations between you and factory representatives, giving you the local context and relationships to negotiate with confidence.",
   },
