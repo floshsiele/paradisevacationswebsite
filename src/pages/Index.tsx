@@ -91,7 +91,7 @@ const serviceCards = [
     icon: Stamp,
     title: "Immigration Services",
     description:
-      "Kenya visa applications and renewals, work permits, residency support and relocation assistance — handled by specialists, end to end.",
+      "Kenya visa applications and renewals, work permits and residency documentation support — handled by specialists, end to end.",
     proof: "Direct liaison with immigration authorities",
     to: "/immigration-services",
   },
@@ -250,9 +250,9 @@ const Index = () => {
               </h2>
               <p className="font-sans text-muted-foreground leading-relaxed mb-6">
                 Exclusive buyer experiences for international tea importers and distributors: visa and flights handled,
-                access to 10+ partner factories across Kericho, Nandi, Nyeri, Murang'a and the Rift Valley, expert-led
-                cupping sessions, negotiation support — and a complimentary 2-day Maasai Mara or coast getaway before
-                you fly home.
+                access to 10+ partner factories across Kericho, Nandi, Bomet, Murang'a and the Rift Valley, expert-led
+                cupping sessions, negotiation support, and meetings with the export teams handling your shipments — with an optional 2-day
+                Maasai Mara or coast add-on before you fly home.
               </p>
               <Link
                 to="/tea-tourism"
