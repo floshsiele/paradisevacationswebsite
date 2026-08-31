@@ -130,8 +130,8 @@ const Immigration = () => (
         badge="14 years of trusted documentation support"
         title={<>Immigration Services — Your Trusted Partner for Visas, Permits &amp; Relocation</>}
         subtitle="Navigating immigration procedures can be confusing, time-consuming and stressful. With 14 years of handling travel and relocation documentation for individuals, families and corporate clients, we take the guesswork and hassle out of the process — for anyone relocating to or from Kenya."
-        image={photos.airportDeparture}
-        imageAlt="Kenya visa and immigration documents handled by Paradise Vacations Kenya"
+        image={photos.visaPassportCanada}
+        imageAlt="Passport and visa documentation for Kenya immigration services"
         primaryLabel="Get immigration assistance"
         secondaryLabel="Book a consultation"
         secondaryTo="/contact"
