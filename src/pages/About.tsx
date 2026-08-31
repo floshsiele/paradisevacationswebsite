@@ -52,7 +52,7 @@ const team = [
     name: "Corporate desk",
     role: "Managed travel & ticketing",
     text: "Accredited consultants issuing, reissuing and auditing fares against your travel policy every working day.",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=85",
+    image: photos.corporateLounge,
   },
   {
     name: "Tours & safari team",

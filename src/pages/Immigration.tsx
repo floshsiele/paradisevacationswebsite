@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { photos } from "@/assets/photos";
 import { StaticNav } from "@/components/FloatingNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
@@ -129,7 +130,7 @@ const Immigration = () => (
         badge="14 years of trusted documentation support"
         title={<>Immigration Services — Your Trusted Partner for Visas, Permits &amp; Relocation</>}
         subtitle="Navigating immigration procedures can be confusing, time-consuming and stressful. With 14 years of handling travel and relocation documentation for individuals, families and corporate clients, we take the guesswork and hassle out of the process — for anyone relocating to or from Kenya."
-        image="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1800&q=85"
+        image={photos.airportDeparture}
         imageAlt="Kenya visa and immigration documents handled by Paradise Vacations Kenya"
         primaryLabel="Get immigration assistance"
         secondaryLabel="Book a consultation"
@@ -211,7 +212,7 @@ const Immigration = () => (
             className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated"
           >
             <img
-              src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=1400&q=85"
+              src={photos.corporateLounge}
               alt="Consultant advising clients on Kenya work permit and relocation paperwork"
               loading="lazy"
               className="w-full h-full object-cover"

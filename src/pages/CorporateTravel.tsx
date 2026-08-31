@@ -275,7 +275,7 @@ const CorporateTravel = () => (
               transition={{ duration: 0.8 }}
               className={`relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated ${index % 2 === 0 ? "" : "lg:order-1"}`}
             >
-              <img src={pillar.image} alt={pillar.imageAlt ?? pillar.title} loading="lazy" className="w-full h-full object-cover" />
+              <img src={pillar.image} alt={pillar.title} loading="lazy" className="w-full h-full object-cover" />
             </motion.div>
           </div>
         </section>

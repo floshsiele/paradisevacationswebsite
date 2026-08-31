@@ -36,13 +36,13 @@ const categoryBlurbs: { key: TravelPackage["category"]; title: string; text: str
     key: "Outbound",
     title: "Outbound Tours — Kenya to the World",
     text: "Dreaming of Dubai, Bali, Thailand, Europe or the Caribbean? Fully managed international holidays — flights, visas, accommodation, guided excursions and travel insurance wrapped into one seamless package for honeymoons, group getaways and solo bucket-list adventures.",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    image: photos.tripPlanning,
   },
   {
     key: "Educational",
     title: "International School Trips — Learning Beyond the Classroom",
     text: "Safe, enriching and expertly supervised trips for schools and universities — from wildlife conservation education in the Maasai Mara to international exchange tours — with safety protocols, group discounts, parental communication and 24/7 chaperone support.",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=85",
+    image: photos.groupPlanning,
   },
 ];
 
