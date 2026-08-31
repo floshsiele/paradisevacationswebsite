@@ -35,4 +35,5 @@ export const photos = {
   tripPlanning: tripPlanning.url,
   visaPassportCanada: visaPassportCanada.url,
   visaStampPassport: visaStampPassport.url,
+  dubaiBurjAlArab: dubaiBurjAlArab.url,
 };
