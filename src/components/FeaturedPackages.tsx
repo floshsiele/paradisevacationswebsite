@@ -4,7 +4,12 @@ import { ArrowRight, Clock, MapPin, Flame } from "lucide-react";
 import { packages } from "@/data/packages";
 import { trackCta, trackPackageCta } from "@/lib/analytics";
 
-const featuredSlugs = ["masai-mara-safari", "dubai-city-break", "diani-beach-escape", "uk-educational-trip"];
+const featuredSlugs = [
+  "masai-mara-lake-nakuru-4-day",
+  "sopa-lodges-6-day-safari",
+  "ultimate-kenya-tea-experience-4-day",
+  "bush-safari-diani-beach-7-day",
+];
 
 export function FeaturedPackages() {
   const featured = featuredSlugs
