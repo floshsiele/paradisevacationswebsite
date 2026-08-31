@@ -22,6 +22,7 @@ import {
   Factory,
   Leaf,
   BadgeCheck,
+  Ship,
 } from "lucide-react";
 import teaGardens from "@/assets/tea-gardens-kericho.jpg";
 import teaFactory from "@/assets/tea-factory-tour.jpg";
@@ -54,6 +55,11 @@ const support = [
     text: "Introductions are only the start — we book and confirm every meeting time, factory slot and cupping session in advance, so your entire buyer schedule is locked in before you board your flight.",
   },
   {
+    icon: Ship,
+    title: "Meet the export team",
+    text: "We also ensure you meet the team from the tea factories that will be handling the export of your tea — so you understand the process, timelines and documentation before you commit.",
+  },
+  {
     icon: Handshake,
     title: "Negotiation support",
     text: "We facilitate price discussions and sourcing conversations between you and factory representatives, giving you the local context and relationships to negotiate with confidence.",
@@ -74,6 +80,7 @@ const includes = [
   "Meet-the-producer sessions with factory management and tea agronomists",
   "Facilitated introductions and negotiation support for tea pricing and supply deals",
   "Pre-confirmed appointment scheduling — every factory visit, meeting and cupping session booked before you arrive",
+  "Meet the export team who will handle your tea shipment, documentation and logistics",
   "Private ground transport between all factories and accommodation",
   "Comfortable accommodation throughout your stay",
   "Optional add-ons: a 2-day Maasai Mara or Kenyan Coast getaway, extended wildlife excursions, cultural experiences and Nairobi city tours",
@@ -137,6 +144,11 @@ const faqs: Faq[] = [
     question: "Can you help with price negotiation?",
     answer:
       "We facilitate the conversation. We introduce you to production managers, sales teams and agronomists, provide local market context, and support price and supply discussions — the contract remains between you and the factory.",
+  },
+  {
+    question: "Will I meet the team responsible for exporting my tea?",
+    answer:
+      "Yes. We make sure you meet the factory's export and logistics team — the people who will handle documentation, shipping timelines and customs processes for your tea. This gives you confidence in the full supply chain before you sign a deal.",
   },
   {
     question: "What tea types can I source in Kenya?",
@@ -220,7 +232,8 @@ const TeaTourism = () => (
                 Through exclusive partnerships with over 10 tea factories across Kenya's premier tea-growing regions —
                 including the highlands of Kericho, Nandi, Bomet, Murang'a and the Rift Valley — you get behind-the-scenes
                 access to production floors, plucking demonstrations in the gardens, expert-led cupping and tasting
-                sessions, and direct conversations with factory management and agronomists.
+                sessions, and direct conversations with factory management, agronomists and the export team who will handle
+                your shipment.
               </p>
               <p>
                 Whether you're a boutique importer looking for a signature single-estate blend, a distributor scouting new
