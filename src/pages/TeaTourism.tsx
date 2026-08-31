@@ -5,7 +5,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { PageTransition } from "@/components/PageTransition";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
-import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { StickyCta } from "@/components/StickyCta";
 import { TeaBuyerForm } from "@/components/TeaBuyerForm";
 import { Seo } from "@/components/Seo";
@@ -45,39 +44,6 @@ const regions = [
   { name: "Rift Valley", text: "Diverse elevations offering everything from orthodox specialty to purple tea." },
 ];
 
-const faqs: Faq[] = [
-  {
-    question: "Who are Kenya tea tourism trips designed for?",
-    answer:
-      "International tea buyers, importers, distributors, blenders and serious enthusiasts who want to inspect, cup and select Kenyan tea at source before committing to a purchase.",
-  },
-  {
-    question: "How many tea factories will I visit?",
-    answer:
-      "We partner with 10+ factories across Kericho, Nandi, Bomet, Murang'a and the Rift Valley. Most buyers visit three to six factories in a single trip.",
-  },
-  {
-    question: "Do you handle my visa and flights?",
-    answer:
-      "Yes. We prepare your Kenya entry visa, book international and domestic flights, and arrange private ground transport.",
-  },
-  {
-    question: "Can you help with price negotiation?",
-    answer:
-      "We facilitate introductions, provide local market context and support price and supply discussions. The contract remains between you and the factory.",
-  },
-  {
-    question: "Will I meet the team responsible for exporting my tea?",
-    answer:
-      "Yes. We arrange time with the factory's export and logistics team so you understand documentation, shipping timelines and customs processes.",
-  },
-  {
-    question: "Can I add a Maasai Mara or coast getaway?",
-    answer:
-      "Yes — add an optional two-day Maasai Mara or Kenyan Coast vacation before your departure flight.",
-  },
-];
-
 const TeaTourism = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
@@ -98,7 +64,6 @@ const TeaTourism = () => (
             provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
             audience: { "@type": "BusinessAudience", name: "Tea buyers, importers and distributors" },
           },
-          faqPageJsonLd(faqs),
         ]}
       />
       <StaticNav />
@@ -331,7 +296,6 @@ const TeaTourism = () => (
         <TeaBuyerForm />
       </section>
 
-      <FaqBlock faqs={faqs} eyebrow="Tea Tourism FAQs" heading="What buyers ask before they travel" tone="plain" />
 
       <CtaBand
         eyebrow="Factory Partnerships"

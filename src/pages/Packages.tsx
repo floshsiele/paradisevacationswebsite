@@ -9,7 +9,6 @@ import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
 import { QuoteSection } from "@/components/QuoteSection";
-import { HomeFaq, homeFaqs, safariFaqs } from "@/components/HomeFaq";
 import { StickyCta } from "@/components/StickyCta";
 import { mainPackages as packages, type TravelPackage } from "@/data/packages";
 import { Seo } from "@/components/Seo";
@@ -275,7 +274,6 @@ const Packages = () => {
 
         <QuoteSection />
 
-        <HomeFaq />
 
         <SiteFooter />
         <StickyCta />

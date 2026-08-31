@@ -7,7 +7,6 @@ import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBand } from "@/components/CtaBand";
-import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
 import { Stamp, Briefcase, Home, Plane, FileText, Landmark, Check, ShieldCheck, Clock, Users } from "lucide-react";
@@ -73,34 +72,6 @@ const whyUs = [
   { icon: Users, title: "Individuals to corporate teams", text: "One applicant or fifty sponsored staff — the same careful handling, with a dedicated contact throughout." },
 ];
 
-const faqs: Faq[] = [
-  {
-    question: "Which Kenya visa or permit do I need?",
-    answer:
-      "It depends on your purpose — tourism, employment, investment, study or family. In a short consultation we assess your situation and recommend the correct visa or permit class before any application is lodged, so you don't pay for the wrong one.",
-  },
-  {
-    question: "How long does a Kenya work permit take?",
-    answer:
-      "Timelines vary by permit class and the completeness of the application. Properly prepared applications move significantly faster; we give you a realistic timeline at the outset and update you at every stage.",
-  },
-  {
-    question: "Can you help companies sponsoring foreign staff?",
-    answer:
-      "Yes. We manage the full sponsorship process — work permits, special passes, renewals and compliance calendars — for HR and admin teams, whether for one hire or an entire project team.",
-  },
-  {
-    question: "Do you handle visa renewals and extensions?",
-    answer:
-      "Yes. We handle renewals and extensions for visas and permits, and we diarise expiry dates for ongoing clients so nothing lapses.",
-  },
-  {
-    question: "Is my information kept confidential?",
-    answer:
-      "Absolutely. Immigration matters involve sensitive personal and corporate documents. Everything you share with us is handled confidentially and professionally, from first consultation to approval.",
-  },
-];
-
 const Immigration = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
@@ -120,7 +91,6 @@ const Immigration = () => (
               "Kenya visa applications and renewals, work permits and special passes, residency and dependent permits, business and investor visas, and documentation support with government liaison.",
             provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
           },
-          faqPageJsonLd(faqs),
         ]}
       />
       <StaticNav />
@@ -282,7 +252,6 @@ const Immigration = () => (
         limit={3}
       />
 
-      <FaqBlock faqs={faqs} eyebrow="Immigration FAQs" heading="What clients ask before we begin" tone="plain" />
 
       <CtaBand
         eyebrow="Get Started"
