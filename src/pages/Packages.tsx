@@ -9,7 +9,6 @@ import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
 import { QuoteSection } from "@/components/QuoteSection";
-import { HomeFaq, homeFaqs, safariFaqs } from "@/components/HomeFaq";
 import { StickyCta } from "@/components/StickyCta";
 import { mainPackages as packages, type TravelPackage } from "@/data/packages";
 import { Seo } from "@/components/Seo";
@@ -74,15 +73,6 @@ const Packages = () => {
                 position: i + 1,
                 name: p.name,
                 url: `/packages/${p.slug}`,
-              })),
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [...homeFaqs, ...safariFaqs].map((f) => ({
-                "@type": "Question",
-                name: f.question,
-                acceptedAnswer: { "@type": "Answer", text: f.answer },
               })),
             },
           ]}
@@ -275,7 +265,6 @@ const Packages = () => {
 
         <QuoteSection />
 
-        <HomeFaq />
 
         <SiteFooter />
         <StickyCta />

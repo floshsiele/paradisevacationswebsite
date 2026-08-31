@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { PageTransition } from "@/components/PageTransition";
+import { AllFaqs } from "@/components/AllFaqs";
+import { faqPageJsonLd } from "@/components/FaqBlock";
+import { allFaqs } from "@/data/faqs";
 import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBand } from "@/components/CtaBand";
-import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
@@ -68,29 +70,6 @@ const team = [
   },
 ];
 
-const faqs: Faq[] = [
-  {
-    question: "Who is Paradise Vacations Kenya?",
-    answer:
-      "We are a Nairobi-based, Kenyan-owned travel house offering corporate travel management, inbound safaris and beach holidays, outbound tours, international educational trips and destination management services for visiting operators and organisers.",
-  },
-  {
-    question: "Where are you based and can I visit you?",
-    answer:
-      "Our office is at Occidental Plaza, 3rd floor, Muthithi Road, Westlands, Nairobi. Walk-ins are welcome during business hours, and we are happy to come to your offices for corporate programme reviews.",
-  },
-  {
-    question: "What makes you different from booking online myself?",
-    answer:
-      "Online tools sell you a seat. We manage the whole trip: negotiated fares, policy compliance, visas, insurance, ground logistics, and a human being who fixes it when something goes wrong at midnight in another time zone.",
-  },
-  {
-    question: "Are you licensed and accredited?",
-    answer:
-      "Yes. Paradise Vacations Kenya is fully licensed and accredited by the leading international and Kenyan travel and tourism bodies, with 14 years of operating experience. You'll find our certification logos on the home page.",
-  },
-];
-
 const About = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
@@ -106,7 +85,7 @@ const About = () => (
             url: "/about",
             about: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
           },
-          faqPageJsonLd(faqs),
+          faqPageJsonLd(allFaqs),
         ]}
       />
       <StaticNav />
@@ -336,7 +315,8 @@ const About = () => (
         </div>
       </section>
 
-      <FaqBlock faqs={faqs} eyebrow="About Us" heading="Questions about working with us" tone="plain" />
+
+      <AllFaqs />
 
       <CtaBand
         eyebrow="Let's Talk"

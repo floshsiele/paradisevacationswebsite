@@ -8,7 +8,6 @@ import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBand } from "@/components/CtaBand";
 import { DmcInquiryForm } from "@/components/DmcInquiryForm";
-import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
 import { PlaneLanding, CalendarCheck, Bus, LifeBuoy, Binoculars, Check, Handshake, Percent, MapPinned } from "lucide-react";
@@ -132,39 +131,6 @@ const process = [
   { n: "04", title: "We run it on the ground", text: "Named duty coordinator, live tracking, daily updates and a post-programme report with reconciliation." },
 ];
 
-const faqs: Faq[] = [
-  {
-    question: "What exactly does a DMC do?",
-    answer:
-      "A destination management company is the local operator behind your programme. We hold the supplier relationships, the fleet, the guides and the permits, and we take responsibility for every movement between arrival and departure — so your team sells and hosts while we deliver.",
-  },
-  {
-    question: "Do you offer net rates to overseas operators?",
-    answer:
-      "Yes. Trade partners receive confidential net rates with a clear commission structure, plus imagery and itinerary copy your own sales team can market from. We never sell around a partner's client.",
-  },
-  {
-    question: "Which destinations do you cover?",
-    answer:
-      "Kenya end to end — Nairobi, Masai Mara, Amboseli, Samburu, Lake Nakuru, Naivasha, Tsavo, Diani, Watamu and Lamu — plus cross-border programmes into Tanzania, Uganda and Rwanda through vetted partners.",
-  },
-  {
-    question: "What size of group can you handle?",
-    answer:
-      "From a two-person luxury circuit to conferences of 400+ delegates. Fleet, guides, rooming and registration scale with the brief, and coordinator numbers are set by group size rather than by budget.",
-  },
-  {
-    question: "How fast is a ground quote?",
-    answer:
-      "Standard programmes are costed within 48 hours. Complex multi-country or large-conference briefs typically take three to five working days including venue inspections.",
-  },
-  {
-    question: "Are your vehicles and guides licensed and insured?",
-    answer:
-      "Yes. Vehicles are serviced, insured, tracked and checked daily. Driver-guides are licensed and KPSGA-standard, briefed on your specific itinerary before departure.",
-  },
-];
-
 const DMC = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
@@ -184,7 +150,6 @@ const DMC = () => (
               "Full destination management services in Kenya and East Africa: arrivals and transfers, event logistics, ground operations, tailor-made programmes and 24/7 support.",
             provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
           },
-          faqPageJsonLd(faqs),
         ]}
       />
       <StaticNav />
@@ -361,7 +326,6 @@ const DMC = () => (
         <DmcInquiryForm />
       </section>
 
-      <FaqBlock faqs={faqs} eyebrow="DMC FAQs" heading="What partners ask before appointing us" tone="plain" />
 
       <CtaBand
         eyebrow="Ground Quote"

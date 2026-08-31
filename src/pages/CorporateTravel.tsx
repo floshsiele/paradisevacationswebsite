@@ -8,7 +8,6 @@ import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBand } from "@/components/CtaBand";
-import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { StickyCta } from "@/components/StickyCta";
 import { Seo } from "@/components/Seo";
 import {
@@ -126,39 +125,6 @@ const onboarding = [
   { n: "04", title: "Quarterly review", text: "We report on savings delivered, policy compliance and supplier performance, then renegotiate where volumes justify it." },
 ];
 
-const faqs: Faq[] = [
-  {
-    question: "How much does corporate travel management cost us?",
-    answer:
-      "There is no subscription or platform fee for standard managed accounts. We are remunerated through supplier arrangements and, where applicable, a transparent transaction fee agreed in your service contract before you sign. Every quote you receive is itemised.",
-  },
-  {
-    question: "How quickly can you issue an urgent ticket?",
-    answer:
-      "Within the hour during business hours, and any time of night through the 24/7 duty desk for accounts with emergency authorisation on file. We can hold fares while your internal approval runs.",
-  },
-  {
-    question: "Do we have to change our travel policy or systems?",
-    answer:
-      "No. We work inside your existing policy and approval chain, and we can help redraft it if you want. There is no software for your staff to learn — they email or call the desk and we handle the rest.",
-  },
-  {
-    question: "Can you offer credit terms and consolidated invoicing?",
-    answer:
-      "Yes. Approved corporate accounts are set up with credit terms and a single monthly invoice reconciled to your cost centres, replacing dozens of individual supplier receipts.",
-  },
-  {
-    question: "How do you handle duty of care?",
-    answer:
-      "We maintain live traveller itineraries, share them with your nominated safety contact, and coordinate medical referrals, evacuations and emergency rerouting through our duty desk.",
-  },
-  {
-    question: "What happens when a trip goes wrong at 2am?",
-    answer:
-      "You call the emergency line and a consultant re-routes or re-issues the ticket, rebooks affected hotels and transfers, and informs your office. There is no agency penalty for disruption rebooking.",
-  },
-];
-
 const CorporateTravel = () => (
   <PageTransition>
     <div className="min-h-screen bg-background">
@@ -178,7 +144,6 @@ const CorporateTravel = () => (
               "Managed corporate travel programmes covering air ticketing, hotels, policy compliance, MICE, duty of care and spend reporting.",
             provider: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
           },
-          faqPageJsonLd(faqs),
         ]}
       />
       <StaticNav />
@@ -345,7 +310,6 @@ const CorporateTravel = () => (
         limit={3}
       />
 
-      <FaqBlock faqs={faqs} eyebrow="Corporate Travel FAQs" heading="What procurement teams ask us" />
 
       <CtaBand
         eyebrow="Free Spend Audit"
