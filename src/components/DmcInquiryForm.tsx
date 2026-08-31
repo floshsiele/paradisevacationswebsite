@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { whatsAppLink } from "@/components/WhatsAppButton";
 import { supabase } from "@/integrations/supabase/client";
 import { buildDmcMessage, setDmcDraft } from "@/lib/dmcDraft";
+import { trackCta, trackFormSubmit } from "@/lib/analytics";
 import { MessageCircle, Paperclip, Send, X } from "lucide-react";
 
 const TEAM_EMAIL = "bookings@paradisegrouptravels.com";
@@ -131,6 +132,13 @@ export function DmcInquiryForm() {
         body: { ...data, attachmentPath, attachmentName: file?.name },
       });
       if (error) throw error;
+
+      trackFormSubmit("dmc_inquiry", {
+        destination: data.destination,
+        group_size: data.groupSize ?? "",
+        services_count: services.length,
+        has_attachment: Boolean(file),
+      });
 
       toast({
         title: "Inquiry received",

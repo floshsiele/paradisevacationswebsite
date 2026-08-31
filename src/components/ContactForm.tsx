@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { trackFormSubmit } from "@/lib/analytics";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,6 +24,11 @@ export function ContactForm() {
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    trackFormSubmit("quote_request", {
+      destination: formData.destination,
+      travel_date: formData.travelDate,
+    });
 
     toast({
       title: "Quote request received",
