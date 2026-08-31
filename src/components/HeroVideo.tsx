@@ -69,9 +69,7 @@ export function HeroVideo() {
             </span>
           </span>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-[1.08] mb-6">
-            Your Gateway to Kenya,
-            <br />
-            <span className="italic font-normal">East Africa, and Beyond.</span>
+            Paradise Vacations
           </h1>
           <p className="font-sans text-base md:text-xl text-white/85 max-w-xl mx-auto leading-relaxed">
             Corporate travel, safaris, destination management and immigration — handled end to end
