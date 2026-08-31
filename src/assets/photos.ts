@@ -13,6 +13,8 @@ import corporateConfidence from "./corporate-traveller-confidence.jpg.asset.json
 import airportDeparture from "./airport-terminal-departure.jpg.asset.json";
 import groupPlanning from "./group-travel-planning.jpg.asset.json";
 import tripPlanning from "./trip-planning-tips.jpg.asset.json";
+import visaPassportCanada from "./visa-passport-canada.jpg.asset.json";
+import visaStampPassport from "./visa-stamp-passport.jpg.asset.json";
 
 export const photos = {
   lionessSafari: lioness.url,
@@ -30,4 +32,6 @@ export const photos = {
   airportDeparture: airportDeparture.url,
   groupPlanning: groupPlanning.url,
   tripPlanning: tripPlanning.url,
+  visaPassportCanada: visaPassportCanada.url,
+  visaStampPassport: visaStampPassport.url,
 };
