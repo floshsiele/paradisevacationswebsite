@@ -10,6 +10,7 @@ import { FaqBlock, faqPageJsonLd, type Faq } from "@/components/FaqBlock";
 import { StickyCta } from "@/components/StickyCta";
 import { TeaBuyerForm } from "@/components/TeaBuyerForm";
 import { Seo } from "@/components/Seo";
+import { agritourismPackages } from "@/data/packages";
 import {
   Stamp,
   Plane,
