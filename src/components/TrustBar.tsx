@@ -18,8 +18,8 @@ const points = [
   },
   {
     icon: ShieldCheck,
-    title: "Free Rebooking Cover",
-    text: "Plans change. We re-issue and re-route without agency penalties.",
+    title: "Hassle-Free Rebooking Support",
+    text: "Plans change — we're here to help. Our team handles re-issuing and re-routing your ticket quickly, with clear guidance on any airline fees involved.",
   },
 ];
 
