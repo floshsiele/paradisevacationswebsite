@@ -2,9 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { StaticNav } from "@/components/FloatingNav";
 import { PageTransition } from "@/components/PageTransition";
-import { AllFaqs } from "@/components/AllFaqs";
-import { faqPageJsonLd } from "@/components/FaqBlock";
-import { allFaqs } from "@/data/faqs";
 import { PageHero } from "@/components/PageHero";
 import { TrustBar } from "@/components/TrustBar";
 import { Testimonials } from "@/components/Testimonials";
@@ -85,7 +82,6 @@ const About = () => (
             url: "/about",
             about: { "@type": "TravelAgency", name: "Paradise Vacations Kenya" },
           },
-          faqPageJsonLd(allFaqs),
         ]}
       />
       <StaticNav />
@@ -315,8 +311,6 @@ const About = () => (
         </div>
       </section>
 
-
-      <AllFaqs />
 
       <CtaBand
         eyebrow="Let's Talk"
