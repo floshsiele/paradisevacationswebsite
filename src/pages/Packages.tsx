@@ -25,27 +25,6 @@ const filters: { key: Filter; label: string }[] = [
   { key: "Corporate", label: "Corporate" },
 ];
 
-const categoryBlurbs: { key: TravelPackage["category"]; title: string; text: string; image: string }[] = [
-  {
-    key: "Inbound",
-    title: "Inbound Tours — Discover the Magic of Kenya",
-    text: "From the Great Migration in the Maasai Mara to the white-sand beaches of Diani and Watamu, Amboseli's elephants beneath Kilimanjaro and the Great Rift Valley's lakes — park permits, licensed guides, curated itineraries and accommodation from budget camps to luxury lodges, all handled for you.",
-    image: photos.safariConvoy,
-  },
-  {
-    key: "Outbound",
-    title: "Outbound Tours — Kenya to the World",
-    text: "Dreaming of Dubai, Bali, Thailand, Europe or the Caribbean? Fully managed international holidays — flights, visas, accommodation, guided excursions and travel insurance wrapped into one seamless package for honeymoons, group getaways and solo bucket-list adventures.",
-    image: photos.tripPlanning,
-  },
-  {
-    key: "Educational",
-    title: "International School Trips — Learning Beyond the Classroom",
-    text: "Safe, enriching and expertly supervised trips for schools and universities — from wildlife conservation education in the Maasai Mara to international exchange tours — with safety protocols, group discounts, parental communication and 24/7 chaperone support.",
-    image: photos.groupPlanning,
-  },
-];
-
 const assurances = [
   { icon: ShieldCheck, title: "Fully licensed & accredited operator", text: "14 years in business, fully licensed and bonded. Your booking, payments and travel documents are handled by certified travel professionals." },
   { icon: CreditCard, title: "Deposit now, pay in instalments", text: "Secure your dates with a deposit and settle the balance in scheduled instalments before departure." },
@@ -99,49 +78,6 @@ const Packages = () => {
         />
 
         <TrustBar />
-
-        {/* Category overview */}
-        <section className="py-16 px-6 md:px-16">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="chapter-title text-xs mb-4 block">Choose Your Style</span>
-              <h2 className="font-display text-3xl md:text-5xl mb-4">Three ways people travel with us</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {categoryBlurbs.map((c) => (
-                <button
-                  key={c.key}
-                  onClick={() => setActive(c.key)}
-                  className="group text-left rounded-xl overflow-hidden border border-border bg-card shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-500"
-                >
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={c.image}
-                      alt={`${c.title} with Paradise Vacations Kenya`}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-display text-xl mb-2 group-hover:text-primary transition-colors">{c.title}</h3>
-                    <p className="font-sans text-sm text-muted-foreground leading-relaxed mb-4">{c.text}</p>
-                    <span className="inline-flex items-center gap-1.5 font-sans text-xs tracking-widest uppercase text-primary">
-                      Show these trips <ArrowRight size={14} />
-                    </span>
-                  </div>
-                </button>
-              ))}
-            </div>
-            <p className="text-center font-sans text-sm text-muted-foreground mt-10 max-w-3xl mx-auto">
-              Curious about Kenya's tea country? Our{" "}
-              <Link to="/tea-tourism" className="text-primary underline underline-offset-4">
-                Tea Tourism experiences
-              </Link>{" "}
-              take you into the highland estates and factories of Kericho, Nandi and beyond — for buyers and curious
-              travellers alike.
-            </p>
-          </div>
-        </section>
 
         {/* Filters + grid */}
         <section className="pb-20 px-6 md:px-16 bg-sand-dark pt-16">
