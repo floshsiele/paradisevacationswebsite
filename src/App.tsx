@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CorporateTravel from "./pages/CorporateTravel";
 import DMC from "./pages/DMC";
+import Faqs from "./pages/Faqs";
 import Immigration from "./pages/Immigration";
 import Packages from "./pages/Packages";
 import PackageDetail from "./pages/PackageDetail";
@@ -40,6 +41,7 @@ const AppRoutes = () => {
         <Route path="/safari-journeys" element={<Navigate to="/packages" replace />} />
         <Route path="/safari-journeys/:slug" element={<Navigate to="/packages" replace />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/faqs" element={<Faqs />} />
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

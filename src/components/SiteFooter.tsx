@@ -23,6 +23,7 @@ export function SiteFooter() {
             <Link to="/dmc" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">DMC</Link>
             <Link to="/tea-tourism" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Tea Tourism</Link>
             <Link to="/immigration-services" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Immigration Services</Link>
+            <Link to="/faqs" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">FAQs</Link>
             <Link to="/contact" className="font-sans text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact</Link>
           </nav>
         </div>
