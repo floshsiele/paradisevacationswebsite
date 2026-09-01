@@ -25,27 +25,6 @@ const filters: { key: Filter; label: string }[] = [
   { key: "Corporate", label: "Corporate" },
 ];
 
-const categoryBlurbs: { key: TravelPackage["category"]; title: string; text: string; image: string }[] = [
-  {
-    key: "Inbound",
-    title: "Inbound Tours — Discover the Magic of Kenya",
-    text: "From the Great Migration in the Maasai Mara to the white-sand beaches of Diani and Watamu, Amboseli's elephants beneath Kilimanjaro and the Great Rift Valley's lakes — park permits, licensed guides, curated itineraries and accommodation from budget camps to luxury lodges, all handled for you.",
-    image: photos.safariConvoy,
-  },
-  {
-    key: "Outbound",
-    title: "Outbound Tours — Kenya to the World",
-    text: "Dreaming of Dubai, Bali, Thailand, Europe or the Caribbean? Fully managed international holidays — flights, visas, accommodation, guided excursions and travel insurance wrapped into one seamless package for honeymoons, group getaways and solo bucket-list adventures.",
-    image: photos.tripPlanning,
-  },
-  {
-    key: "Educational",
-    title: "International School Trips — Learning Beyond the Classroom",
-    text: "Safe, enriching and expertly supervised trips for schools and universities — from wildlife conservation education in the Maasai Mara to international exchange tours — with safety protocols, group discounts, parental communication and 24/7 chaperone support.",
-    image: photos.groupPlanning,
-  },
-];
-
 const assurances = [
   { icon: ShieldCheck, title: "Fully licensed & accredited operator", text: "14 years in business, fully licensed and bonded. Your booking, payments and travel documents are handled by certified travel professionals." },
   { icon: CreditCard, title: "Deposit now, pay in instalments", text: "Secure your dates with a deposit and settle the balance in scheduled instalments before departure." },
