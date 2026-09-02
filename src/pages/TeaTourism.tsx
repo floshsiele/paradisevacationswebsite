@@ -17,6 +17,7 @@ import teaCupping from "@/assets/tea-cupping-session.jpg";
 const support = [
   { icon: Stamp, title: "Visa processing", text: "We handle your Kenya entry visa application and documentation." },
   { icon: Plane, title: "International & domestic flights", text: "We book your air tickets into Kenya and any domestic flights to tea regions." },
+  { icon: CalendarCheck, title: "Appointment scheduling", text: "Every meeting, factory slot and cupping session is confirmed before you land." },
   { icon: Bus, title: "Factory-to-factory transport", text: "Private ground transport between accommodation and 10+ partner factories." },
   { icon: Users, title: "Direct introductions", text: "Meet production managers, sales teams and agronomists who control quality and pricing." },
   { icon: Ship, title: "Meet the export team", text: "Understand shipping timelines, documentation and logistics before you commit." },
