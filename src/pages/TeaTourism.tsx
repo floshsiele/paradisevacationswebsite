@@ -88,146 +88,147 @@ const TeaTourism = () => (
         ]}
       />
 
-      {/* What it is + support */}
-      <section className="py-20 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="chapter-title text-xs mb-4 block">Farm to Cup</span>
-            <h2 className="font-display text-3xl md:text-4xl mb-6 leading-tight">
-              Doors that are normally closed to the public
-            </h2>
-            <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
-              <p>
-                Kenya is one of the world's leading tea producers. Our Tea Tourism experiences give international buyers,
-                importers and distributors direct, curated access to the source.
-              </p>
-              <p>
-                Through partnerships with 10+ tea factories across Kericho, Nandi, Bomet, Murang'a and the Rift Valley,
-                you get behind-the-scenes access to production floors, expert-led cupping sessions, and direct conversations
-                with factory management, agronomists and the export team who will handle your shipment.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated"
-          >
-            <img
-              src={teaFactory}
-              alt="International tea buyers touring a Kenyan tea factory production floor"
-              loading="lazy"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Compact support + regions */}
-      <section className="py-14 px-6 md:px-16 bg-sand-dark">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="chapter-title text-xs mb-3 block">Buyer Support &amp; Regions</span>
+      {/* Magazine layout: read left column top-to-bottom, then right column top-to-bottom */}
+      <section className="py-20 px-6 md:px-16 bg-sand-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="chapter-title text-xs mb-4 block">Buyer Support &amp; Regions</span>
             <h2 className="font-display text-3xl md:text-4xl mb-3">We handle everything but the tasting</h2>
             <p className="font-sans text-muted-foreground">
               From visa to factory floor, across five Kenyan tea regions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {/* Support list */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-soft"
-            >
-              <h3 className="font-display text-xl mb-5">True end-to-end support</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                {support.map((s) => (
-                  <div key={s.title} className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
-                    </div>
-                    <div>
-                      <h4 className="font-display text-sm">{s.title}</h4>
-                      <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            {/* LEFT COLUMN — top to bottom */}
+            <div className="space-y-10">
+              {/* Farm to Cup */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-soft"
+              >
+                <span className="chapter-title text-xs mb-4 block">Farm to Cup</span>
+                <h3 className="font-display text-2xl md:text-3xl mb-5 leading-tight">
+                  Doors that are normally closed to the public
+                </h3>
+                <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
+                  <p>
+                    Kenya is one of the world's leading tea producers. Our Tea Tourism experiences give international buyers,
+                    importers and distributors direct, curated access to the source.
+                  </p>
+                  <p>
+                    Through partnerships with 10+ tea factories across Kericho, Nandi, Bomet, Murang'a and the Rift Valley,
+                    you get behind-the-scenes access to production floors, expert-led cupping sessions, and direct conversations
+                    with factory management, agronomists and the export team who will handle your shipment.
+                  </p>
+                </div>
+              </motion.div>
 
-            {/* Regions list */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-soft"
-            >
-              <h3 className="font-display text-xl mb-5">Where we take buyers</h3>
-              <ul className="space-y-3">
-                {regions.map((r) => (
-                  <li key={r.name} className="flex items-start gap-3">
-                    <Leaf className="w-4 h-4 text-primary mt-1 shrink-0" strokeWidth={1.6} />
-                    <div>
-                      <span className="font-display text-sm">{r.name}</span>
-                      <span className="font-sans text-xs text-muted-foreground leading-snug block">{r.text}</span>
+              {/* Support list */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-soft"
+              >
+                <h3 className="font-display text-xl mb-5">True end-to-end support</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                  {support.map((s) => (
+                    <div key={s.title} className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                        <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
+                      </div>
+                      <div>
+                        <h4 className="font-display text-sm">{s.title}</h4>
+                        <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
+                      </div>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* What's included */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-soft"
+              >
+                <span className="chapter-title text-xs mb-4 block">What's Included</span>
+                <h3 className="font-display text-2xl md:text-3xl mb-5 leading-tight">Everything in one costed programme</h3>
+                <ul className="space-y-2.5">
+                  {includes.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span className="font-sans text-sm text-muted-foreground leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+
+            {/* RIGHT COLUMN — top to bottom */}
+            <div className="space-y-10">
+              {/* Factory image */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated"
+              >
+                <img
+                  src={teaFactory}
+                  alt="International tea buyers touring a Kenyan tea factory production floor"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              {/* Regions list */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-soft"
+              >
+                <h3 className="font-display text-xl mb-5">Where we take buyers</h3>
+                <ul className="space-y-3">
+                  {regions.map((r) => (
+                    <li key={r.name} className="flex items-start gap-3">
+                      <Leaf className="w-4 h-4 text-primary mt-1 shrink-0" strokeWidth={1.6} />
+                      <div>
+                        <span className="font-display text-sm">{r.name}</span>
+                        <span className="font-sans text-xs text-muted-foreground leading-snug block">{r.text}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Cupping image */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated"
+              >
+                <img
+                  src={teaCupping}
+                  alt="Professional tea cupping session evaluating different grades of Kenyan tea"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* What's included */}
-      <section className="py-14 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-elevated order-2 lg:order-1"
-          >
-            <img
-              src={teaCupping}
-              alt="Professional tea cupping session evaluating different grades of Kenyan tea"
-              loading="lazy"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="order-1 lg:order-2"
-          >
-            <span className="chapter-title text-xs mb-4 block">What's Included</span>
-            <h2 className="font-display text-3xl md:text-4xl mb-6 leading-tight">Everything in one costed programme</h2>
-            <ul className="space-y-2.5">
-              {includes.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                  <span className="font-sans text-sm text-muted-foreground leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
         </div>
       </section>
 
