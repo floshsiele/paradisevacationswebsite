@@ -28,7 +28,7 @@ const support = [
 const includes = [
   "Visa processing and travel documentation support",
   "International and domestic flight bookings",
-  "Access to 10+ partner tea factories across Kericho, Nandi, Bomet and Murang'a",
+  "Access to 10+ partner tea factories across Kericho, Nandi, Bomet, Murang'a and Limuru",
   "Factory floor tours, tea cupping and tasting sessions",
   "Meet-the-producer and export-team introductions",
   "Pre-confirmed appointment scheduling",
@@ -41,6 +41,7 @@ const regions = [
   { name: "Nandi", text: "High-altitude gardens producing bright, brisk liquors prized by blenders." },
   { name: "Bomet", text: "Fertile highland zone with fast-growing smallholder factories and competitive black CTC." },
   { name: "Murang'a", text: "Rich volcanic soils and cooperative-run factories with excellent traceability." },
+  { name: "Limuru", text: "Cool, high-altitude Kiambu County gardens known for bright, aromatic highland teas." },
 ];
 
 const TeaTourism = () => (
@@ -119,7 +120,7 @@ const TeaTourism = () => (
                     importers and distributors direct, curated access to the source.
                   </p>
                   <p>
-                    Through partnerships with 10+ tea factories across Kericho, Nandi, Bomet and Murang'a,
+                    Through partnerships with 10+ tea factories across Kericho, Nandi, Bomet, Murang'a and Limuru,
                     you get behind-the-scenes access to production floors, expert-led cupping sessions, and direct conversations
                     with factory management, agronomists and the export team who will handle your shipment.
                   </p>

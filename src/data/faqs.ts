@@ -127,7 +127,7 @@ export const teaFaqs: Faq[] = [
   {
     question: "How many tea factories will I visit?",
     answer:
-      "We partner with 10+ factories across Kericho, Nandi, Bomet and Murang'a. Most buyers visit three to six factories in a single trip.",
+      "We partner with 10+ factories across Kericho, Nandi, Bomet, Murang'a and Limuru. Most buyers visit three to six factories in a single trip.",
   },
   {
     question: "Do you handle my visa and flights?",
