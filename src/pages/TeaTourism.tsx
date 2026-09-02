@@ -127,7 +127,7 @@ const TeaTourism = () => (
                 </div>
               </motion.div>
 
-              {/* Support list */}
+              {/* Support list — priority order, top-to-bottom left then top-to-bottom right */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -137,17 +137,32 @@ const TeaTourism = () => (
               >
                 <h3 className="font-display text-xl mb-5">True end-to-end support</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                  {support.map((s) => (
-                    <div key={s.title} className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
+                  <div className="space-y-4">
+                    {support.slice(0, 4).map((s) => (
+                      <div key={s.title} className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                          <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
+                        </div>
+                        <div>
+                          <h4 className="font-display text-sm">{s.title}</h4>
+                          <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-display text-sm">{s.title}</h4>
-                        <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
+                    ))}
+                  </div>
+                  <div className="space-y-4">
+                    {support.slice(4).map((s) => (
+                      <div key={s.title} className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                          <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
+                        </div>
+                        <div>
+                          <h4 className="font-display text-sm">{s.title}</h4>
+                          <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </motion.div>
 
