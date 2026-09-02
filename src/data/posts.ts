@@ -214,7 +214,7 @@ export const posts: Post[] = [
       {
         heading: "The working days",
         paragraphs: [
-          "Most buyers visit three to six factories across Kericho, Nandi, Bomet, Murang'a and the Rift Valley. Each visit includes the field, the production floor, a formal cupping session, and time with the export and logistics team — so you understand documentation, shipping timelines and customs before you commit.",
+          "Most buyers visit three to six factories across Kericho, Nandi, Bomet and Murang'a. Each visit includes the field, the production floor, a formal cupping session, and time with the export and logistics team — so you understand documentation, shipping timelines and customs before you commit.",
           "Appointments are scheduled directly with factory management in advance. You are not a tourist walking through; you are a buyer with a schedule.",
         ],
       },
