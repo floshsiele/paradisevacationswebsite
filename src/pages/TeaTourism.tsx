@@ -15,9 +15,9 @@ import teaFactory from "@/assets/tea-factory-tour.jpg";
 import teaCupping from "@/assets/tea-cupping-session.jpg";
 
 const support = [
+  { icon: CalendarCheck, title: "Appointment scheduling", text: "Every meeting, factory slot and cupping session is confirmed before you land." },
   { icon: Stamp, title: "Visa processing", text: "We handle your Kenya entry visa application and documentation." },
   { icon: Plane, title: "International & domestic flights", text: "We book your air tickets into Kenya and any domestic flights to tea regions." },
-  { icon: CalendarCheck, title: "Appointment scheduling", text: "Every meeting, factory slot and cupping session is confirmed before you land." },
   { icon: Bus, title: "Factory-to-factory transport", text: "Private ground transport between accommodation and 10+ partner factories." },
   { icon: Users, title: "Direct introductions", text: "Meet production managers, sales teams and agronomists who control quality and pricing." },
   { icon: Ship, title: "Meet the export team", text: "Understand shipping timelines, documentation and logistics before you commit." },
@@ -135,20 +135,20 @@ const TeaTourism = () => (
                 transition={{ duration: 0.6 }}
                 className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-soft"
               >
-                <h3 className="font-display text-xl mb-5">True end-to-end support</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                  {support.map((s) => (
-                    <div key={s.title} className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
-                      </div>
-                      <div>
-                        <h4 className="font-display text-sm">{s.title}</h4>
-                        <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
-                      </div>
+              <h3 className="font-display text-xl mb-5">True end-to-end support</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-4 gap-x-6 gap-y-4 sm:grid-flow-col">
+                {support.map((s) => (
+                  <div key={s.title} className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
                     </div>
-                  ))}
-                </div>
+                    <div>
+                      <h4 className="font-display text-sm">{s.title}</h4>
+                      <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
               </motion.div>
 
               {/* What's included */}
