@@ -135,20 +135,20 @@ const TeaTourism = () => (
                 transition={{ duration: 0.6 }}
                 className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-soft"
               >
-                <h3 className="font-display text-xl mb-5">True end-to-end support</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                  {support.map((s) => (
-                    <div key={s.title} className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
-                      </div>
-                      <div>
-                        <h4 className="font-display text-sm">{s.title}</h4>
-                        <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
-                      </div>
+              <h3 className="font-display text-xl mb-5">True end-to-end support</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-4 gap-x-6 gap-y-4 sm:grid-flow-col">
+                {support.map((s) => (
+                  <div key={s.title} className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <s.icon className="w-4 h-4 text-primary" strokeWidth={1.6} />
                     </div>
-                  ))}
-                </div>
+                    <div>
+                      <h4 className="font-display text-sm">{s.title}</h4>
+                      <p className="font-sans text-xs text-muted-foreground leading-snug">{s.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
               </motion.div>
 
               {/* What's included */}
