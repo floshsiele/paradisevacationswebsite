@@ -250,7 +250,7 @@ const Index = () => {
               </h2>
               <p className="font-sans text-muted-foreground leading-relaxed mb-6">
                 Exclusive buyer experiences for international tea importers and distributors: visa and flights handled,
-                access to 10+ partner factories across Kericho, Nandi, Bomet, Murang'a and the Rift Valley, expert-led
+                access to 10+ partner factories across Kericho, Nandi, Bomet and Murang'a, expert-led
                 cupping sessions, negotiation support, and meetings with the export teams handling your shipments — with an optional 2-day
                 Maasai Mara or coast add-on before you fly home.
               </p>
