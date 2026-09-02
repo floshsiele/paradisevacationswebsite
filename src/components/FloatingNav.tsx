@@ -10,10 +10,10 @@ const navItems = [
   { name: "About Us", path: "/about" },
   { name: "CTM", path: "/corporate-travel" },
   { name: "Packages", path: "/packages" },
-  { name: "DMC", path: "/dmc" },
-  { name: "FAQs", path: "/faqs" },
   { name: "Tea Tourism", path: "/tea-tourism" },
+  { name: "DMC", path: "/dmc" },
   { name: "Immigration", path: "/immigration-services" },
+  { name: "FAQ", path: "/faqs" },
 ];
 
 // Pages with dark backgrounds (hero with dark overlay)
