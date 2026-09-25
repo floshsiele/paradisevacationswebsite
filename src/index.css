@@ -214,6 +214,108 @@
   .image-hover:hover {
     @apply scale-[1.02];
   }
+
+  /* AI-generated blog article typography.
+     Tailwind preflight removes browser margins, so generated HTML needs
+     explicit typography instead of relying on the optional prose plugin. */
+  .blog-content {
+    color: hsl(var(--foreground) / 0.88);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+
+  .blog-content p {
+    margin: 0 0 1.35rem;
+  }
+
+  .blog-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .blog-content h2,
+  .blog-content h3 {
+    color: hsl(var(--foreground));
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+  }
+
+  .blog-content h2 {
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+    margin: 3rem 0 1rem;
+  }
+
+  .blog-content h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    margin: 2rem 0 0.75rem;
+  }
+
+  .blog-content h2:first-child,
+  .blog-content h3:first-child {
+    margin-top: 0;
+  }
+
+  .blog-content ul,
+  .blog-content ol {
+    margin: 0 0 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .blog-content ul {
+    list-style: disc;
+  }
+
+  .blog-content ol {
+    list-style: decimal;
+  }
+
+  .blog-content li {
+    margin: 0.45rem 0;
+    padding-left: 0.25rem;
+  }
+
+  .blog-content li::marker {
+    color: hsl(var(--primary));
+  }
+
+  .blog-content strong {
+    color: hsl(var(--foreground));
+    font-weight: 700;
+  }
+
+  .blog-content em {
+    font-style: italic;
+  }
+
+  .blog-content a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+  }
+
+  .blog-content a:hover {
+    color: hsl(var(--accent-foreground));
+  }
+
+  .blog-content > p:first-child {
+    font-size: 1.1rem;
+    color: hsl(var(--foreground) / 0.94);
+  }
+
+  @media (max-width: 640px) {
+    .blog-content {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .blog-content h2 {
+      margin-top: 2.25rem;
+    }
+  }
 }
 
 @layer utilities {

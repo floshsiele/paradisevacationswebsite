@@ -14,6 +14,7 @@ const navItems = [
   { name: "DMC", path: "/dmc" },
   { name: "Immigration", path: "/immigration-services" },
   { name: "FAQ", path: "/faqs" },
+  { name: "Blog", path: "/blog" },
 ];
 
 // Pages with dark backgrounds (hero with dark overlay)
@@ -87,8 +88,21 @@ export function FloatingNav() {
 // Static nav for top of pages - adapts to page background
 export function StaticNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isDarkBackground = darkBackgroundPages.includes(location.pathname);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 60);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const useLightNav = isDarkBackground && !isScrolled;
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -102,12 +116,14 @@ export function StaticNav() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 py-4 px-6 md:py-5 md:px-16",
-          isDarkBackground ? "bg-transparent" : "bg-background/95 backdrop-blur-sm border-b border-border/30"
+          "fixed top-0 left-0 right-0 z-40 py-4 px-6 md:py-5 md:px-16 transition-all duration-300",
+          useLightNav
+            ? "bg-transparent"
+            : "bg-white/95 backdrop-blur-sm border-b border-border/30 shadow-sm"
         )}
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <Logo variant={isDarkBackground ? "light" : "dark"} />
+          <Logo variant={useLightNav ? "light" : "dark"} />
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
@@ -117,7 +133,7 @@ export function StaticNav() {
                 to={item.path}
                 className={cn(
                   "font-sans text-xs lg:text-sm tracking-widest uppercase whitespace-nowrap transition-all duration-400 link-underline",
-                  isDarkBackground
+                  useLightNav
                     ? location.pathname === item.path
                       ? "text-white"
                       : "text-white/70 hover:text-white"
@@ -133,7 +149,7 @@ export function StaticNav() {
               href="tel:+254726927081"
               className={cn(
                 "hidden min-[1500px]:flex items-center gap-2 font-sans text-sm tracking-widest whitespace-nowrap transition-colors duration-400",
-                isDarkBackground ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-foreground"
+                useLightNav ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-foreground"
               )}
             >
               <Phone size={14} />
@@ -146,7 +162,7 @@ export function StaticNav() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={cn(
               "md:hidden p-2 transition-colors duration-300",
-              isDarkBackground ? "text-white" : "text-foreground"
+              useLightNav ? "text-white" : "text-foreground"
             )}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >

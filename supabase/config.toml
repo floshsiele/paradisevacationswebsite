@@ -1,1 +1,13 @@
-project_id = "uqmszqfqmvttibucjgkh"
+project_id = "ceswismuktigjbzzirpw"
+
+[functions.generate-content-worker]
+verify_jwt = true
+
+[functions.generate-content]
+verify_jwt = true
+
+[functions.run-content-automation]
+verify_jwt = false
+
+[functions.analyze-website-keywords]
+verify_jwt = true

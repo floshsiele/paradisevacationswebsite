@@ -19,6 +19,8 @@ import Packages from "./pages/Packages";
 import PackageDetail from "./pages/PackageDetail";
 import TeaTourism from "./pages/TeaTourism";
 import NotFound from "./pages/NotFound";
+import AdminLogin from "./pages/AdminLogin";
+import ContentAdmin from "./pages/ContentAdmin";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,8 @@ const AppRoutes = () => {
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/content" element={<ContentAdmin />} />
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
