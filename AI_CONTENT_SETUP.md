@@ -108,3 +108,24 @@ The `generate-content` function processes articles in batches of up to 5 concurr
 The project includes a master keyword library seeded from the supplied Kenya travel keyword list. Workers claim the least-used available keyword atomically. A keyword's `times_used` is incremented only after its article is successfully saved. This means every keyword is used once before any keyword is selected for a second cycle. On later cycles the worker passes previous article titles for that keyword to the AI and requires a substantially different angle.
 
 Migration: `20260925200000_keyword_cycles.sql`. Deploy it with `npx supabase db push`, then deploy `generate-content-worker`.
+
+## Scheduled automation troubleshooting
+
+The scheduled runner uses pg_cron/pg_net to call `run-content-automation` daily. The runner then calls `generate-content` with both the service-role JWT and `x-automation-secret`; this is required because `generate-content` has JWT verification enabled at the Supabase Functions gateway.
+
+To verify the cron job in Supabase SQL Editor:
+
+```sql
+select jobid, jobname, schedule, active
+from cron.job
+where jobname = 'daily-content-automation';
+```
+
+To inspect recent scheduled HTTP calls:
+
+```sql
+select id, created, status_code, error_msg
+from net._http_response
+order by created desc
+limit 20;
+```

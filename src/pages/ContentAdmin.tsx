@@ -50,7 +50,8 @@ const ContentAdmin = () => {
       remaining: Number(ks?.remaining_this_cycle || 0),
       currentCycle: Number(ks?.current_cycle || 1),
     });
-    setSettings(s); setPosts(p || []); setRuns(r || []); setSelectedPostIds([]); setLoading(false);
+    setSettings(s);
+    setPosts(p || []); setRuns(r || []); setSelectedPostIds([]); setLoading(false);
   };
   useEffect(() => { load(); }, []);
 
@@ -99,12 +100,19 @@ const ContentAdmin = () => {
 
   const save = async () => {
     if (!settings) return;
+    const nowEnabled = Boolean(settings.enabled);
     const { error } = await supabase.from('content_automation_settings').update({
-      enabled: settings.enabled, posts_per_day: Number(settings.posts_per_day), words_per_post: Number(settings.words_per_post),
+      enabled: nowEnabled, posts_per_day: Number(settings.posts_per_day), words_per_post: Number(settings.words_per_post),
       auto_publish: settings.auto_publish, default_category: settings.default_category, brand_instructions: settings.brand_instructions,
       target_keywords: settings.target_keywords,
     }).eq('id', settings.id);
-    if (error) toast.error(error.message); else toast.success('Automation settings saved.');
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
+
+    toast.success('Automation settings saved.');
+
   };
 
   const analyzeWebsiteKeywords = async () => {
@@ -234,7 +242,7 @@ const ContentAdmin = () => {
       </section>
       <section className="grid lg:grid-cols-[1.4fr_.6fr] gap-6">
         <div className="rounded-2xl border bg-background p-6 shadow-sm space-y-6">
-          <div className="flex items-center justify-between"><div><h2 className="font-display text-2xl">Automation</h2><p className="text-sm text-muted-foreground">Generate and publish SEO content automatically.</p></div><div className="flex items-center gap-3"><span className="text-sm">Enabled</span><Switch checked={!!settings.enabled} onCheckedChange={(v) => setSettings({ ...settings, enabled: v })} /></div></div>
+          <div className="flex items-center justify-between"><div><h2 className="font-display text-2xl">Automation</h2><p className="text-sm text-muted-foreground">Generate and publish SEO content automatically. Runs daily while enabled.</p></div><div className="flex items-center gap-3"><span className="text-sm">Enabled</span><Switch checked={!!settings.enabled} onCheckedChange={(v) => setSettings({ ...settings, enabled: v })} /></div></div>
           <div className="grid sm:grid-cols-2 gap-5">
             <div><Label>Posts per day</Label><Input type="number" min="1" max="50" value={settings.posts_per_day} onChange={e => setSettings({ ...settings, posts_per_day: e.target.value })} /></div>
             <div><Label>Words per post</Label><Input type="number" min="500" max="3000" value={settings.words_per_post} onChange={e => setSettings({ ...settings, words_per_post: e.target.value })} /></div>

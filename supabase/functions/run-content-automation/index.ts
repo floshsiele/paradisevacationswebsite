@@ -5,14 +5,42 @@ const supabase = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SUPAB
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: cors })
-  const secret = Deno.env.get('CONTENT_AUTOMATION_SECRET')
-  if (!secret || req.headers.get('x-automation-secret') !== secret) return new Response('Unauthorized', { status: 401, headers: cors })
   try {
     const { data: settings } = await supabase.from('content_automation_settings').select('*').single()
+    const envSecret = Deno.env.get('CONTENT_AUTOMATION_SECRET')
+    const requestSecret = req.headers.get('x-automation-secret')
+    const validSecret = (envSecret && requestSecret === envSecret) || (settings?.automation_secret && requestSecret === settings.automation_secret)
+    if (!validSecret) return new Response('Unauthorized', { status: 401, headers: cors })
     if (!settings?.enabled) return new Response(JSON.stringify({ skipped: true, reason: 'Automation disabled' }), { headers: { ...cors, 'Content-Type': 'application/json' } })
+
+    const { data: activeRun } = await supabase.from('content_generation_runs')
+      .select('id,started_at')
+      .eq('status', 'running')
+      .order('started_at', { ascending: false })
+      .limit(1)
+      .maybeSingle()
+    if (activeRun) {
+      const started = new Date(activeRun.started_at).getTime()
+      const sixHours = 6 * 60 * 60 * 1000
+      if (Date.now() - started < sixHours) {
+        return new Response(JSON.stringify({ skipped: true, reason: 'A content generation run is already in progress', run_id: activeRun.id }), { headers: { ...cors, 'Content-Type': 'application/json' } })
+      }
+    }
+
+    const secret = envSecret || settings.automation_secret
+    const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+    if (!serviceRoleKey) throw new Error('SUPABASE_SERVICE_ROLE_KEY is not configured')
+
+    // generate-content has JWT verification enabled at the Supabase Functions gateway.
+    // The scheduler must therefore send the service-role JWT as Authorization in
+    // addition to the automation secret checked by the function itself.
     const response = await fetch(`${Deno.env.get('SUPABASE_URL')}/functions/v1/generate-content`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-automation-secret': secret },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${serviceRoleKey}`,
+        'x-automation-secret': secret,
+      },
       body: JSON.stringify({ count: settings.posts_per_day }),
     })
     const body = await response.text()
