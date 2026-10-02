@@ -21,6 +21,7 @@ import TeaTourism from "./pages/TeaTourism";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/AdminLogin";
 import ContentAdmin from "./pages/ContentAdmin";
+import SeoDashboard from "./pages/SeoDashboard";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const AppRoutes = () => {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/content" element={<ContentAdmin />} />
+        <Route path="/admin/seo" element={<SeoDashboard />} />
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
